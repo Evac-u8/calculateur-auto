@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr-CA">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<meta name="description" content="Calculateur automobile Québec : calculez le vrai coût de votre voiture par mois, par année et par kilomètre.">
-<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="canonical" href="https://calculateurauto.ca/">
+<meta
+name="description"
+content="Calculateur Auto Québec : calculez le vrai coût de votre voiture par mois, par année et par kilomètre."
+>
 
-<meta property="og:title" content="Calculateur Auto Québec — Coût réel de votre voiture">
-<meta property="og:description" content="Calculez le vrai coût de votre voiture par mois, par année et par kilomètre au Québec.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://calculateurauto.ca/">
+<meta
+name="robots"
+content="index, follow"
+>
 
-<title>Calculateur Auto Québec — Coût réel de votre voiture</title>
+<link
+rel="canonical"
+href="https://calculateurauto.ca/"
+>
+
+<meta
+property="og:title"
+content="Calculateur Auto Québec — Le vrai coût de votre voiture"
+>
+
+<meta
+property="og:description"
+content="Calculez le vrai coût de votre voiture par mois, par année et par kilomètre au Québec."
+>
+
+<meta
+property="og:type"
+content="website"
+>
+
+<meta
+property="og:url"
+content="https://calculateurauto.ca/"
+>
+
+<title>
+Calculateur Auto Québec — Le vrai coût de votre voiture
+</title>
+
 
 <style>
 
+/* =========================================================
+   BASE
+========================================================= */
+
 *{
-box-sizing:border-box
+box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth
+scroll-behavior:smooth;
 }
 
 body{
@@ -31,11 +66,13 @@ margin:0;
 font-family:Arial,Helvetica,sans-serif;
 background:#eef2f6;
 color:#20252b;
-line-height:1.55
+line-height:1.55;
 }
 
 
-/* ================= HEADER ================= */
+/* =========================================================
+   HEADER
+========================================================= */
 
 header{
 background:#ffffff;
@@ -43,24 +80,24 @@ color:#102b46;
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 3px 15px rgba(0,0,0,.15)
+box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
 .nav{
-max-width:1100px;
+max-width:1150px;
 min-height:92px;
 margin:auto;
-padding:14px 18px;
+padding:12px 18px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:20px
+gap:20px;
 }
 
 .logo{
 display:flex;
 align-items:center;
-min-width:0
+min-width:0;
 }
 
 .brand-logo{
@@ -68,144 +105,167 @@ display:block;
 width:310px;
 height:auto;
 max-height:90px;
-object-fit:contain
+object-fit:contain;
 }
 
 nav{
 display:flex;
-gap:8px;
+align-items:center;
+justify-content:flex-end;
+gap:5px;
 flex-wrap:wrap;
-justify-content:flex-end
 }
 
 nav button{
 background:transparent;
 border:0;
 color:#102b46;
-padding:9px 12px;
+padding:9px 11px;
 border-radius:7px;
 cursor:pointer;
-font-weight:bold
+font-weight:bold;
+font-size:14px;
 }
 
 nav button:hover{
-background:#eef2f6
+background:#eef2f6;
 }
 
 
-/* ================= GENERAL ================= */
+/* =========================================================
+   CONTENU
+========================================================= */
 
 .container{
-max-width:1050px;
+max-width:1080px;
 margin:auto;
-padding:20px
+padding:20px;
 }
 
 .page{
-display:none
+display:none;
 }
 
 .page.active{
-display:block
+display:block;
 }
 
 .card{
-background:white;
+background:#ffffff;
 border-radius:18px;
 padding:30px;
 margin:20px 0;
-box-shadow:0 5px 20px rgba(0,0,0,.08)
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
-
-
-/* ================= CONTACT ================= */
-
-.contact-box{
-background:#f5f7fa;
-border-left:4px solid #102b46;
-padding:20px;
-border-radius:10px;
-margin-top:25px
-}
-
-.contact-box a{
-color:#102b46;
-font-weight:bold;
-text-decoration:none
-}
-
-.contact-box a:hover{
-text-decoration:underline
-}
-
-
-/* ================= ACCUEIL ================= */
-
-.hero-home{
-background:#102b46;
-color:white;
-border-radius:20px;
-padding:45px 30px;
-text-align:center;
-margin-bottom:25px
-}
-
-.hero-home h1{
-font-size:40px;
-margin:0 0 12px
-}
-
-.hero-home p{
-font-size:18px;
-max-width:700px;
-margin:0 auto 25px;
-opacity:.9
-}
-
-.cta{
-display:inline-block;
-background:#fff;
-color:#102b46;
-border:0;
-border-radius:9px;
-padding:15px 24px;
-font-weight:bold;
-font-size:17px;
-cursor:pointer
-}
-
-
-/* ================= TITRES ================= */
 
 h1,
 h2,
 h3{
-color:#102b46
-}
-
-.hero-home h1{
-color:white
+color:#102b46;
 }
 
 h2{
 border-bottom:2px solid #e5e9ee;
 padding-bottom:8px;
-margin-top:28px
+margin-top:28px;
+}
+
+p{
+margin-top:10px;
 }
 
 .intro{
 text-align:center;
 color:#66717d;
-margin-bottom:30px
+margin-bottom:30px;
 }
 
 
-/* ================= FORMULAIRE ================= */
+/* =========================================================
+   ACCUEIL
+========================================================= */
+
+.hero-home{
+background:#102b46;
+color:#ffffff;
+border-radius:20px;
+padding:50px 30px;
+text-align:center;
+margin-bottom:25px;
+}
+
+.hero-home h1{
+color:#ffffff;
+font-size:40px;
+line-height:1.15;
+margin:0 0 15px;
+}
+
+.hero-home p{
+font-size:18px;
+max-width:750px;
+margin:0 auto 28px;
+opacity:.93;
+}
+
+.cta{
+background:#ffffff;
+color:#102b46;
+border:0;
+border-radius:9px;
+padding:15px 25px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.cta:hover{
+background:#eef2f6;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-bottom:20px;
+}
+
+.feature{
+background:#ffffff;
+padding:24px;
+border-radius:14px;
+box-shadow:0 3px 12px rgba(0,0,0,.06);
+}
+
+.feature strong{
+display:block;
+font-size:18px;
+color:#102b46;
+margin-bottom:8px;
+}
+
+.home-contact{
+background:#f4f7fa;
+border-left:5px solid #102b46;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+}
+
+.home-contact a{
+color:#102b46;
+font-weight:bold;
+}
+
+
+/* =========================================================
+   FORMULAIRE
+========================================================= */
 
 label{
 display:block;
 font-weight:bold;
-margin-top:16px
+margin-top:16px;
 }
 
 input,
@@ -216,53 +276,57 @@ margin-top:6px;
 border:1px solid #ccd2d9;
 border-radius:8px;
 font-size:16px;
-background:#fff
+background:#ffffff;
 }
 
 input:focus,
 select:focus{
 outline:none;
-border-color:#457b9d
+border-color:#457b9d;
 }
 
 .small{
+font-size:13px;
 color:#68727d;
-font-size:13px
 }
 
 
-/* ================= PROGRESSION ================= */
+/* =========================================================
+   PROGRESSION
+========================================================= */
 
 .progress{
-margin:30px 0
+margin:35px 0;
 }
 
 .progress-track{
 position:relative;
 height:5px;
 background:#ddd;
-margin:0 9%
+margin:0 9%;
 }
 
 .progress-bar{
 position:absolute;
+left:0;
+top:0;
 height:5px;
 width:0;
 background:#102b46;
-transition:.3s
+transition:.3s;
 }
 
 .progress-items{
 display:flex;
 justify-content:space-between;
-margin-top:-20px
+margin-top:-20px;
 }
 
 .progress-item{
 width:25%;
 text-align:center;
 font-size:12px;
-color:#777
+color:#777;
 }
 
 .circle{
@@ -271,40 +335,44 @@ height:38px;
 border-radius:50%;
 background:#ddd;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 margin:auto auto 6px;
-font-weight:bold
+font-weight:bold;
 }
 
 .progress-item.active{
 color:#102b46;
-font-weight:bold
+font-weight:bold;
 }
 
 .progress-item.active .circle{
 background:#102b46;
-color:white
+color:#ffffff;
 }
 
 
-/* ================= ÉTAPES ================= */
+/* =========================================================
+   ÉTAPES
+========================================================= */
 
 .step{
-display:none
+display:none;
 }
 
 .step.active{
-display:block
+display:block;
 }
 
 
-/* ================= BOUTONS ================= */
+/* =========================================================
+   BOUTONS
+========================================================= */
 
 .buttons{
 display:flex;
 gap:12px;
-margin-top:30px
+margin-top:30px;
 }
 
 button{
@@ -313,239 +381,323 @@ border-radius:9px;
 padding:15px;
 font-size:16px;
 font-weight:bold;
-cursor:pointer
+cursor:pointer;
 }
 
 .next,
 .calculate{
 flex:2;
 background:#102b46;
-color:white
+color:#ffffff;
+}
+
+.next:hover,
+.calculate:hover{
+background:#183b5c;
 }
 
 .back{
 flex:1;
 background:#ddd;
-color:#222
+color:#222;
+}
+
+.back:hover,
+.reset:hover{
+background:#cfd4d9;
 }
 
 .reset{
 width:100%;
 background:#ddd;
 color:#222;
-margin-top:20px
+margin-top:20px;
 }
 
 
-/* ================= ERREURS ================= */
+/* =========================================================
+   ERREURS
+========================================================= */
 
 .error{
+display:none;
 background:#fff0f0;
 color:#a33;
 padding:12px;
 border-radius:8px;
 margin-top:15px;
-display:none
 }
 
 
-/* ================= RESULTATS ================= */
+/* =========================================================
+   RESULTATS
+========================================================= */
 
 .hero{
 background:#102b46;
-color:white;
+color:#ffffff;
 border-radius:15px;
-padding:28px;
+padding:30px;
 text-align:center;
-margin-bottom:20px
+margin-bottom:20px;
 }
 
 .hero-title{
-font-size:15px
+font-size:15px;
 }
 
 .hero-value{
-font-size:40px;
+font-size:42px;
 font-weight:bold;
-margin-top:8px
+margin-top:8px;
 }
 
 .result-card{
 background:#f1f7fc;
 border-radius:14px;
 padding:20px;
-margin-top:18px
+margin-top:18px;
 }
 
 .row{
 display:flex;
 justify-content:space-between;
+align-items:center;
 gap:20px;
 padding:11px 0;
-border-bottom:1px solid #d7dfe7
+border-bottom:1px solid #d7dfe7;
 }
 
 .row:last-child{
-border-bottom:0
+border-bottom:0;
 }
 
 .total{
-background:white;
+background:#ffffff;
 border-radius:10px;
 padding:17px;
 margin-top:12px;
 font-size:18px;
-font-weight:bold
+font-weight:bold;
 }
 
 .total span{
-float:right
+float:right;
 }
 
 .big{
 font-size:23px;
-color:#102b46
+color:#102b46;
 }
 
 .compare{
 margin-top:18px;
 padding:18px;
-background:#fff;
-border-radius:12px
+background:#ffffff;
+border-radius:12px;
 }
 
 .tip{
-padding:15px;
+padding:18px;
 background:#fff8df;
 border-radius:10px;
-margin-top:18px
+margin-top:18px;
 }
 
 
-/* ================= ARTICLES ================= */
+/* =========================================================
+   ARTICLES / PAGES
+========================================================= */
 
 .article{
-max-width:850px;
-margin:auto
+max-width:900px;
+margin:auto;
 }
 
 .article p{
-font-size:17px
+font-size:17px;
 }
 
 .article ul{
-font-size:16px
+font-size:16px;
 }
 
 .article-box{
 background:#f4f7fa;
 padding:20px;
 border-radius:12px;
-margin:20px 0
+margin:20px 0;
 }
 
 
-/* ================= ACCUEIL BLOCS ================= */
+/* =========================================================
+   CONTACT
+========================================================= */
 
-.feature-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
-}
-
-.feature{
-background:#fff;
+.contact-box{
+background:#f4f7fa;
+border-left:5px solid #102b46;
 padding:24px;
-border-radius:14px;
-box-shadow:0 3px 12px rgba(0,0,0,.06)
+border-radius:10px;
+margin-top:25px;
 }
 
-.feature strong{
-display:block;
-font-size:18px;
+.contact-box h2{
+margin-top:0;
+}
+
+.contact-box a{
 color:#102b46;
-margin-bottom:8px
+font-weight:bold;
+text-decoration:none;
+}
+
+.contact-box a:hover{
+text-decoration:underline;
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
 background:#102b46;
 color:#dce6ef;
 margin-top:40px;
-padding:35px 20px
+padding:35px 20px;
 }
 
 .footer-inner{
-max-width:1050px;
+max-width:1080px;
 margin:auto;
 display:flex;
 justify-content:space-between;
 gap:30px;
-flex-wrap:wrap
+flex-wrap:wrap;
+}
+
+footer strong{
+color:#ffffff;
 }
 
 footer button{
 background:none;
 color:#dce6ef;
-padding:4px 0;
-margin-right:15px
+padding:5px 0;
+margin-right:16px;
+font-size:14px;
+}
+
+footer button:hover{
+color:#ffffff;
+text-decoration:underline;
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-@media(max-width:700px){
+@media(max-width:800px){
 
 .nav{
 align-items:flex-start;
 flex-direction:column;
-min-height:auto
+min-height:auto;
 }
 
 .brand-logo{
 width:270px;
-max-height:78px
+max-height:78px;
 }
 
 nav{
-justify-content:flex-start
+width:100%;
+justify-content:flex-start;
+}
+
+nav button{
+padding:8px 9px;
 }
 
 .hero-home h1{
-font-size:30px
+font-size:30px;
 }
 
 .feature-grid{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .card{
-padding:20px
+padding:20px;
 }
 
 .buttons{
-flex-direction:column
+flex-direction:column;
 }
 
 .hero-value{
-font-size:32px
+font-size:34px;
 }
 
 .progress-item{
-font-size:10px
+font-size:10px;
 }
 
 .circle{
 width:32px;
-height:32px
+height:32px;
+}
+
+.row{
+font-size:14px;
+}
+
+}
+
+
+/* =========================================================
+   PETIT MOBILE
+========================================================= */
+
+@media(max-width:480px){
+
+.container{
+padding:12px;
+}
+
+.hero-home{
+padding:35px 20px;
+}
+
+.hero-home h1{
+font-size:27px;
+}
+
+.brand-logo{
+width:245px;
+}
+
+nav{
+gap:2px;
+}
+
+nav button{
+font-size:13px;
+padding:7px 8px;
+}
+
+.card{
+border-radius:14px;
 }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
@@ -567,6 +719,7 @@ alt="Calculateur Auto Québec — Le vrai coût de votre voiture"
 >
 
 </div>
+
 
 <nav>
 
@@ -601,6 +754,7 @@ Contact
 </header>
 
 
+
 <main class="container">
 
 
@@ -608,7 +762,10 @@ Contact
      ACCUEIL
 ========================================================= -->
 
-<section id="accueil" class="page active">
+<section
+id="accueil"
+class="page active"
+>
 
 
 <div class="hero-home">
@@ -618,8 +775,8 @@ Combien vous coûte réellement votre voiture?
 </h1>
 
 <p>
-Calculez votre coût automobile réel par mois, par année et par kilomètre.
-Carburant, assurance, entretien, dépréciation, financement et plus.
+Calculez le vrai coût de votre automobile par mois,
+par année et par kilomètre.
 </p>
 
 <button
@@ -630,6 +787,7 @@ onclick="showPage('calculateur')"
 </button>
 
 </div>
+
 
 
 <div class="feature-grid">
@@ -663,12 +821,13 @@ Voyez l'impact de la perte de valeur de votre véhicule.
 🛣️ Coût par kilomètre
 </strong>
 
-Découvrez combien vous coûte chaque kilomètre parcouru.
+Découvrez combien vous coûte réellement chaque kilomètre parcouru.
 
 </div>
 
 
 </div>
+
 
 
 <div class="card">
@@ -678,22 +837,23 @@ Pourquoi calculer le vrai coût d'une voiture?
 </h2>
 
 <p>
-Le prix affiché chez le concessionnaire n'est qu'une partie du coût d'un véhicule.
-Une automobile entraîne également des dépenses de carburant, d'assurance,
-d'entretien, de pneus, de réparations, d'immatriculation et de financement.
+Le prix d'achat ou le paiement mensuel n'est qu'une partie du coût
+réel d'une automobile.
 </p>
 
 <p>
-Notre calculateur regroupe ces dépenses afin de vous donner une estimation
-plus complète du coût réel de possession de votre véhicule.
+Il faut également considérer le carburant, l'assurance, l'entretien,
+les pneus, les réparations, l'immatriculation, le stationnement,
+le financement et la dépréciation.
 </p>
 
 <p>
-L'objectif est simple : vous permettre de prendre de meilleures décisions
-avant d'acheter, de conserver ou de remplacer une automobile.
+Calculateur Auto Québec regroupe ces dépenses afin de vous donner
+une meilleure idée du coût réel de votre véhicule.
 </p>
 
 </div>
+
 
 
 <div class="card">
@@ -703,8 +863,8 @@ avant d'acheter, de conserver ou de remplacer une automobile.
 </h2>
 
 <p>
-Entrez vos données personnelles de véhicule et obtenez immédiatement
-une estimation de votre coût automobile annuel, mensuel et par kilomètre.
+Entrez les informations de votre véhicule et obtenez immédiatement
+une estimation de son coût annuel, mensuel et par kilomètre.
 </p>
 
 <button
@@ -717,14 +877,50 @@ COMMENCER LE CALCUL
 </div>
 
 
+
+<!-- CONTACT DIRECTEMENT SUR L'ACCUEIL -->
+
+<div class="home-contact">
+
+<h3>
+📧 Une question ou une suggestion?
+</h3>
+
+<p>
+Vous avez trouvé une erreur, vous avez une idée pour améliorer
+le calculateur ou vous voulez simplement nous contacter?
+</p>
+
+<p>
+
+<a href="mailto:evac-u8@live.ca">
+evac-u8@live.ca
+</a>
+
+</p>
+
+<button
+class="next"
+onclick="showPage('contact')"
+>
+NOUS CONTACTER
+</button>
+
+</div>
+
+
 </section>
+
 
 
 <!-- =========================================================
      CALCULATEUR
 ========================================================= -->
 
-<section id="calculateur" class="page">
+<section
+id="calculateur"
+class="page"
+>
 
 
 <div class="card">
@@ -735,8 +931,10 @@ COMMENCER LE CALCUL
 </h1>
 
 <p class="intro">
-Découvrez le véritable coût de votre automobile par année, par mois et par kilomètre.
+Découvrez le véritable coût de votre automobile par année,
+par mois et par kilomètre.
 </p>
+
 
 
 <!-- PROGRESSION -->
@@ -817,14 +1015,16 @@ Résultat
 </div>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      ÉTAPE 1
-========================================================= -->
+===================================================== -->
 
 <div
 class="step active"
 id="step1"
 >
+
 
 <h2>
 🚘 Votre véhicule
@@ -872,6 +1072,7 @@ Prix d'achat ($)
 id="prixAchat"
 type="number"
 min="0"
+step="0.01"
 placeholder="35000"
 >
 
@@ -884,6 +1085,7 @@ Valeur actuelle ($)
 id="valeurActuelle"
 type="number"
 min="0"
+step="0.01"
 placeholder="25000"
 >
 
@@ -896,6 +1098,7 @@ Années de possession
 id="anneesPossession"
 type="number"
 min="1"
+step="1"
 placeholder="5"
 >
 
@@ -929,12 +1132,14 @@ Suivant →
 
 </div>
 
+
 </div>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      ÉTAPE 2
-========================================================= -->
+===================================================== -->
 
 <div
 class="step"
@@ -993,6 +1198,7 @@ Autres coûts de carburant ($/année)
 id="autreCarburant"
 type="number"
 min="0"
+step="0.01"
 placeholder="0"
 >
 
@@ -1010,6 +1216,7 @@ Mise de fonds ($)
 id="miseFonds"
 type="number"
 min="0"
+step="0.01"
 placeholder="5000"
 >
 
@@ -1022,7 +1229,7 @@ Taux d'intérêt (%)
 id="taux"
 type="number"
 min="0"
-step="0.1"
+step="0.01"
 placeholder="7.5"
 >
 
@@ -1035,6 +1242,7 @@ Durée du financement (années)
 id="duree"
 type="number"
 min="1"
+step="1"
 placeholder="5"
 >
 
@@ -1063,12 +1271,14 @@ Suivant →
 
 </div>
 
+
 </div>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      ÉTAPE 3
-========================================================= -->
+===================================================== -->
 
 <div
 class="step"
@@ -1089,6 +1299,7 @@ Assurance ($/année)
 id="assurance"
 type="number"
 min="0"
+step="0.01"
 placeholder="1200"
 >
 
@@ -1139,6 +1350,7 @@ Immatriculation ($/année)
 id="immatriculation"
 type="number"
 min="0"
+step="0.01"
 value="217.41"
 >
 
@@ -1151,12 +1363,14 @@ Contribution transport / TIV ($/année)
 id="transport"
 type="number"
 min="0"
+step="0.01"
 value="0"
 >
 
 
 <p class="small">
-Les montants affichés sont des exemples et peuvent varier selon votre situation.
+Les montants affichés sont des valeurs de départ.
+Ils peuvent varier selon votre situation.
 </p>
 
 
@@ -1173,6 +1387,7 @@ Entretien courant ($/année)
 id="entretien"
 type="number"
 min="0"
+step="0.01"
 placeholder="1000"
 >
 
@@ -1185,6 +1400,7 @@ Pneus ($/année)
 id="pneus"
 type="number"
 min="0"
+step="0.01"
 placeholder="400"
 >
 
@@ -1197,6 +1413,7 @@ Réparations ($/année)
 id="reparations"
 type="number"
 min="0"
+step="0.01"
 placeholder="800"
 >
 
@@ -1209,6 +1426,7 @@ Stationnement ($/année)
 id="stationnement"
 type="number"
 min="0"
+step="0.01"
 placeholder="600"
 >
 
@@ -1221,6 +1439,7 @@ Lavage / esthétique ($/année)
 id="lavage"
 type="number"
 min="0"
+step="0.01"
 placeholder="200"
 >
 
@@ -1233,6 +1452,7 @@ Autres dépenses ($/année)
 id="autres"
 type="number"
 min="0"
+step="0.01"
 placeholder="300"
 >
 
@@ -1261,12 +1481,14 @@ onclick="calculer()"
 
 </div>
 
+
 </div>
 
 
-<!-- =========================================================
-     ÉTAPE 4 — RÉSULTATS
-========================================================= -->
+
+<!-- =====================================================
+     ÉTAPE 4
+===================================================== -->
 
 <div
 class="step"
@@ -1290,7 +1512,8 @@ id="rMensuelHero"
 </div>
 
 
-<!-- COÛT ANNUEL -->
+
+<!-- COÛTS -->
 
 <div class="result-card">
 
@@ -1300,171 +1523,80 @@ id="rMensuelHero"
 
 
 <div class="row">
-
-<span>
-⛽ Carburant
-</span>
-
-<strong id="rCarburant">
-$0
-</strong>
-
+<span>⛽ Carburant</span>
+<strong id="rCarburant">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-🛡️ Assurance
-</span>
-
-<strong id="rAssurance">
-$0
-</strong>
-
+<span>🛡️ Assurance</span>
+<strong id="rAssurance">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-📋 Immatriculation
-</span>
-
-<strong id="rImmat">
-$0
-</strong>
-
+<span>📋 Immatriculation</span>
+<strong id="rImmat">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-🪪 Permis
-</span>
-
-<strong id="rPermis">
-$0
-</strong>
-
+<span>🪪 Permis</span>
+<strong id="rPermis">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-🚌 Transport / TIV
-</span>
-
-<strong id="rTransport">
-$0
-</strong>
-
+<span>🚌 Transport / TIV</span>
+<strong id="rTransport">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-🔧 Entretien
-</span>
-
-<strong id="rEntretien">
-$0
-</strong>
-
+<span>🔧 Entretien</span>
+<strong id="rEntretien">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-🛞 Pneus
-</span>
-
-<strong id="rPneus">
-$0
-</strong>
-
+<span>🛞 Pneus</span>
+<strong id="rPneus">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-🔨 Réparations
-</span>
-
-<strong id="rReparations">
-$0
-</strong>
-
+<span>🔨 Réparations</span>
+<strong id="rReparations">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-🅿️ Stationnement
-</span>
-
-<strong id="rStationnement">
-$0
-</strong>
-
+<span>🅿️ Stationnement</span>
+<strong id="rStationnement">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-🧽 Lavage / esthétique
-</span>
-
-<strong id="rLavage">
-$0
-</strong>
-
+<span>🧽 Lavage / esthétique</span>
+<strong id="rLavage">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-📦 Autres
-</span>
-
-<strong id="rAutres">
-$0
-</strong>
-
+<span>📦 Autres</span>
+<strong id="rAutres">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-📉 Dépréciation
-</span>
-
-<strong id="rDepreciation">
-$0
-</strong>
-
+<span>📉 Dépréciation</span>
+<strong id="rDepreciation">$0</strong>
 </div>
 
 
 <div class="row">
-
-<span>
-💳 Intérêts du prêt
-</span>
-
-<strong id="rInterets">
-$0
-</strong>
-
+<span>💳 Intérêts du prêt</span>
+<strong id="rInterets">$0</strong>
 </div>
 
 
@@ -1479,6 +1611,7 @@ $0
 </div>
 
 </div>
+
 
 
 <!-- FINANCEMENT -->
@@ -1531,7 +1664,8 @@ $0
 </div>
 
 
-<!-- CHIFFRES -->
+
+<!-- CHIFFRES IMPORTANTS -->
 
 <div class="result-card">
 
@@ -1586,15 +1720,18 @@ $0
 </div>
 
 
+
 <div class="compare">
 
 <h3>
 💡 À retenir
 </h3>
 
-<p id="messageResultat"></p>
+<p id="messageResultat">
+</p>
 
 </div>
+
 
 
 <div class="tip">
@@ -1605,15 +1742,16 @@ Pourquoi deux coûts?
 
 <br><br>
 
-Le <strong>coût économique</strong> tient compte notamment de la
-dépréciation et des intérêts du financement.
+Le <strong>coût économique</strong> tient compte notamment
+de la dépréciation et des intérêts du financement.
 
 <br><br>
 
-La <strong>sortie d'argent</strong> représente plutôt l'argent qui quitte
-réellement votre compte chaque mois, incluant le paiement du prêt.
+La <strong>sortie d'argent</strong> représente plutôt l'argent
+qui quitte réellement votre compte, incluant le paiement du prêt.
 
 </div>
+
 
 
 <button
@@ -1631,6 +1769,7 @@ onclick="recommencer()"
 </section>
 
 
+
 <!-- =========================================================
      GUIDES
 ========================================================= -->
@@ -1643,6 +1782,7 @@ class="page"
 
 <div class="card article">
 
+
 <h1>
 📚 Guides automobiles
 </h1>
@@ -1654,49 +1794,67 @@ Combien coûte réellement une voiture au Québec?
 
 
 <p>
-Le coût d'une automobile ne se limite pas au paiement mensuel affiché
-par un concessionnaire. Pour connaître le coût réel, il faut considérer
-l'ensemble des dépenses associées au véhicule.
+Le coût d'une automobile ne se limite pas au paiement mensuel
+affiché par un concessionnaire.
 </p>
 
 
 <p>
-Parmi les principales dépenses, on retrouve le carburant, l'assurance,
-l'entretien, les pneus, les réparations, l'immatriculation, le stationnement,
-les intérêts du financement et la dépréciation.
+Pour connaître le véritable coût d'un véhicule, il faut considérer
+l'ensemble des dépenses associées à sa possession et à son utilisation.
 </p>
 
 
 <div class="article-box">
 
 <strong>
-💡 Conseil :
+💡 Les principaux coûts :
 </strong>
 
-Utilisez notre calculateur pour additionner toutes ces dépenses
-et obtenir une estimation personnalisée.
+<ul>
+
+<li>Carburant</li>
+
+<li>Assurance</li>
+
+<li>Entretien</li>
+
+<li>Pneus</li>
+
+<li>Réparations</li>
+
+<li>Immatriculation</li>
+
+<li>Stationnement</li>
+
+<li>Financement</li>
+
+<li>Dépréciation</li>
+
+</ul>
 
 </div>
 
 
+
 <h2>
-💰 Coût automobile mensuel
+💰 Combien coûte une voiture par mois?
 </h2>
 
 
 <p>
-Le paiement automobile n'est qu'une partie du budget nécessaire pour
-posséder une voiture. Une automobile financée peut sembler abordable
-lorsqu'on regarde uniquement son paiement mensuel, alors que son coût
-total est beaucoup plus élevé.
+Le paiement automobile n'est qu'une partie du budget.
+Une voiture peut coûter plusieurs centaines de dollars supplémentaires
+par mois lorsque toutes les dépenses sont additionnées.
 </p>
 
 
 <p>
-Pour obtenir une meilleure idée de votre budget automobile, additionnez
-le paiement, l'assurance, le carburant, l'entretien, les pneus,
-les réparations et les autres dépenses récurrentes.
+Le coût mensuel réel dépend notamment du kilométrage,
+de la consommation, de l'assurance, de l'âge du véhicule,
+de son financement et de sa dépréciation.
 </p>
+
 
 
 <h2>
@@ -1706,52 +1864,52 @@ les réparations et les autres dépenses récurrentes.
 
 <p>
 La dépréciation représente la perte de valeur d'un véhicule avec le temps.
-Elle ne constitue pas nécessairement une facture mensuelle, mais elle
-représente néanmoins un coût économique important.
+Ce n'est pas nécessairement une facture mensuelle, mais il s'agit
+d'un coût économique important.
 </p>
 
 
 <p>
-Par exemple, si un véhicule acheté 35 000 $ vaut maintenant 25 000 $,
-la perte de valeur est de 10 000 $. Le calculateur répartit cette perte
-sur la période de possession indiquée.
+Par exemple, un véhicule acheté 35 000 $ qui vaut maintenant 25 000 $
+a perdu 10 000 $ de valeur.
 </p>
 
 
+
 <h2>
-🛣️ Combien coûte un kilomètre?
+🛣️ Le coût par kilomètre
 </h2>
 
 
 <p>
 Le coût par kilomètre permet de comparer plus facilement différents
-véhicules ou différentes façons de se déplacer.
+véhicules et différentes façons de se déplacer.
 </p>
 
 
 <p>
-Notre calculateur divise le coût automobile annuel par le nombre de
-kilomètres parcourus annuellement afin de produire une estimation
-du coût par kilomètre.
+Le calculateur divise le coût automobile annuel par le nombre
+de kilomètres parcourus annuellement.
 </p>
 
 
+
 <h2>
-🏦 Financement automobile
+🏦 Les intérêts du financement
 </h2>
 
 
 <p>
-Un financement automobile entraîne des intérêts en plus du prix du véhicule.
-Le montant financé, le taux d'intérêt et la durée du prêt ont tous un
-impact sur le coût total.
+Le taux d'intérêt et la durée du prêt ont un impact important sur
+le coût total d'une automobile.
 </p>
 
 
 <p>
-Un prêt plus long peut réduire le paiement mensuel tout en augmentant
-le montant total des intérêts payés.
+Un financement plus long peut réduire le paiement mensuel,
+mais il peut également augmenter le montant total des intérêts payés.
 </p>
+
 
 
 <h2>
@@ -1760,20 +1918,21 @@ le montant total des intérêts payés.
 
 
 <p>
-L'entretien et les réparations sont souvent difficiles à prévoir
-exactement parce qu'ils varient selon le véhicule, son âge,
-son kilométrage et son utilisation.
+Les coûts d'entretien et de réparation varient selon le véhicule,
+son âge, son kilométrage et son utilisation.
 </p>
 
 
 <p>
-Pour cette raison, le calculateur permet d'entrer vos propres estimations
-annuelles plutôt que d'imposer une valeur unique à tous les conducteurs.
+C'est pourquoi le calculateur vous permet d'entrer vos propres
+estimations annuelles.
 </p>
+
 
 </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -1788,14 +1947,16 @@ class="page"
 
 <div class="card article">
 
+
 <h1>
 Comment ça marche?
 </h1>
 
 
 <p>
-Notre calculateur estime le coût réel de possession de votre automobile
-en regroupant les principales dépenses liées à son utilisation et à sa propriété.
+Calculateur Auto Québec regroupe les principales dépenses associées
+à votre automobile afin de produire une estimation du coût réel
+de possession.
 </p>
 
 
@@ -1804,61 +1965,67 @@ en regroupant les principales dépenses liées à son utilisation et à sa propr
 </h2>
 
 <p>
-Entrez le prix d'achat, la valeur actuelle du véhicule, le nombre d'années
-de possession et son kilométrage actuel. Ces informations servent notamment
-à estimer la dépréciation.
+Entrez le prix d'achat, la valeur actuelle et le nombre d'années
+de possession.
 </p>
 
 
 <h2>
-2. Utilisation et financement
+2. Votre utilisation
 </h2>
 
 <p>
-Indiquez votre kilométrage annuel, votre consommation de carburant et le
-prix de l'essence. Si votre véhicule est financé, ajoutez la mise de fonds,
+Indiquez votre kilométrage annuel, votre consommation de carburant
+et le prix de l'essence.
+</p>
+
+
+<h2>
+3. Votre financement
+</h2>
+
+<p>
+Si votre véhicule est financé, entrez la mise de fonds,
 le taux d'intérêt et la durée du prêt.
 </p>
 
 
 <h2>
-3. Dépenses annuelles
+4. Vos dépenses
 </h2>
 
 <p>
-Ajoutez vos coûts d'assurance, de permis, d'immatriculation, de transport
-ou TIV, d'entretien, de pneus, de réparations, de stationnement, de lavage
-et vos autres dépenses.
+Ajoutez votre assurance, l'immatriculation, le permis,
+l'entretien, les pneus, les réparations et les autres dépenses.
 </p>
 
 
 <h2>
-4. Vos résultats
+5. Vos résultats
 </h2>
 
 <p>
-Le calculateur affiche ensuite votre coût automobile économique annuel,
+Le calculateur vous donne votre coût économique annuel,
 mensuel et par kilomètre, ainsi que votre sortie d'argent mensuelle.
-Il présente aussi le montant financé, le paiement mensuel et les intérêts
-totaux du prêt.
 </p>
 
 
 <div class="article-box">
 
 <strong>
-💡 À retenir :
+💡 Important :
 </strong>
 
-le coût économique tient notamment compte de la dépréciation et des intérêts
-du financement, tandis que la sortie d'argent mesure davantage les sommes
-qui quittent réellement votre compte.
+Les résultats sont des estimations basées sur les données que vous
+avez fournies.
 
 </div>
+
 
 </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -1873,21 +2040,21 @@ class="page"
 
 <div class="card article">
 
+
 <h1>
 À propos de Calculateur Auto Québec
 </h1>
 
 
 <p>
-Calculateur Auto Québec a pour objectif de rendre le coût réel d'une
-automobile plus facile à comprendre.
+Calculateur Auto Québec a été créé pour aider les automobilistes
+à mieux comprendre le coût réel de leur véhicule.
 </p>
 
 
 <p>
-L'idée est simple : plutôt que de regarder uniquement le prix d'achat
-ou le paiement mensuel, nous voulons permettre aux automobilistes
-de considérer l'ensemble des dépenses associées à leur véhicule.
+L'objectif est simple : aller plus loin que le simple paiement
+mensuel affiché lors de l'achat d'une automobile.
 </p>
 
 
@@ -1897,96 +2064,26 @@ Notre objectif
 
 
 <p>
-Fournir des outils simples, accessibles et faciles à utiliser afin
-d'aider les automobilistes à prendre de meilleures décisions financières
-concernant leur véhicule.
+Fournir un outil simple, accessible et pratique permettant aux
+automobilistes québécois de mieux évaluer leurs dépenses automobiles.
 </p>
 
 
 <h2>
-Important
+Une estimation, pas un conseil financier
 </h2>
 
 
 <p>
-Les résultats du calculateur sont des estimations basées sur les
-informations fournies par l'utilisateur. Ils ne constituent pas
-des conseils financiers, fiscaux, juridiques ou professionnels.
+Les résultats du calculateur sont des estimations et ne constituent
+pas des conseils financiers, fiscaux, juridiques ou professionnels.
 </p>
+
 
 </div>
 
 </section>
 
-
-<!-- =========================================================
-     CONFIDENTIALITÉ
-========================================================= -->
-
-<section
-id="confidentialite"
-class="page"
->
-
-
-<div class="card article">
-
-<h1>
-Politique de confidentialité
-</h1>
-
-
-<p>
-Cette page présente les principes généraux de confidentialité applicables
-au site Calculateur Auto Québec.
-</p>
-
-
-<h2>
-Données saisies dans le calculateur
-</h2>
-
-
-<p>
-Les informations entrées dans le calculateur sont utilisées afin
-d'effectuer les calculs demandés par l'utilisateur.
-</p>
-
-
-<p>
-Dans cette version du calculateur, les calculs sont effectués directement
-dans le navigateur.
-</p>
-
-
-<h2>
-Cookies et publicité
-</h2>
-
-
-<p>
-Le site pourrait utiliser ultérieurement des services publicitaires,
-d'analyse ou d'affiliation. Ces services peuvent utiliser des cookies
-ou des technologies similaires conformément à leurs propres politiques.
-</p>
-
-
-<h2>
-Contact
-</h2>
-
-
-<p>
-Pour toute question concernant la confidentialité, vous pouvez nous écrire
-à l'adresse
-<a href="mailto:evac-u8@live.ca">
-evac-u8@live.ca
-</a>.
-</p>
-
-</div>
-
-</section>
 
 
 <!-- =========================================================
@@ -2001,19 +2098,21 @@ class="page"
 
 <div class="card article">
 
+
 <h1>
-Contact
+📧 Contact
 </h1>
 
 
 <p>
-Vous avez une question, une suggestion, vous avez trouvé une erreur dans
-le calculateur ou vous souhaitez simplement nous faire part de vos commentaires?
-Vous pouvez nous écrire directement par courriel.
+Vous avez une question, une suggestion, vous avez trouvé une erreur
+dans le calculateur ou vous souhaitez simplement nous faire part
+de vos commentaires?
 </p>
 
 
 <div class="contact-box">
+
 
 <h2>
 Nous joindre
@@ -2026,7 +2125,9 @@ Nous joindre
 Courriel :
 </strong>
 
-<a href="mailto:evac-u8@live.ca">
+<a
+href="mailto:evac-u8@live.ca"
+>
 evac-u8@live.ca
 </a>
 
@@ -2034,16 +2135,98 @@ evac-u8@live.ca
 
 
 <p>
-Pour faciliter le traitement de votre message, indiquez si possible le sujet
-de votre demande et, lorsqu'il s'agit du calculateur, les informations
-ou le résultat concernés.
+Vous pouvez utiliser cette adresse pour nous transmettre vos questions,
+commentaires ou suggestions concernant Calculateur Auto Québec.
 </p>
 
+
+<p>
+Si votre message concerne un résultat du calculateur, indiquez si possible
+les informations utilisées afin de faciliter la vérification.
+</p>
+
+
 </div>
+
 
 </div>
 
 </section>
+
+
+
+<!-- =========================================================
+     CONFIDENTIALITÉ
+========================================================= -->
+
+<section
+id="confidentialite"
+class="page"
+>
+
+
+<div class="card article">
+
+
+<h1>
+Politique de confidentialité
+</h1>
+
+
+<p>
+Calculateur Auto Québec accorde de l'importance à la protection
+des renseignements personnels de ses visiteurs.
+</p>
+
+
+<h2>
+Données saisies dans le calculateur
+</h2>
+
+
+<p>
+Les informations saisies dans le calculateur servent à effectuer
+les calculs demandés.
+</p>
+
+
+<p>
+Les calculs sont effectués directement dans le navigateur.
+</p>
+
+
+<h2>
+Cookies et services externes
+</h2>
+
+
+<p>
+Le site pourrait éventuellement utiliser des services d'analyse,
+de publicité ou d'affiliation. Ces services peuvent utiliser
+des cookies ou des technologies similaires selon leurs propres politiques.
+</p>
+
+
+<h2>
+Contact</h2>
+
+
+<p>
+Pour toute question concernant la confidentialité :
+
+<a
+href="mailto:evac-u8@live.ca"
+>
+evac-u8@live.ca
+</a>
+
+</p>
+
+
+</div>
+
+</section>
+
 
 
 <!-- =========================================================
@@ -2058,14 +2241,15 @@ class="page"
 
 <div class="card article">
 
+
 <h1>
 Conditions d'utilisation
 </h1>
 
 
 <p>
-Les outils présents sur Calculateur Auto Québec sont fournis à titre
-informatif et permettent d'obtenir des estimations.
+Les outils présents sur Calculateur Auto Québec sont fournis
+à titre informatif et permettent d'obtenir des estimations.
 </p>
 
 
@@ -2076,7 +2260,7 @@ Exactitude
 
 <p>
 Les résultats dépendent des informations saisies par l'utilisateur.
-Les résultats peuvent donc différer des coûts réellement engagés.
+Ils peuvent donc différer des coûts réellement engagés.
 </p>
 
 
@@ -2086,9 +2270,21 @@ Responsabilité
 
 
 <p>
-L'utilisateur demeure responsable de vérifier les informations utilisées
-avant de prendre une décision financière ou automobile.
+L'utilisateur demeure responsable de vérifier les informations
+utilisées avant de prendre une décision financière ou automobile.
 </p>
+
+
+<h2>
+Utilisation du site
+</h2>
+
+
+<p>
+L'utilisation du calculateur ne constitue pas une garantie
+quant au coût réel futur d'un véhicule.
+</p>
+
 
 </div>
 
@@ -2098,11 +2294,13 @@ avant de prendre une décision financière ou automobile.
 </main>
 
 
+
 <!-- =========================================================
      FOOTER
 ========================================================= -->
 
 <footer>
+
 
 <div class="footer-inner">
 
@@ -2114,72 +2312,101 @@ Calculateur Auto Québec
 </strong>
 
 <p>
-Comprendre le vrai coût de votre automobile.
+Le vrai coût de votre voiture.
+</p>
+
+<p>
+© 2026 Calculateur Auto Québec
 </p>
 
 </div>
 
 
+
 <div>
 
-<button onclick="showPage('accueil')">
+<button
+onclick="showPage('accueil')"
+>
 Accueil
 </button>
 
-<button onclick="showPage('calculateur')">
+
+<button
+onclick="showPage('calculateur')"
+>
 Calculateur
 </button>
 
-<button onclick="showPage('guides')">
+
+<button
+onclick="showPage('guides')"
+>
 Guides
 </button>
 
-<button onclick="showPage('comment-ca-marche')">
+
+<button
+onclick="showPage('comment-ca-marche')"
+>
 Comment ça marche
 </button>
 
-<button onclick="showPage('apropos')">
+
+<button
+onclick="showPage('apropos')"
+>
 À propos
 </button>
 
-<button onclick="showPage('contact')">
+
+<button
+onclick="showPage('contact')"
+>
 Contact
 </button>
 
-<button onclick="showPage('confidentialite')">
+
+<button
+onclick="showPage('confidentialite')"
+>
 Confidentialité
 </button>
 
-<button onclick="showPage('conditions')">
+
+<button
+onclick="showPage('conditions')"
+>
 Conditions
 </button>
 
 </div>
+
 
 </div>
 
 </footer>
 
 
+
 <script>
 
-
 /* =========================================================
-   NAVIGATION DU SITE
+   NAVIGATION
 ========================================================= */
 
 function showPage(page){
 
 document
 .querySelectorAll(".page")
-.forEach(function(p){
+.forEach(function(element){
 
-p.classList.remove("active");
+element.classList.remove("active");
 
 });
 
 
-var target=
+var target =
 document.getElementById(page);
 
 
@@ -2191,42 +2418,45 @@ target.classList.add("active");
 
 
 window.scrollTo({
-
 top:0,
 behavior:"smooth"
-
 });
 
 }
 
 
 /* =========================================================
-   OUTILS
+   OUTIL DE LECTURE
 ========================================================= */
 
 function val(id){
 
-var element=
+var element =
 document.getElementById(id);
 
 
 if(!element){
-
 return 0;
-
 }
 
 
-var value=
+var value =
 parseFloat(element.value);
 
 
-return isNaN(value)
-?0
-:value;
+if(isNaN(value)){
+return 0;
+}
+
+
+return value;
 
 }
 
+
+/* =========================================================
+   FORMAT MONÉTAIRE
+========================================================= */
 
 function money(value){
 
@@ -2242,20 +2472,20 @@ currency:"CAD"
 
 
 /* =========================================================
-   VALIDATION
+   ERREURS
 ========================================================= */
 
-function showError(id,msg){
+function showError(id,message){
 
-var box=
+var box =
 document.getElementById(id);
 
 
-box.textContent=
-msg;
+box.textContent =
+message;
 
 
-box.style.display=
+box.style.display =
 "block";
 
 }
@@ -2263,13 +2493,13 @@ box.style.display=
 
 function hideError(id){
 
-var box=
+var box =
 document.getElementById(id);
 
 
 if(box){
 
-box.style.display=
+box.style.display =
 "none";
 
 }
@@ -2278,20 +2508,18 @@ box.style.display=
 
 
 /* =========================================================
-   ÉTAPES
+   CHANGEMENT D'ÉTAPE
 ========================================================= */
 
 function goStep(step){
 
 
-/* ÉTAPE 1 → 2 */
-
-if(step===2){
+if(step === 2){
 
 hideError("error1");
 
 
-if(val("prixAchat")<=0){
+if(val("prixAchat") <= 0){
 
 showError(
 "error1",
@@ -2303,7 +2531,7 @@ return;
 }
 
 
-if(val("valeurActuelle")<0){
+if(val("valeurActuelle") < 0){
 
 showError(
 "error1",
@@ -2315,7 +2543,7 @@ return;
 }
 
 
-if(val("anneesPossession")<=0){
+if(val("anneesPossession") <= 0){
 
 showError(
 "error1",
@@ -2329,14 +2557,12 @@ return;
 }
 
 
-/* ÉTAPE 2 → 3 */
-
-if(step===3){
+if(step === 3){
 
 hideError("error2");
 
 
-if(val("kmAnnuel")<0){
+if(val("kmAnnuel") < 0){
 
 showError(
 "error2",
@@ -2348,7 +2574,7 @@ return;
 }
 
 
-if(val("consommation")<0){
+if(val("consommation") < 0){
 
 showError(
 "error2",
@@ -2362,23 +2588,27 @@ return;
 }
 
 
-/* AFFICHAGE DE L'ÉTAPE */
-
 document
 .querySelectorAll(".step")
-.forEach(function(x){
+.forEach(function(element){
 
-x.classList.remove("active");
+element.classList.remove("active");
 
 });
 
 
-document
-.getElementById("step"+step)
-.classList.add("active");
+var current =
+document.getElementById(
+"step"+step
+);
 
 
-/* INDICATEURS */
+if(current){
+
+current.classList.add("active");
+
+}
+
 
 for(
 var i=1;
@@ -2387,7 +2617,9 @@ i++
 ){
 
 document
-.getElementById("indicator"+i)
+.getElementById(
+"indicator"+i
+)
 .classList.remove("active");
 
 }
@@ -2400,36 +2632,34 @@ j++
 ){
 
 document
-.getElementById("indicator"+j)
+.getElementById(
+"indicator"+j
+)
 .classList.add("active");
 
 }
 
 
-/* BARRE DE PROGRESSION */
-
-var progress=
+var progress =
 ((step-1)/3)*100;
 
 
 document
 .getElementById("progressBar")
-.style.width=
+.style.width =
 progress+"%";
 
 
 window.scrollTo({
-
 top:0,
 behavior:"smooth"
-
 });
 
 }
 
 
 /* =========================================================
-   CALCUL PRINCIPAL
+   CALCUL
 ========================================================= */
 
 function calculer(){
@@ -2437,104 +2667,110 @@ function calculer(){
 hideError("error3");
 
 
-/* =========================================================
-   VEHICULE
-========================================================= */
+/* ---------------------------------------------------------
+   VÉHICULE
+--------------------------------------------------------- */
 
-var prixAchat=
+var prixAchat =
 val("prixAchat");
 
-var valeurActuelle=
+var valeurActuelle =
 val("valeurActuelle");
 
-var annees=
+var annees =
 val("anneesPossession");
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    UTILISATION
-========================================================= */
+--------------------------------------------------------- */
 
-var km=
+var km =
 val("kmAnnuel");
 
-var consommation=
+var consommation =
 val("consommation");
 
-var prixEssence=
+var prixEssence =
 val("prixEssence");
 
-var autreCarburant=
+var autreCarburant =
 val("autreCarburant");
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    CARBURANT
-========================================================= */
+--------------------------------------------------------- */
 
-var litres=
-km*consommation/100;
+var litres =
+km * consommation / 100;
 
 
-var carburant=
-(litres*prixEssence)+
+var carburant =
+(litres * prixEssence)
++
 autreCarburant;
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    FINANCEMENT
-========================================================= */
+--------------------------------------------------------- */
 
-var miseFonds=
+var miseFonds =
 val("miseFonds");
 
-var taux=
-val("taux")/100;
+var taux =
+val("taux") / 100;
 
-var duree=
+var duree =
 val("duree");
 
 
-var finance=
+var finance =
 Math.max(
 0,
-prixAchat-miseFonds
+prixAchat - miseFonds
 );
 
 
-var paiementMensuel=0;
+var paiementMensuel =
+0;
 
-var interetsTotaux=0;
+var interetsTotaux =
+0;
 
-var paiementAnnuel=0;
+var paiementAnnuel =
+0;
 
-var interetsAnnuels=0;
+var interetsAnnuels =
+0;
 
 
 if(
-finance>0 &&
-duree>0
+finance > 0 &&
+duree > 0
 ){
 
-var mois=
-duree*12;
+var mois =
+duree * 12;
 
 
-var tauxMensuel=
-taux/12;
+var tauxMensuel =
+taux / 12;
 
 
-if(tauxMensuel>0){
+if(tauxMensuel > 0){
 
-paiementMensuel=
-finance*
+paiementMensuel =
+finance *
 (
-tauxMensuel*
+tauxMensuel *
 Math.pow(
 1+tauxMensuel,
 mois
 )
-)/
+)
+/
 (
 Math.pow(
 1+tauxMensuel,
@@ -2545,320 +2781,349 @@ mois
 }
 else{
 
-paiementMensuel=
-finance/mois;
+paiementMensuel =
+finance / mois;
 
 }
 
 
-var totalPaiements=
-paiementMensuel*mois;
+var totalPaiements =
+paiementMensuel * mois;
 
 
-interetsTotaux=
+interetsTotaux =
 Math.max(
 0,
-totalPaiements-finance
+totalPaiements - finance
 );
 
 
-paiementAnnuel=
-paiementMensuel*12;
+paiementAnnuel =
+paiementMensuel * 12;
 
 
-interetsAnnuels=
-interetsTotaux/duree;
+interetsAnnuels =
+interetsTotaux / duree;
 
 }
 
 
-/* =========================================================
-   DEPRECIATION
-========================================================= */
+/* ---------------------------------------------------------
+   DÉPRÉCIATION
+--------------------------------------------------------- */
 
-var perte=
+var perte =
 Math.max(
 0,
-prixAchat-valeurActuelle
+prixAchat - valeurActuelle
 );
 
 
-var depreciation=0;
+var depreciation =
+0;
 
 
-if(annees>0){
+if(annees > 0){
 
-depreciation=
-perte/annees;
+depreciation =
+perte / annees;
 
 }
 
 
-/* =========================================================
-   AUTRES DEPENSES
-========================================================= */
+/* ---------------------------------------------------------
+   AUTRES DÉPENSES
+--------------------------------------------------------- */
 
-var assurance=
+var assurance =
 val("assurance");
 
-var permis=
+var permis =
 val("permis");
 
-var immatriculation=
+var immatriculation =
 val("immatriculation");
 
-var transport=
+var transport =
 val("transport");
 
-var entretien=
+var entretien =
 val("entretien");
 
-var pneus=
+var pneus =
 val("pneus");
 
-var reparations=
+var reparations =
 val("reparations");
 
-var stationnement=
+var stationnement =
 val("stationnement");
 
-var lavage=
+var lavage =
 val("lavage");
 
-var autres=
+var autres =
 val("autres");
 
 
-/* =========================================================
-   COUT ECONOMIQUE
-========================================================= */
+/* ---------------------------------------------------------
+   COÛT ÉCONOMIQUE
+--------------------------------------------------------- */
 
-var annuel=
+var annuel =
 
-carburant+
-assurance+
-permis+
-immatriculation+
-transport+
-entretien+
-pneus+
-reparations+
-stationnement+
-lavage+
-autres+
-depreciation+
+carburant
++
+assurance
++
+permis
++
+immatriculation
++
+transport
++
+entretien
++
+pneus
++
+reparations
++
+stationnement
++
+lavage
++
+autres
++
+depreciation
++
 interetsAnnuels;
 
 
-var mensuel=
-annuel/12;
+var mensuel =
+annuel / 12;
 
 
-var coutKm=
-km>0
-?annuel/km
-:0;
+var coutKm =
+km > 0
+?
+annuel / km
+:
+0;
 
 
-/* =========================================================
-   SORTIE DE TRESORERIE
-========================================================= */
+/* ---------------------------------------------------------
+   SORTIE D'ARGENT
+--------------------------------------------------------- */
 
-var cashAnnuel=
+var cashAnnuel =
 
-carburant+
-assurance+
-permis+
-immatriculation+
-transport+
-entretien+
-pneus+
-reparations+
-stationnement+
-lavage+
-autres+
+carburant
++
+assurance
++
+permis
++
+immatriculation
++
+transport
++
+entretien
++
+pneus
++
+reparations
++
+stationnement
++
+lavage
++
+autres
++
 paiementAnnuel;
 
 
-var cashMensuel=
-cashAnnuel/12;
+var cashMensuel =
+cashAnnuel / 12;
 
 
-/* =========================================================
-   AFFICHAGE DES DEPENSES
-========================================================= */
+/* ---------------------------------------------------------
+   AFFICHAGE
+--------------------------------------------------------- */
 
 document
 .getElementById("rCarburant")
-.textContent=
+.textContent =
 money(carburant);
 
 
 document
 .getElementById("rAssurance")
-.textContent=
+.textContent =
 money(assurance);
 
 
 document
-.getElementById("rPermis")
-.textContent=
-money(permis);
-
-
-document
 .getElementById("rImmat")
-.textContent=
+.textContent =
 money(immatriculation);
 
 
 document
+.getElementById("rPermis")
+.textContent =
+money(permis);
+
+
+document
 .getElementById("rTransport")
-.textContent=
+.textContent =
 money(transport);
 
 
 document
 .getElementById("rEntretien")
-.textContent=
+.textContent =
 money(entretien);
 
 
 document
 .getElementById("rPneus")
-.textContent=
+.textContent =
 money(pneus);
 
 
 document
 .getElementById("rReparations")
-.textContent=
+.textContent =
 money(reparations);
 
 
 document
 .getElementById("rStationnement")
-.textContent=
+.textContent =
 money(stationnement);
 
 
 document
 .getElementById("rLavage")
-.textContent=
+.textContent =
 money(lavage);
 
 
 document
 .getElementById("rAutres")
-.textContent=
+.textContent =
 money(autres);
 
 
 document
 .getElementById("rDepreciation")
-.textContent=
+.textContent =
 money(depreciation);
 
 
 document
 .getElementById("rInterets")
-.textContent=
+.textContent =
 money(interetsAnnuels);
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    FINANCEMENT
-========================================================= */
+--------------------------------------------------------- */
 
 document
 .getElementById("rFinance")
-.textContent=
+.textContent =
 money(finance);
 
 
 document
 .getElementById("rPaiement")
-.textContent=
+.textContent =
 money(paiementMensuel);
 
 
 document
 .getElementById("rInteretsTotaux")
-.textContent=
+.textContent =
 money(interetsTotaux);
 
 
-/* =========================================================
-   RESULTATS
-========================================================= */
+/* ---------------------------------------------------------
+   RÉSULTATS
+--------------------------------------------------------- */
 
 document
 .getElementById("rAnnuel")
-.textContent=
+.textContent =
 money(annuel);
 
 
 document
 .getElementById("rAnnuel2")
-.textContent=
+.textContent =
 money(annuel);
 
 
 document
 .getElementById("rMensuel")
-.textContent=
+.textContent =
 money(mensuel);
 
 
 document
 .getElementById("rMensuelHero")
-.textContent=
+.textContent =
 money(mensuel);
 
 
 document
 .getElementById("rKm")
-.textContent=
-money(coutKm)+" / km";
+.textContent =
+money(coutKm)
++
+" / km";
 
 
 document
 .getElementById("rCashMensuel")
-.textContent=
+.textContent =
 money(cashMensuel);
 
 
-/* =========================================================
-   MESSAGE PERSONNALISE
-========================================================= */
+/* ---------------------------------------------------------
+   MESSAGE
+--------------------------------------------------------- */
 
-var message="";
+var message;
 
 
-if(mensuel<500){
+if(mensuel < 500){
 
-message=
-"Votre coût automobile calculé est relativement faible. "+
+message =
+"Votre coût automobile calculé est relativement faible. "
++
 "Pensez tout de même à prévoir un montant pour les dépenses imprévues.";
 
 }
+else if(mensuel < 900){
 
-
-else if(mensuel<900){
-
-message=
-"Votre automobile représente une dépense importante dans votre budget. "+
-"Le carburant, l'entretien, la dépréciation et le financement peuvent "+
+message =
+"Votre automobile représente une dépense importante dans votre budget. "
++
+"Le carburant, l'entretien, la dépréciation et le financement peuvent "
++
 "représenter une part importante du coût total.";
 
 }
-
-
 else{
 
-message=
-"Votre automobile représente une dépense très importante. "+
-"Le financement, la dépréciation et les coûts d'utilisation peuvent "+
+message =
+"Votre automobile représente une dépense très importante. "
++
+"Le financement, la dépréciation et les coûts d'utilisation peuvent "
++
 "expliquer une grande partie du montant.";
 
 }
@@ -2866,13 +3131,13 @@ message=
 
 document
 .getElementById("messageResultat")
-.textContent=
+.textContent =
 message;
 
 
-/* =========================================================
-   PASSAGE AU RESULTAT
-========================================================= */
+/* ---------------------------------------------------------
+   AFFICHER RÉSULTAT
+--------------------------------------------------------- */
 
 goStep(4);
 
@@ -2885,21 +3150,24 @@ goStep(4);
 
 function recommencer(){
 
+
 document
 .querySelectorAll("input")
 .forEach(function(input){
 
 
-if(input.id==="immatriculation"){
+if(
+input.id ===
+"immatriculation"
+){
 
-input.value=
+input.value =
 "217.41";
 
 }
-
 else{
 
-input.value=
+input.value =
 "";
 
 }
@@ -2909,13 +3177,13 @@ input.value=
 
 document
 .getElementById("transport")
-.value=
+.value =
 "0";
 
 
 document
 .getElementById("permis")
-.value=
+.value =
 "50.23";
 
 
@@ -2939,5 +3207,7 @@ showPage("accueil");
 
 </script>
 
+
 </body>
+
 </html>
