@@ -49,9 +49,9 @@ header{
 }
 .brand-logo{
  display:block;
- width:520px;
+ width:1040px;
  height:auto;
- max-height:175px;
+ max-height:350px;
  object-fit:contain;
 }
 nav{
@@ -171,7 +171,10 @@ input:focus,select:focus{
  font-size:13px
 }
 
-.progress{margin:30px 0;position:relative}
+.progress{
+ margin:30px 0;
+ position:relative
+}
 .progress-track{
  position:absolute;
  z-index:1;
@@ -219,8 +222,7 @@ input:focus,select:focus{
  justify-content:center;
  align-items:center;
  margin:auto auto 6px;
- font-weight:bold;
- border:0
+ font-weight:bold
 }
 .progress-item.active{
  color:#102b46;
@@ -380,9 +382,96 @@ footer button{
  margin-right:15px
 }
 
+.field-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:0 18px
+}
+.field-grid label{margin-top:16px}
+.section-note{
+ background:#f5f7fa;
+ border-left:4px solid #102b46;
+ padding:14px 16px;
+ border-radius:9px;
+ margin:18px 0;
+ color:#4f5b66;
+ font-size:14px
+}
+.analysis-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:14px;
+ margin-top:18px
+}
+.analysis-box{
+ background:white;
+ border-radius:12px;
+ padding:16px;
+ border:1px solid #dce3ea
+}
+.analysis-box strong{
+ display:block;
+ color:#102b46;
+ margin-bottom:5px
+}
+.vehicle-summary{
+ background:#102b46;
+ color:white;
+ border-radius:14px;
+ padding:18px;
+ margin-top:18px
+}
+.vehicle-summary h3{color:white;margin-top:0}
+.vehicle-tags{
+ display:flex;
+ flex-wrap:wrap;
+ gap:8px
+}
+.vehicle-tag{
+ background:rgba(255,255,255,.12);
+ padding:7px 10px;
+ border-radius:7px;
+ font-size:13px
+}
+.projection-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:14px;
+ margin-top:18px
+}
+.projection-box{
+ background:white;
+ border:1px solid #dce3ea;
+ border-radius:12px;
+ padding:18px
+}
+.projection-box h3{margin-top:0}
+.comparison-form{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:0 18px
+}
+.comparison-result{
+ margin-top:18px;
+ background:#f5f7fa;
+ border-radius:12px;
+ padding:18px;
+ display:none
+}
+.comparison-result .winner{
+ font-size:20px;
+ font-weight:bold;
+ color:#102b46
+}
+.source-note{
+ font-size:12px;
+ color:#6d7781;
+ margin-top:12px
+}
+
 @media(max-width:700px){
  .nav{align-items:center;flex-direction:column;min-height:auto}
- .brand-logo{width:340px;max-height:120px}
+ .brand-logo{width:680px;max-height:240px}
  nav{justify-content:center;width:100%}
  .hero-home h1{font-size:30px}
  .feature-grid{grid-template-columns:1fr}
@@ -416,12 +505,9 @@ footer button{
 
 <main class="container">
 
-<!-- ================= ACCUEIL ================= -->
-
 <section id="accueil" class="page active">
 
 <div class="hero-home">
-
 <h1>Combien vous coûte réellement votre voiture?</h1>
 
 <p>
@@ -432,7 +518,6 @@ Carburant, assurance, entretien, dépréciation, financement et plus.
 <button class="cta" onclick="showPage('calculateur')">
 🧮 Calculer mon coût automobile
 </button>
-
 </div>
 
 <div class="feature-grid">
@@ -494,8 +579,6 @@ COMMENCER LE CALCUL
 </section>
 
 
-<!-- ================= CALCULATEUR ================= -->
-
 <section id="calculateur" class="page">
 
 <div class="card">
@@ -538,8 +621,6 @@ Résultat
 </div>
 
 
-<!-- ÉTAPE 1 -->
-
 <div class="step active" id="step1">
 
 <h2>🚘 Votre véhicule</h2>
@@ -554,6 +635,62 @@ Résultat
 <option>Hybride</option>
 <option>Électrique</option>
 </select>
+
+<div class="field-grid">
+
+<div>
+<label>Année</label>
+<input id="anneeVehicule" type="number" min="1900" max="2100" placeholder="2021">
+</div>
+
+<div>
+<label>Marque</label>
+<input id="marqueVehicule" type="text" placeholder="Toyota">
+</div>
+
+<div>
+<label>Modèle</label>
+<input id="modeleVehicule" type="text" placeholder="RAV4">
+</div>
+
+<div>
+<label>Version / finition</label>
+<input id="versionVehicule" type="text" placeholder="XLE AWD">
+</div>
+
+<div>
+<label>Transmission</label>
+<select id="transmission">
+<option>Traction avant (FWD)</option>
+<option>Traction intégrale (AWD)</option>
+<option>4x4</option>
+<option>Propulsion (RWD)</option>
+<option>Autre / inconnue</option>
+</select>
+</div>
+
+<div>
+<label>État général</label>
+<select id="etatVehicule">
+<option>Excellent</option>
+<option selected>Très bon</option>
+<option>Bon</option>
+<option>Moyen</option>
+<option>Mauvais</option>
+</select>
+</div>
+
+</div>
+
+<div class="section-note">
+
+<strong>💡 Pourquoi ces informations?</strong><br>
+
+Elles permettent d'identifier précisément votre véhicule et de préparer
+une future estimation de valeur basée sur des données automobiles externes.
+Pour l'instant, la valeur utilisée dans le calcul reste celle que vous indiquez.
+
+</div>
 
 <label>Prix d'achat ($)</label>
 <input id="prixAchat" type="number" min="0" placeholder="35000">
@@ -580,14 +717,21 @@ Suivant →
 </div>
 
 
-<!-- ÉTAPE 2 -->
-
 <div class="step" id="step2">
 
 <h2>🛣️ Utilisation</h2>
 
 <label>Kilométrage annuel</label>
 <input id="kmAnnuel" type="number" min="0" placeholder="20000">
+
+<label>Type d'utilisation</label>
+
+<select id="profilConduite">
+<option>Mixte — ville et route</option>
+<option>Principalement en ville</option>
+<option>Principalement sur route</option>
+<option>Principalement autoroute</option>
+</select>
 
 <label>Consommation (L/100 km)</label>
 <input id="consommation" type="number" min="0" step="0.1" placeholder="8.5">
@@ -625,8 +769,6 @@ Suivant →
 
 </div>
 
-
-<!-- ÉTAPE 3 -->
 
 <div class="step" id="step3">
 
@@ -666,6 +808,9 @@ Les montants affichés sont des exemples et peuvent varier selon votre situation
 <label>Pneus ($/année)</label>
 <input id="pneus" type="number" min="0" placeholder="400">
 
+<label>Coût prévu pour un prochain remplacement de pneus ($)</label>
+<input id="prochainPneus" type="number" min="0" placeholder="0">
+
 <label>Réparations ($/année)</label>
 <input id="reparations" type="number" min="0" placeholder="800">
 
@@ -695,8 +840,6 @@ Les montants affichés sont des exemples et peuvent varier selon votre situation
 </div>
 
 
-<!-- ÉTAPE 4 -->
-
 <div class="step" id="step4">
 
 <div class="hero">
@@ -707,6 +850,40 @@ VOTRE COÛT AUTOMOBILE MOYEN PAR MOIS
 
 <div class="hero-value" id="rMensuelHero">
 0 $
+</div>
+
+</div>
+
+
+<div class="vehicle-summary">
+
+<h3>🚘 Votre véhicule</h3>
+
+<div class="vehicle-tags">
+
+<span class="vehicle-tag" id="rVehiculeNom">
+Véhicule
+</span>
+
+<span class="vehicle-tag" id="rVehiculeAnnee">
+Année —
+</span>
+
+<span class="vehicle-tag" id="rVehiculeKm">
+0 km
+</span>
+
+<span class="vehicle-tag" id="rVehiculeEtat">
+État —
+</span>
+
+</div>
+
+<div class="source-note" style="color:#dce6ef">
+
+La valeur actuelle utilisée pour la dépréciation provient de votre saisie.
+Une connexion à une source de données automobile pourra être ajoutée ultérieurement.
+
 </div>
 
 </div>
@@ -849,16 +1026,224 @@ Sortie d'argent mensuelle
 
 <div class="tip">
 
-<strong>Pourquoi deux coûts?</strong>
-<br><br>
+<strong>Pourquoi deux coûts?</strong><br><br>
 
 Le <strong>coût économique</strong> tient compte notamment de la
 dépréciation et des intérêts du financement.
 
-<br><br>
-
 La <strong>sortie d'argent</strong> représente plutôt l'argent qui quitte
 réellement votre compte chaque mois, incluant le paiement du prêt.
+
+</div>
+
+
+<div class="result-card" id="blackbook-card">
+
+<h2>📘 Canadian Black Book</h2>
+
+<p>
+Vous voulez une évaluation plus précise de la valeur de votre véhicule?
+Utilisez directement l’outil officiel de Canadian Black Book.
+</p>
+
+<a
+href="https://www.canadianblackbook.com/value-your-vehicle-2/"
+target="_blank"
+rel="noopener noreferrer"
+style="display:block;text-align:center;text-decoration:none;margin-top:16px;background:#102b46;color:#fff;padding:15px 18px;border-radius:11px;font-size:16px;font-weight:bold"
+>
+💰 ÉVALUER MON VÉHICULE AVEC BLACK BOOK →
+</a>
+
+<div class="section-note">
+
+<strong>Comment l’utiliser :</strong><br>
+
+1. Cliquez sur le bouton ci-dessus.<br>
+2. Obtenez votre valeur auprès de Canadian Black Book.<br>
+3. Revenez au calculateur.<br>
+4. Inscrivez cette valeur dans <strong>« Valeur actuelle »</strong> à l’étape 1.<br>
+5. Refaites le calcul pour obtenir une estimation plus précise de votre coût réel.
+
+</div>
+
+<p class="source-note">
+
+La valeur affichée par Canadian Black Book provient de leur propre outil.
+Calculateur Auto Québec ne prétend pas fournir lui-même une valeur Black Book.
+
+</p>
+
+</div>
+
+
+<div class="result-card">
+
+<h2>📆 Projection du coût</h2>
+
+<p class="small">
+Projection simplifiée basée sur vos dépenses actuelles,
+sans inflation ni changement majeur du véhicule.
+</p>
+
+<div class="projection-grid">
+
+<div class="projection-box">
+
+<h3>3 ans</h3>
+
+<div class="row">
+<span>Coût économique estimé</span>
+<strong id="rProjection3">$0</strong>
+</div>
+
+<div class="row">
+<span>Valeur estimée restante</span>
+<strong id="rValeur3">$0</strong>
+</div>
+
+</div>
+
+
+<div class="projection-box">
+
+<h3>5 ans</h3>
+
+<div class="row">
+<span>Coût économique estimé</span>
+<strong id="rProjection5">$0</strong>
+</div>
+
+<div class="row">
+<span>Valeur estimée restante</span>
+<strong id="rValeur5">$0</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="result-card">
+
+<h2>🔎 Où va votre argent?</h2>
+
+<p class="small">
+Les dépenses sont classées automatiquement selon leur importance
+dans votre coût économique annuel.
+</p>
+
+<div class="analysis-grid">
+
+<div class="analysis-box">
+<strong id="rTop1Nom">—</strong>
+<span id="rTop1Valeur">$0</span>
+</div>
+
+<div class="analysis-box">
+<strong id="rTop2Nom">—</strong>
+<span id="rTop2Valeur">$0</span>
+</div>
+
+<div class="analysis-box">
+<strong id="rTop3Nom">—</strong>
+<span id="rTop3Valeur">$0</span>
+</div>
+
+</div>
+
+<div class="compare">
+
+<h3>💡 Analyse</h3>
+
+<p id="analyseDetail"></p>
+
+</div>
+
+</div>
+
+
+<div class="result-card">
+
+<h2>⚖️ Comparer avec un autre véhicule</h2>
+
+<p class="small">
+Entrez les principaux coûts annuels de l'autre véhicule pour voir
+lequel vous coûte le moins cher. Cette comparaison ne nécessite
+pas de données externes.
+</p>
+
+<div class="comparison-form">
+
+<div>
+<label>Nom du véhicule à comparer</label>
+<input id="comparaisonNom" type="text" placeholder="Honda CR-V 2021">
+</div>
+
+<div>
+<label>Coût annuel de carburant ($)</label>
+<input id="comparaisonCarburant" type="number" min="0" placeholder="1900">
+</div>
+
+<div>
+<label>Assurance ($/année)</label>
+<input id="comparaisonAssurance" type="number" min="0" placeholder="1250">
+</div>
+
+<div>
+<label>Entretien ($/année)</label>
+<input id="comparaisonEntretien" type="number" min="0" placeholder="1000">
+</div>
+
+<div>
+<label>Pneus ($/année)</label>
+<input id="comparaisonPneus" type="number" min="0" placeholder="450">
+</div>
+
+<div>
+<label>Réparations ($/année)</label>
+<input id="comparaisonReparations" type="number" min="0" placeholder="700">
+</div>
+
+<div>
+<label>Dépréciation ($/année)</label>
+<input id="comparaisonDepreciation" type="number" min="0" placeholder="3000">
+</div>
+
+<div>
+<label>Intérêts ($/année)</label>
+<input id="comparaisonInterets" type="number" min="0" placeholder="1000">
+</div>
+
+<div>
+<label>Autres coûts ($/année)</label>
+<input id="comparaisonAutres" type="number" min="0" placeholder="1500">
+</div>
+
+<div>
+<label>Kilométrage annuel</label>
+<input id="comparaisonKm" type="number" min="0" placeholder="20000">
+</div>
+
+</div>
+
+<button
+class="calculate"
+style="width:100%;margin-top:20px"
+onclick="comparerVehicules()"
+>
+⚖️ COMPARER LES COÛTS
+</button>
+
+<div class="comparison-result" id="comparisonResult">
+
+<div class="winner" id="comparisonWinner"></div>
+
+<p id="comparisonDetails"></p>
+
+</div>
 
 </div>
 
@@ -873,8 +1258,6 @@ réellement votre compte chaque mois, incluant le paiement du prêt.
 
 </section>
 
-
-<!-- ================= GUIDES ================= -->
 
 <section id="guides" class="page">
 
@@ -983,8 +1366,6 @@ annuelles plutôt que d'imposer une valeur unique à tous les conducteurs.
 </section>
 
 
-<!-- ================= COMMENT ÇA MARCHE ================= -->
-
 <section id="comment-ca-marche" class="page">
 
 <div class="card article">
@@ -1033,9 +1414,9 @@ totaux du prêt.
 
 <strong>💡 À retenir :</strong>
 
-le coût économique tient notamment compte de la dépréciation et des
-intérêts du financement, tandis que la sortie d'argent mesure davantage
-les sommes qui quittent réellement votre compte.
+le coût économique tient notamment compte de la dépréciation et des intérêts
+du financement, tandis que la sortie d'argent mesure davantage les sommes
+qui quittent réellement votre compte.
 
 </div>
 
@@ -1043,8 +1424,6 @@ les sommes qui quittent réellement votre compte.
 
 </section>
 
-
-<!-- ================= A PROPOS ================= -->
 
 <section id="apropos" class="page">
 
@@ -1059,8 +1438,8 @@ automobile plus facile à comprendre.
 
 <p>
 L'idée est simple : plutôt que de regarder uniquement le prix d'achat
-ou le paiement mensuel, nous voulons permettre aux automobilistes de
-considérer l'ensemble des dépenses associées à leur véhicule.
+ou le paiement mensuel, nous voulons permettre aux automobilistes
+de considérer l'ensemble des dépenses associées à leur véhicule.
 </p>
 
 <h2>Notre objectif</h2>
@@ -1083,8 +1462,6 @@ des conseils financiers, fiscaux, juridiques ou professionnels.
 
 </section>
 
-
-<!-- ================= CONFIDENTIALITE ================= -->
 
 <section id="confidentialite" class="page">
 
@@ -1129,8 +1506,6 @@ Pour toute question concernant la confidentialité, vous pouvez nous écrire
 </section>
 
 
-<!-- ================= CONTACT ================= -->
-
 <section id="contact" class="page">
 
 <div class="card article">
@@ -1164,8 +1539,6 @@ le résultat concernés.
 
 </section>
 
-
-<!-- ================= CONDITIONS ================= -->
 
 <section id="conditions" class="page">
 
@@ -1204,7 +1577,6 @@ avant de prendre une décision financière ou automobile.
 <div class="footer-inner">
 
 <div>
-
 <strong>Calculateur Auto Québec</strong>
 
 <p>
@@ -1327,7 +1699,16 @@ showError(
 );
 
 return;
+}
 
+if(val("anneeVehicule")<1900 || val("anneeVehicule")>2100){
+
+showError(
+"error1",
+"Veuillez entrer une année de véhicule valide."
+);
+
+return;
 }
 
 if(val("valeurActuelle")<0){
@@ -1338,7 +1719,6 @@ showError(
 );
 
 return;
-
 }
 
 if(val("anneesPossession")<=0){
@@ -1349,7 +1729,16 @@ showError(
 );
 
 return;
+}
 
+if(val("kmActuel")<0){
+
+showError(
+"error1",
+"Le kilométrage actuel ne peut pas être négatif."
+);
+
+return;
 }
 
 }
@@ -1366,7 +1755,6 @@ showError(
 );
 
 return;
-
 }
 
 if(val("consommation")<0){
@@ -1377,7 +1765,6 @@ showError(
 );
 
 return;
-
 }
 
 }
@@ -1435,6 +1822,12 @@ hideError("error3");
 var prixAchat=val("prixAchat");
 var valeurActuelle=val("valeurActuelle");
 var annees=val("anneesPossession");
+var anneeVehicule=val("anneeVehicule");
+var marqueVehicule=document.getElementById("marqueVehicule").value.trim();
+var modeleVehicule=document.getElementById("modeleVehicule").value.trim();
+var versionVehicule=document.getElementById("versionVehicule").value.trim();
+var etatVehicule=document.getElementById("etatVehicule").value;
+var kmActuel=val("kmActuel");
 
 
 /* UTILISATION */
@@ -1535,6 +1928,7 @@ var immatriculation=val("immatriculation");
 var transport=val("transport");
 var entretien=val("entretien");
 var pneus=val("pneus");
+var prochainPneus=val("prochainPneus");
 var reparations=val("reparations");
 var stationnement=val("stationnement");
 var lavage=val("lavage");
@@ -1585,6 +1979,77 @@ autres+
 paiementAnnuel;
 
 var cashMensuel=cashAnnuel/12;
+
+
+/* PROJECTION */
+
+var coutRecurrents=Math.max(
+0,
+annuel-depreciation
+);
+
+var projection3=
+coutRecurrents*3+
+Math.min(
+valeurActuelle,
+depreciation*3
+);
+
+var projection5=
+coutRecurrents*5+
+Math.min(
+valeurActuelle,
+depreciation*5
+);
+
+var valeur3=
+Math.max(
+0,
+valeurActuelle-depreciation*3
+);
+
+var valeur5=
+Math.max(
+0,
+valeurActuelle-depreciation*5
+);
+
+
+/* ANALYSE DES DEPENSES */
+
+var postes=[
+
+{nom:"Carburant",valeur:carburant},
+
+{nom:"Assurance",valeur:assurance},
+
+{nom:"Immatriculation",valeur:immatriculation},
+
+{nom:"Permis",valeur:permis},
+
+{nom:"Transport / TIV",valeur:transport},
+
+{nom:"Entretien",valeur:entretien},
+
+{nom:"Pneus",valeur:pneus},
+
+{nom:"Réparations",valeur:reparations},
+
+{nom:"Stationnement",valeur:stationnement},
+
+{nom:"Lavage / esthétique",valeur:lavage},
+
+{nom:"Autres",valeur:autres},
+
+{nom:"Dépréciation",valeur:depreciation},
+
+{nom:"Intérêts",valeur:interetsAnnuels}
+
+];
+
+postes.sort(function(a,b){
+return b.valeur-a.valeur;
+});
 
 
 /* AFFICHAGE */
@@ -1662,6 +2127,103 @@ document.getElementById("rCashMensuel").textContent=
 money(cashMensuel);
 
 
+/* VEHICULE */
+
+var nomVehicule=
+(marqueVehicule+" "+modeleVehicule).trim();
+
+if(versionVehicule)
+nomVehicule+=" "+versionVehicule;
+
+if(!nomVehicule)
+nomVehicule="Véhicule";
+
+document.getElementById("rVehiculeNom").textContent=
+nomVehicule;
+
+document.getElementById("rVehiculeAnnee").textContent=
+"Année "+anneeVehicule;
+
+document.getElementById("rVehiculeKm").textContent=
+kmActuel.toLocaleString("fr-CA")+" km";
+
+document.getElementById("rVehiculeEtat").textContent=
+"État : "+etatVehicule;
+
+
+/* PROJECTION */
+
+document.getElementById("rProjection3").textContent=
+money(projection3);
+
+document.getElementById("rValeur3").textContent=
+money(valeur3);
+
+document.getElementById("rProjection5").textContent=
+money(projection5);
+
+document.getElementById("rValeur5").textContent=
+money(valeur5);
+
+
+/* TOP DEPENSES */
+
+for(var t=1;t<=3;t++){
+
+var poste=
+postes[t-1]||
+{nom:"—",valeur:0};
+
+document.getElementById(
+"rTop"+t+"Nom"
+).textContent=
+poste.nom;
+
+document.getElementById(
+"rTop"+t+"Valeur"
+).textContent=
+money(poste.valeur);
+
+}
+
+var partTop=
+annuel>0
+?
+((postes[0].valeur/annuel)*100)
+:
+0;
+
+var analyse=
+"Votre plus grande dépense est "+
+postes[0].nom+
+" avec "+
+money(postes[0].valeur)+
+" par année ("+
+partTop.toFixed(1)+
+" % du coût économique).";
+
+if(depreciation>0){
+
+analyse+=
+" La dépréciation représente "+
+((depreciation/annuel)*100).toFixed(1)+
+" % de votre coût total.";
+
+}
+
+if(prochainPneus>0){
+
+analyse+=
+" Vous avez aussi prévu "+
+money(prochainPneus)+
+" pour un prochain remplacement de pneus.";
+
+}
+
+document.getElementById("analyseDetail").textContent=
+analyse;
+
+
 /* MESSAGE */
 
 var message="";
@@ -1669,23 +2231,25 @@ var message="";
 if(mensuel<500){
 
 message=
-"Votre coût automobile calculé est relativement faible. " +
+"Votre coût automobile calculé est relativement faible. "+
 "Pensez tout de même à prévoir un montant pour les dépenses imprévues.";
 
 }
+
 else if(mensuel<900){
 
 message=
-"Votre automobile représente une dépense importante dans votre budget. " +
-"Le carburant, l'entretien, la dépréciation et le financement peuvent " +
+"Votre automobile représente une dépense importante dans votre budget. "+
+"Le carburant, l'entretien, la dépréciation et le financement peuvent "+
 "représenter une part importante du coût total.";
 
 }
+
 else{
 
 message=
-"Votre automobile représente une dépense très importante. " +
-"Le financement, la dépréciation et les coûts d'utilisation peuvent " +
+"Votre automobile représente une dépense très importante. "+
+"Le financement, la dépréciation et les coûts d'utilisation peuvent "+
 "expliquer une grande partie du montant.";
 
 }
@@ -1697,6 +2261,163 @@ message;
 /* PASSAGE AU RESULTAT */
 
 goStep(4);
+
+}
+
+
+/* =========================================================
+   COMPARAISON DE VEHICULES
+========================================================= */
+
+function comparerVehicules(){
+
+var autreNom=
+document.getElementById("comparaisonNom").value.trim()
+||
+"Autre véhicule";
+
+var autreCarburant=
+val("comparaisonCarburant");
+
+var autreAssurance=
+val("comparaisonAssurance");
+
+var autreEntretien=
+val("comparaisonEntretien");
+
+var autrePneus=
+val("comparaisonPneus");
+
+var autreReparations=
+val("comparaisonReparations");
+
+var autreDepreciation=
+val("comparaisonDepreciation");
+
+var autreInterets=
+val("comparaisonInterets");
+
+var autreAutres=
+val("comparaisonAutres");
+
+var autreKm=
+val("comparaisonKm");
+
+var notreAnnuel=
+parseMoney(
+document.getElementById("rAnnuel").textContent
+);
+
+var notreKm=
+val("kmAnnuel");
+
+var autreTotal=
+autreCarburant+
+autreAssurance+
+autreEntretien+
+autrePneus+
+autreReparations+
+autreDepreciation+
+autreInterets+
+autreAutres;
+
+var notreParKm=
+notreKm>0
+?notreAnnuel/notreKm
+:0;
+
+var autreParKm=
+autreKm>0
+?autreTotal/autreKm
+:0;
+
+var result=
+document.getElementById("comparisonResult");
+
+var winner=
+document.getElementById("comparisonWinner");
+
+var details=
+document.getElementById("comparisonDetails");
+
+var nomNotre=
+document.getElementById("rVehiculeNom").textContent
+||
+"Votre véhicule";
+
+result.style.display="block";
+
+if(autreTotal<=0){
+
+winner.textContent=
+"Entrez au moins un coût pour le véhicule à comparer.";
+
+details.textContent="";
+
+return;
+
+}
+
+var difference=
+Math.abs(
+notreAnnuel-autreTotal
+);
+
+var moinsCher=
+notreAnnuel<=autreTotal
+?nomNotre
+:autreNom;
+
+winner.textContent=
+"🏆 Le moins cher : "+
+moinsCher;
+
+details.textContent=
+nomNotre+
+" : "+
+money(notreAnnuel)+
+" / année ("+
+(
+notreParKm>0
+?
+money(notreParKm)+" / km"
+:
+"coût/km non disponible"
+)+
+"). "+
+
+autreNom+
+" : "+
+money(autreTotal)+
+" / année ("+
+(
+autreParKm>0
+?
+money(autreParKm)+" / km"
+:
+"coût/km non disponible"
+)+
+"). Différence : "+
+money(difference)+
+" par année.";
+
+}
+
+
+function parseMoney(text){
+
+if(!text)return 0;
+
+var normalized=
+text
+.replace(/\s/g,"")
+.replace(/[^\d,.-]/g,"")
+.replace(/\./g,"")
+.replace(",", ".");
+
+var n=parseFloat(normalized);
+
+return isNaN(n)?0:n;
 
 }
 
@@ -1736,7 +2457,9 @@ goStep(1);
    INITIALISATION
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener(
+"DOMContentLoaded",
+function(){
 
 showPage("accueil");
 
