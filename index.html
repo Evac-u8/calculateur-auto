@@ -18,12 +18,12 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Calculateur Auto Québec",
-  "url": "https://calculateurauto.ca/",
-  "description": "Calculateur automobile Québec pour estimer le coût réel d'une voiture par mois, par année et par kilomètre.",
-  "inLanguage": "fr-CA"
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Calculateur Auto Québec",
+  "url":"https://calculateurauto.ca/",
+  "description":"Calculateur automobile Québec pour estimer le coût réel d'une voiture par mois, par année et par kilomètre.",
+  "inLanguage":"fr-CA"
 }
 </script>
 
@@ -640,6 +640,7 @@ Résultat
 </select>
 
 <div class="field-grid">
+
 <div>
 <label>Année</label>
 <input id="anneeVehicule" type="number" min="1900" max="2100" placeholder="2021">
@@ -681,6 +682,7 @@ Résultat
 <option>Mauvais</option>
 </select>
 </div>
+
 </div>
 
 <div class="section-note">
@@ -841,10 +843,10 @@ VOTRE COÛT AUTOMOBILE MOYEN PAR MOIS
 </div>
 
 <div class="source-note" style="color:#dce6ef">
-La valeur actuelle utilisée pour la dépréciation provient de votre saisie. Une connexion à une source de données automobile pourra être ajoutée ultérieurement.
+La valeur actuelle utilisée pour la dépréciation provient de votre saisie.
+Une connexion à une source de données automobile pourra être ajoutée ultérieurement.
 </div>
 </div>
-
 
 <div class="result-card">
 
@@ -922,7 +924,6 @@ Coût économique annuel
 
 </div>
 
-
 <div class="result-card">
 
 <h2>🏦 Financement</h2>
@@ -943,7 +944,6 @@ Coût économique annuel
 </div>
 
 </div>
-
 
 <div class="result-card">
 
@@ -971,15 +971,12 @@ Sortie d'argent mensuelle
 
 </div>
 
-
 <div class="compare">
 <h3>💡 À retenir</h3>
 <p id="messageResultat"></p>
 </div>
 
-
 <div class="tip">
-
 <strong>Pourquoi deux coûts?</strong><br><br>
 
 Le <strong>coût économique</strong> tient compte notamment de la
@@ -987,60 +984,53 @@ dépréciation et des intérêts du financement.
 
 La <strong>sortie d'argent</strong> représente plutôt l'argent qui quitte
 réellement votre compte chaque mois, incluant le paiement du prêt.
-
 </div>
-
 
 <div class="result-card">
 
 <h2>📆 Projection du coût</h2>
 
 <p class="small">
-Projection simplifiée basée sur vos dépenses actuelles, sans inflation ni changement majeur du véhicule.
+Projection simplifiée basée sur vos dépenses actuelles,
+sans inflation ni changement majeur du véhicule.
 </p>
 
 <div class="projection-grid">
 
 <div class="projection-box">
 <h3>3 ans</h3>
-
 <div class="row">
 <span>Coût économique estimé</span>
 <strong id="rProjection3">$0</strong>
 </div>
-
 <div class="row">
 <span>Valeur estimée restante</span>
 <strong id="rValeur3">$0</strong>
 </div>
-
 </div>
 
 <div class="projection-box">
 <h3>5 ans</h3>
-
 <div class="row">
 <span>Coût économique estimé</span>
 <strong id="rProjection5">$0</strong>
 </div>
-
 <div class="row">
 <span>Valeur estimée restante</span>
 <strong id="rValeur5">$0</strong>
 </div>
-
 </div>
 
 </div>
 </div>
-
 
 <div class="result-card">
 
 <h2>🔎 Où va votre argent?</h2>
 
 <p class="small">
-Les dépenses sont classées automatiquement selon leur importance dans votre coût économique annuel.
+Les dépenses sont classées automatiquement selon leur importance
+dans votre coût économique annuel.
 </p>
 
 <div class="analysis-grid">
@@ -1069,13 +1059,14 @@ Les dépenses sont classées automatiquement selon leur importance dans votre co
 
 </div>
 
-
 <div class="result-card">
 
 <h2>⚖️ Comparer avec un autre véhicule</h2>
 
 <p class="small">
-Entrez les principaux coûts annuels de l'autre véhicule pour voir lequel vous coûte le moins cher. Cette comparaison ne nécessite pas de données externes.
+Entrez les principaux coûts annuels de l'autre véhicule pour voir
+lequel vous coûte le moins cher. Cette comparaison ne nécessite
+pas de données externes.
 </p>
 
 <div class="comparison-form">
@@ -1143,39 +1134,41 @@ Entrez les principaux coûts annuels de l'autre véhicule pour voir lequel vous 
 
 </div>
 
-
 <div class="result-card">
 
 <h2>📘 Canadian Black Book</h2>
 
 <p>
-Vous pouvez vérifier la valeur actuelle de votre véhicule directement avec Canadian Black Book, puis revenir ici pour utiliser cette valeur dans votre calcul.
+Vous pouvez vérifier la valeur actuelle de votre véhicule directement
+avec Canadian Black Book, puis revenir ici pour utiliser cette valeur
+dans votre calcul.
 </p>
 
 <p>
 <strong>1.</strong> Cliquez sur le bouton ci-dessous.<br>
 <strong>2.</strong> Obtenez la valeur de votre véhicule sur Canadian Black Book.<br>
 <strong>3.</strong> Revenez dans le calculateur.<br>
-<strong>4.</strong> Entrez la valeur obtenue dans <strong>« Valeur actuelle »</strong> et refaites le calcul.
+<strong>4.</strong> Entrez la valeur obtenue dans <strong>« Valeur actuelle »</strong>
+et refaites le calcul.
 </p>
 
-<button class="calculate" style="width:100%;margin-top:10px" onclick="window.open('https://www.canadianblackbook.com/value-your-vehicle-2/','_blank','noopener,noreferrer')">
+<button class="calculate" style="width:100%;margin-top:10px"
+onclick="window.open('https://www.canadianblackbook.com/value-your-vehicle-2/','_blank','noopener,noreferrer')">
 📘 OUVRIR CANADIAN BLACK BOOK
 </button>
 
 <p class="small" style="margin-top:15px">
-La valeur fournie par Canadian Black Book provient de Canadian Black Book et non de Calculateur Auto Québec.
+La valeur fournie par Canadian Black Book provient de Canadian Black Book
+et non de Calculateur Auto Québec.
 </p>
 
 </div>
-
 
 <button class="reset" onclick="recommencer()">
 ↻ REFAIRE UN CALCUL
 </button>
 
 </div>
-
 </div>
 </section>
 
@@ -1189,30 +1182,32 @@ La valeur fournie par Canadian Black Book provient de Canadian Black Book et non
 <h2>Combien coûte réellement une voiture par mois au Québec?</h2>
 
 <p>
-Quand on pense au coût d'une voiture, on pense souvent au paiement mensuel. Pourtant,
-le paiement n'est qu'une partie de la facture. Une automobile peut aussi entraîner des
-coûts de carburant, d'assurance, d'entretien, de pneus, de réparations, d'immatriculation,
-de permis, de stationnement, de financement et de dépréciation.
+Quand on pense au coût d'une voiture, on pense souvent au paiement mensuel.
+Pourtant, le paiement n'est qu'une partie de la facture. Une automobile peut
+aussi entraîner des coûts de carburant, d'assurance, d'entretien, de pneus,
+de réparations, d'immatriculation, de permis, de stationnement, de financement
+et de dépréciation.
 </p>
 
 <p>
-C'est pour cette raison qu'il est utile de regarder le <strong>coût réel d'une voiture</strong>
-plutôt que seulement son paiement. Une voiture qui coûte 450 $ par mois à financer peut,
-une fois toutes les autres dépenses ajoutées, représenter un budget beaucoup plus élevé.
+C'est pour cette raison qu'il est utile de regarder le
+<strong>coût réel d'une voiture</strong> plutôt que seulement son paiement.
+Une voiture qui coûte 450 $ par mois à financer peut, une fois toutes les
+autres dépenses ajoutées, représenter un budget beaucoup plus élevé.
 </p>
 
 <div class="article-box">
 <strong>🧮 Le moyen le plus simple de connaître votre coût réel :</strong><br><br>
-Entrez vos propres chiffres dans notre calculateur automobile. Vous obtiendrez une estimation
-de votre coût annuel, mensuel et par kilomètre.
+Entrez vos propres chiffres dans notre calculateur automobile.
+Vous obtiendrez une estimation de votre coût annuel, mensuel et par kilomètre.
 </div>
 
 <h3>Les principales dépenses d'une voiture</h3>
 
 <p>
-Pour avoir une vision réaliste de votre budget automobile, il faut considérer plusieurs
-catégories de dépenses. Certaines sont faciles à voir, tandis que d'autres sont souvent
-oubliées.
+Pour avoir une vision réaliste de votre budget automobile, il faut considérer
+plusieurs catégories de dépenses. Certaines sont faciles à voir, tandis que
+d'autres sont souvent oubliées.
 </p>
 
 <ul>
@@ -1230,52 +1225,57 @@ oubliées.
 <h3>Pourquoi le paiement mensuel peut être trompeur</h3>
 
 <p>
-Comparer deux véhicules uniquement avec leur paiement mensuel peut donner une image
-incomplète. Un véhicule avec un paiement plus élevé peut parfois coûter moins cher à
-utiliser s'il consomme moins de carburant, coûte moins cher à assurer ou conserve mieux
-sa valeur. À l'inverse, un paiement plus faible ne signifie pas nécessairement que le
-véhicule est moins coûteux à posséder.
+Comparer deux véhicules uniquement avec leur paiement mensuel peut donner
+une image incomplète. Un véhicule avec un paiement plus élevé peut parfois
+coûter moins cher à utiliser s'il consomme moins de carburant, coûte moins
+cher à assurer ou conserve mieux sa valeur. À l'inverse, un paiement plus
+faible ne signifie pas nécessairement que le véhicule est moins coûteux
+à posséder.
 </p>
 
 <p>
-La durée du financement joue également un rôle. Un prêt plus long peut réduire le paiement
-mensuel, mais il peut augmenter le montant total des intérêts payés. Il faut donc regarder
-à la fois le montant mensuel et le coût total.
+La durée du financement joue également un rôle. Un prêt plus long peut réduire
+le paiement mensuel, mais il peut augmenter le montant total des intérêts payés.
+Il faut donc regarder à la fois le montant mensuel et le coût total.
 </p>
 
 <h3>La dépréciation : le coût souvent oublié</h3>
 
 <p>
-La dépréciation correspond à la perte de valeur d'un véhicule avec le temps. Elle n'apparaît
-pas nécessairement dans votre compte bancaire chaque mois, mais elle fait partie du coût
-économique de possession.
+La dépréciation correspond à la perte de valeur d'un véhicule avec le temps.
+Elle n'apparaît pas nécessairement dans votre compte bancaire chaque mois,
+mais elle fait partie du coût économique de possession.
 </p>
 
 <p>
-Par exemple, si vous avez acheté un véhicule 35 000 $ et qu'il vaut maintenant 25 000 $,
-la différence représente 10 000 $ de perte de valeur depuis l'achat. La vitesse de cette
-perte peut varier énormément selon le modèle, l'âge, le kilométrage, l'état et le marché.
+Par exemple, si vous avez acheté un véhicule 35 000 $ et qu'il vaut maintenant
+25 000 $, la différence représente 10 000 $ de perte de valeur depuis l'achat.
+La vitesse de cette perte peut varier énormément selon le modèle, l'âge,
+le kilométrage, l'état et le marché.
 </p>
 
 <h3>Combien coûte une voiture par kilomètre?</h3>
 
 <p>
-Le coût par kilomètre est une autre façon très utile de mesurer le coût d'une automobile.
-Il permet de tenir compte du nombre de kilomètres parcourus et facilite la comparaison
-entre différents véhicules ou différentes habitudes de déplacement.
+Le coût par kilomètre est une autre façon très utile de mesurer le coût
+d'une automobile. Il permet de tenir compte du nombre de kilomètres parcourus
+et facilite la comparaison entre différents véhicules ou différentes habitudes
+de déplacement.
 </p>
 
 <p>
-Dans notre calculateur, le coût automobile annuel est divisé par le kilométrage annuel
-pour obtenir une estimation du coût par kilomètre. Plus vous parcourez de kilomètres,
-plus certains coûts fixes sont répartis sur un plus grand nombre de kilomètres.
+Dans notre calculateur, le coût automobile annuel est divisé par le kilométrage
+annuel pour obtenir une estimation du coût par kilomètre. Plus vous parcourez
+de kilomètres, plus certains coûts fixes sont répartis sur un plus grand nombre
+de kilomètres.
 </p>
 
 <h3>Comment réduire le coût de sa voiture?</h3>
 
 <p>
-Il n'existe pas une seule façon de réduire le coût automobile. Le meilleur levier dépend
-de la situation de chaque conducteur. Voici quelques pistes à examiner :
+Il n'existe pas une seule façon de réduire le coût automobile. Le meilleur
+levier dépend de la situation de chaque conducteur. Voici quelques pistes
+à examiner :
 </p>
 
 <ul>
@@ -1291,52 +1291,56 @@ de la situation de chaque conducteur. Voici quelques pistes à examiner :
 <h3>Une voiture à 500 $ par mois coûte-t-elle vraiment 500 $?</h3>
 
 <p>
-Dans la plupart des situations, non. Si le paiement est de 500 $ par mois, il faut encore
-ajouter les autres dépenses liées au véhicule. Le coût réel dépendra de votre kilométrage,
-de votre consommation, de votre assurance, de vos frais d'entretien et de réparation,
-de votre financement et de la perte de valeur du véhicule.
+Dans la plupart des situations, non. Si le paiement est de 500 $ par mois,
+il faut encore ajouter les autres dépenses liées au véhicule. Le coût réel
+dépendra de votre kilométrage, de votre consommation, de votre assurance,
+de vos frais d'entretien et de réparation, de votre financement et de la
+perte de valeur du véhicule.
 </p>
 
 <p>
-C'est exactement la différence entre regarder uniquement une mensualité et calculer le
-<strong>coût réel de possession</strong> d'une automobile.
+C'est exactement la différence entre regarder uniquement une mensualité
+et calculer le <strong>coût réel de possession</strong> d'une automobile.
 </p>
 
 <div class="article-box">
 <strong>💡 À retenir :</strong><br><br>
-Pour connaître ce qu'une voiture vous coûte réellement, ne regardez pas seulement le
-paiement. Additionnez les dépenses récurrentes et tenez compte de la dépréciation et des
-intérêts du financement. Ensuite, divisez le coût annuel par 12 pour connaître le coût
-mensuel moyen et par votre kilométrage annuel pour connaître le coût par kilomètre.
+Pour connaître ce qu'une voiture vous coûte réellement, ne regardez pas
+seulement le paiement. Additionnez les dépenses récurrentes et tenez compte
+de la dépréciation et des intérêts du financement. Ensuite, divisez le coût
+annuel par 12 pour connaître le coût mensuel moyen et par votre kilométrage
+annuel pour connaître le coût par kilomètre.
 </div>
 
 <p>
 <strong>Vous voulez connaître votre propre coût?</strong> Utilisez le
-calculateur automobile de Calculateur Auto Québec et entrez vos chiffres réels. Vous
-pourrez voir immédiatement votre coût annuel, votre coût mensuel et votre coût par kilomètre.
+calculateur automobile de Calculateur Auto Québec et entrez vos chiffres
+réels. Vous pourrez voir immédiatement votre coût annuel, votre coût mensuel
+et votre coût par kilomètre.
 </p>
-
 
 <h2>Quel est le coût mensuel moyen d'une voiture au Québec?</h2>
 
 <p>
-Il n'existe pas un montant mensuel unique qui représente le coût d'une voiture pour tout le monde. Le budget dépend du véhicule, du kilométrage, de la consommation, de l'assurance, du financement et de plusieurs autres dépenses.
+Il n'existe pas un montant mensuel unique qui représente le coût d'une voiture
+pour tout le monde. Le budget dépend du véhicule, du kilométrage, de la
+consommation, de l'assurance, du financement et de plusieurs autres dépenses.
 </p>
 
 <p>
-La meilleure façon d'estimer votre budget est donc de regarder l'ensemble des coûts liés à votre automobile plutôt que de vous fier uniquement à son paiement mensuel.
+La meilleure façon d'estimer votre budget est donc de regarder l'ensemble
+des coûts liés à votre automobile plutôt que de vous fier uniquement à son
+paiement mensuel.
 </p>
 
 <div class="article-box">
 <strong>💡 Le chiffre à retenir :</strong><br><br>
-Votre véritable budget automobile mensuel devrait tenir compte des dépenses qui reviennent chaque année, mais aussi des coûts moins visibles comme la dépréciation et les intérêts du financement.
+Votre véritable budget automobile mensuel devrait tenir compte des dépenses
+qui reviennent chaque année, mais aussi des coûts moins visibles comme la
+dépréciation et les intérêts du financement.
 </div>
 
 <h3>💰 Quels coûts faut-il inclure?</h3>
-
-<p>
-Pour établir un budget automobile réaliste, commencez par dresser la liste de toutes les dépenses associées à votre véhicule.
-</p>
 
 <ul>
 <li><strong>Paiement du véhicule :</strong> montant versé au prêteur lorsque l'automobile est financée.</li>
@@ -1349,406 +1353,358 @@ Pour établir un budget automobile réaliste, commencez par dresser la liste de 
 <li><strong>Stationnement :</strong> garage, stationnement au travail ou autres frais.</li>
 <li><strong>Dépréciation :</strong> perte de valeur du véhicule avec le temps.</li>
 <li><strong>Intérêts :</strong> coût du financement qui s'ajoute au prix du véhicule.</li>
-</ul>
-
-<h3>🏦 Le paiement mensuel n'est pas le budget automobile</h3>
+</ul><h3>🏦 Le paiement mensuel n'est pas le budget automobile</h3>
 
 <p>
-Supposons qu'un véhicule ait un paiement de 500 $ par mois. Cela représente 6 000 $ par année, mais ce montant ne comprend pas nécessairement le carburant, l'assurance, l'entretien, les pneus, les réparations et les autres coûts d'utilisation.
+Supposons qu'un véhicule ait un paiement de 500 $ par mois. Cela représente
+6 000 $ par année, mais ce montant ne comprend pas nécessairement le carburant,
+l'assurance, l'entretien, les pneus, les réparations et les autres coûts
+d'utilisation.
 </p>
 
 <p>
-C'est pourquoi un paiement de 500 $ ne signifie pas nécessairement que votre voiture coûte 500 $ par mois. Votre budget réel peut être considérablement plus élevé.
+C'est pourquoi un paiement de 500 $ ne signifie pas nécessairement que votre
+voiture coûte 500 $ par mois. Votre budget réel peut être considérablement
+plus élevé.
 </p>
 
 <p>
-L'Office de la protection du consommateur du Québec recommande de ne pas déterminer son budget automobile uniquement selon un paiement hebdomadaire ou mensuel et de considérer le montant total de la dépense. CAA-Québec recommande également de tenir compte de l'assurance, du carburant, de l'entretien, des pneus, de l'immatriculation et du financement lorsque vous établissez votre budget automobile.
+L'Office de la protection du consommateur du Québec recommande de ne pas
+déterminer son budget automobile uniquement selon un paiement hebdomadaire
+ou mensuel et de considérer le montant total de la dépense. CAA-Québec
+recommande également de tenir compte de l'assurance, du carburant, de
+l'entretien, des pneus, de l'immatriculation et du financement lorsque
+vous établissez votre budget automobile.
 </p>
 
 <h3>📉 Pourquoi la dépréciation doit être considérée</h3>
 
 <p>
-La dépréciation est particulière parce qu'elle ne représente pas nécessairement une sortie d'argent chaque mois. Pourtant, elle représente une diminution de la valeur de votre véhicule.
+La dépréciation est particulière parce qu'elle ne représente pas nécessairement
+une sortie d'argent chaque mois. Pourtant, elle représente une diminution de
+la valeur de votre véhicule.
 </p>
 
 <p>
-Par exemple, un véhicule acheté 35 000 $ qui vaut 25 000 $ après plusieurs années a perdu 10 000 $ de valeur. Cette perte doit être considérée lorsqu'on veut comparer le coût économique de différents véhicules.
+Par exemple, un véhicule acheté 35 000 $ qui vaut 25 000 $ après plusieurs
+années a perdu 10 000 $ de valeur. Cette perte doit être considérée lorsqu'on
+veut comparer le coût économique de différents véhicules.
 </p>
 
 <p>
-La dépréciation varie selon le modèle, l'année, le kilométrage, l'état et le marché. Il est donc préférable d'utiliser une valeur actuelle aussi réaliste que possible.
+La dépréciation varie selon le modèle, l'année, le kilométrage, l'état et
+le marché. Il est donc préférable d'utiliser une valeur actuelle aussi
+réaliste que possible.
 </p>
 
 <h3>⛽ Le kilométrage change beaucoup le budget</h3>
 
 <p>
-Deux personnes qui possèdent exactement le même véhicule peuvent avoir des coûts très différents. La raison est simple : elles ne parcourent pas nécessairement le même nombre de kilomètres.
+Deux personnes qui possèdent exactement le même véhicule peuvent avoir des
+coûts très différents. La raison est simple : elles ne parcourent pas
+nécessairement le même nombre de kilomètres.
 </p>
 
 <p>
-Plus vous roulez, plus vous dépensez généralement en carburant et plus certains éléments comme les pneus et l'entretien sont sollicités. Le coût par kilomètre permet justement de mieux comprendre cette différence.
+Plus vous roulez, plus vous dépensez généralement en carburant et plus
+certains éléments comme les pneus et l'entretien sont sollicités. Le coût
+par kilomètre permet justement de mieux comprendre cette différence.
 </p>
 
 <h3>🛞 Entretien, pneus et réparations</h3>
 
 <p>
-Ces dépenses sont parfois difficiles à prévoir parce qu'elles ne surviennent pas toujours de façon régulière. Une année peut être relativement tranquille tandis qu'une autre peut nécessiter des freins, une batterie, des pneus ou une réparation importante.
+Ces dépenses sont parfois difficiles à prévoir parce qu'elles ne surviennent
+pas toujours de façon régulière. Une année peut être relativement tranquille
+tandis qu'une autre peut nécessiter des freins, une batterie, des pneus ou
+une réparation importante.
 </p>
 
 <p>
-Pour établir un budget, il est donc raisonnable de prévoir une moyenne annuelle plutôt que de considérer uniquement les factures de l'année précédente.
+Pour établir un budget, il est donc raisonnable de prévoir une moyenne
+annuelle plutôt que de considérer uniquement les factures de l'année précédente.
 </p>
 
 <h3>🇨🇦 Les frais au Québec</h3>
 
 <p>
-Au Québec, il faut également tenir compte des frais liés à la SAAQ. En 2026, le tarif de base de renouvellement de l'immatriculation d'un véhicule de promenade est de 217,41 $, avant certaines contributions ou taxes pouvant s'appliquer selon la situation et le lieu de résidence. Le permis de conduire constitue aussi une dépense distincte.
+Au Québec, il faut également tenir compte des frais liés à la SAAQ. En 2026,
+le tarif de base de renouvellement de l'immatriculation d'un véhicule de
+promenade est de 217,41 $, avant certaines contributions ou taxes pouvant
+s'appliquer selon la situation et le lieu de résidence. Le permis de conduire
+constitue aussi une dépense distincte.
 </p>
 
 <p>
-Les montants de la SAAQ peuvent changer avec le temps. Pour un calcul précis, vérifiez toujours les tarifs officiels en vigueur au moment de faire votre budget.
+Les montants de la SAAQ peuvent changer avec le temps. Pour un calcul précis,
+vérifiez toujours les tarifs officiels en vigueur au moment de faire votre budget.
 </p>
 
 <h3>📊 Comment transformer un coût annuel en coût mensuel?</h3>
 
 <p>
-La méthode est simple : additionnez vos dépenses annuelles, puis divisez le résultat par 12.
+La méthode est simple : additionnez vos dépenses annuelles, puis divisez
+le résultat par 12.
 </p>
 
 <div class="article-box">
 <strong>Exemple :</strong><br><br>
-Si vos coûts automobiles totalisent 12 000 $ par année, votre coût moyen est de 1 000 $ par mois.<br><br>
+Si vos coûts automobiles totalisent 12 000 $ par année, votre coût moyen
+est de 1 000 $ par mois.<br><br>
 12 000 $ ÷ 12 = <strong>1 000 $ par mois</strong>
 </div>
 
 <p>
-Cette méthode permet de comparer plus facilement votre automobile avec votre budget mensuel et avec d'autres véhicules.
+Cette méthode permet de comparer plus facilement votre automobile avec votre
+budget mensuel et avec d'autres véhicules.
 </p>
 
 <h3>⚖️ Pourquoi comparer deux véhicules?</h3>
 
 <p>
-Le véhicule qui coûte le moins cher à l'achat n'est pas nécessairement celui qui coûte le moins cher à posséder. Une automobile plus chère peut parfois avoir une meilleure consommation, une meilleure valeur de revente ou des coûts d'entretien différents.
+Le véhicule qui coûte le moins cher à l'achat n'est pas nécessairement celui
+qui coûte le moins cher à posséder. Une automobile plus chère peut parfois
+avoir une meilleure consommation, une meilleure valeur de revente ou des
+coûts d'entretien différents.
 </p>
 
 <p>
-À l'inverse, un véhicule moins cher peut perdre davantage de valeur ou nécessiter plus de réparations. C'est pourquoi il est intéressant de comparer les coûts annuels et le coût par kilomètre plutôt que seulement le prix d'achat.
+À l'inverse, un véhicule moins cher peut perdre davantage de valeur ou
+nécessiter plus de réparations. C'est pourquoi il est intéressant de comparer
+les coûts annuels et le coût par kilomètre plutôt que seulement le prix d'achat.
 </p>
 
 <h3>🧮 Faites votre propre calcul</h3>
 
 <p>
-Utilisez notre calculateur automobile pour entrer vos dépenses réelles et obtenir une estimation personnalisée de votre coût annuel, mensuel et par kilomètre.
+Les moyennes générales peuvent donner une idée, mais votre situation personnelle
+est beaucoup plus utile pour établir un budget. Entrez votre véhicule, votre
+kilométrage et vos dépenses réelles dans notre calculateur afin d'obtenir
+une estimation adaptée à votre situation.
 </p>
 
+<div class="article-box">
+<strong>🚗 Commencez avec vos vrais chiffres.</strong><br><br>
+Plus les données entrées sont réalistes, plus votre estimation du coût
+automobile sera utile pour planifier votre budget.<br><br>
+<button class="calculate" style="width:100%" onclick="showPage('calculateur')">
+CALCULER MON COÛT AUTOMOBILE
+</button>
+</div>
 
 <h2>Combien coûte l'essence d'une voiture par année au Québec?</h2>
 
 <p>
-Le coût annuel de l'essence dépend principalement de trois facteurs : le nombre de kilomètres parcourus, la consommation du véhicule et le prix du carburant.
-</p>
-
-<div class="article-box">
-<strong>⛽ Formule :</strong><br><br>
-kilomètres annuels × consommation ÷ 100 × prix du litre = coût annuel de carburant
-</div>
-
-<h3>Exemple simple</h3>
-
-<p>
-Une voiture qui parcourt 20 000 km par année et consomme 8 L/100 km utilise environ 1 600 litres d'essence. À 1,70 $ le litre, cela représente environ 2 720 $ par année.
-</p>
-
-<h3>Pourquoi le kilométrage est important</h3>
-
-<p>
-Deux conducteurs qui utilisent exactement le même véhicule peuvent avoir des dépenses très différentes s'ils ne parcourent pas le même nombre de kilomètres.
+Le carburant est l'une des dépenses les plus visibles lorsqu'on possède une
+automobile. Son coût dépend principalement du nombre de kilomètres parcourus,
+de la consommation du véhicule et du prix payé à la pompe.
 </p>
 
 <p>
-Le coût du carburant augmente généralement avec le kilométrage. C'est pourquoi une voiture très économique peut devenir particulièrement intéressante pour une personne qui roule beaucoup.
-</p>
-
-<h3>La consommation n'est pas le seul facteur</h3>
-
-<p>
-Un véhicule qui consomme moins peut réduire la facture de carburant, mais il faut aussi regarder son prix d'achat, son assurance, son entretien, ses pneus et sa dépréciation.
-</p>
-
-<p>
-Le carburant doit donc être considéré comme une partie du coût total de possession plutôt que comme le seul critère pour choisir une voiture.
-</p>
-
-<div class="article-box">
-<strong>💡 Conseil :</strong><br><br>
-Si vous connaissez votre kilométrage annuel, votre consommation réelle et le prix moyen que vous payez à la pompe, vous pouvez obtenir une estimation beaucoup plus représentative de votre dépense annuelle.
-</div>
-
-
-<h2>Combien prévoir pour l'entretien d'une voiture?</h2>
-
-<p>
-L'entretien automobile est une dépense difficile à prévoir au dollar près. Le montant dépend de l'âge du véhicule, du kilométrage, du modèle, de l'utilisation et de l'entretien recommandé par le constructeur.
-</p>
-
-<h3>🔧 Entretien courant</h3>
-
-<p>
-L'entretien courant peut comprendre notamment les changements d'huile, les filtres, les inspections, les freins et différents services recommandés selon le véhicule.
-</p>
-
-<h3>Pourquoi prévoir une moyenne annuelle?</h3>
-
-<p>
-Certaines années peuvent coûter relativement peu, alors qu'une autre année peut nécessiter plusieurs travaux. Pour établir un budget réaliste, il est souvent plus utile de calculer une moyenne sur plusieurs années.
-</p>
-
-<p>
-Par exemple, si vous dépensez 600 $ une année, 1 200 $ l'année suivante et 900 $ l'année suivante, la moyenne permet de mieux représenter votre budget à long terme.
-</p>
-
-<h3>🛠️ L'âge et le kilométrage</h3>
-
-<p>
-Avec l'âge et l'augmentation du kilométrage, certains composants peuvent nécessiter davantage d'attention. Les freins, la suspension, la batterie, certains joints, les systèmes de refroidissement et plusieurs autres éléments peuvent éventuellement demander des travaux.
-</p>
-
-<h3>Entretien et réparations : deux choses différentes</h3>
-
-<p>
-L'entretien correspond généralement aux travaux prévus ou recommandés. Les réparations sont plutôt liées à une défaillance ou à un problème qui doit être corrigé.
-</p>
-
-<p>
-Dans notre calculateur, ces deux catégories sont séparées afin de vous permettre d'obtenir une estimation plus précise.
-</p>
-
-<div class="article-box">
-<strong>💡 À retenir :</strong><br><br>
-Ne prévoyez pas seulement l'entretien prévu par le constructeur. Gardez également une marge pour les réparations et les dépenses imprévues.
-</div><h2>Combien coûtent les pneus d'une voiture sur une année?</h2>
-
-<p>
-Les pneus représentent une dépense automobile souvent oubliée parce qu'ils ne sont pas remplacés chaque année. Pourtant, lorsqu'on répartit leur coût sur leur durée d'utilisation, ils peuvent représenter une dépense annuelle importante.
-</p>
-
-<h3>🛞 Comment calculer le coût annuel?</h3>
-
-<p>
-Une méthode simple consiste à prendre le prix total d'un ensemble de pneus et à le répartir sur le nombre d'années ou de kilomètres pendant lesquels vous prévoyez les utiliser.
+Pour obtenir une estimation simple, on peut utiliser la formule suivante :
+kilométrage annuel × consommation ÷ 100 × prix du litre.
 </p>
 
 <div class="article-box">
 <strong>Exemple :</strong><br><br>
-Un ensemble de pneus coûte 1 000 $ et dure environ quatre ans. Une estimation simple serait de 250 $ par année.
+20 000 km par année, une consommation de 8 L/100 km et un prix de 1,70 $/L
+donnent environ 2 720 $ de carburant par année.
 </div>
 
-<h3>Pourquoi le kilométrage compte</h3>
+<h3>⛽ Plus vous roulez, plus le carburant compte</h3>
 
 <p>
-La durée de vie des pneus dépend notamment du kilométrage, du type de conduite, du véhicule, de l'alignement et de l'entretien. Une personne qui roule beaucoup peut devoir remplacer ses pneus plus rapidement.
+Une personne qui parcourt 10 000 km par année ne devrait pas avoir le même
+budget de carburant qu'une personne qui en parcourt 25 000. Le kilométrage
+annuel est donc une donnée importante lorsqu'on compare deux véhicules.
 </p>
 
-<h3>Deux ensembles de pneus au Québec</h3>
+<h3>🚗 La consommation fait une grande différence</h3>
 
 <p>
-De nombreux automobilistes québécois utilisent des pneus différents pour l'été et l'hiver. Il faut donc considérer les deux ensembles lorsqu'on établit le coût réel de possession du véhicule.
+Deux véhicules utilisés de la même façon peuvent avoir des coûts de carburant
+très différents. Un véhicule qui consomme 6 L/100 km nécessitera généralement
+moins de carburant qu'un véhicule consommant 10 L/100 km pour le même nombre
+de kilomètres.
 </p>
 
-<h3>Ne pas oublier le prochain remplacement</h3>
+<p>
+Cela explique pourquoi une voiture plus chère à l'achat peut parfois avoir
+des coûts d'utilisation plus faibles.
+</p>
+
+<h2>Combien prévoir pour l'entretien d'une voiture?</h2>
 
 <p>
-Une bonne façon de planifier son budget est de noter le coût prévu du prochain ensemble de pneus. Même si la dépense n'est pas immédiate, elle peut être anticipée.
+L'entretien automobile est difficile à prévoir avec une précision parfaite.
+Les besoins varient selon le modèle, l'âge, le kilométrage, le type d'utilisation
+et l'entretien déjà effectué.
+</p>
+
+<p>
+Il faut notamment penser aux vidanges, filtres, freins, inspections, fluides
+et autres travaux recommandés par le constructeur.
+</p>
+
+<h3>🔧 Entretien ou réparation?</h3>
+
+<p>
+L'entretien courant correspond aux travaux prévisibles qui permettent de
+maintenir le véhicule en bon état. Les réparations sont plutôt les interventions
+nécessaires lorsqu'une pièce tombe en panne ou lorsqu'un problème apparaît.
+</p>
+
+<p>
+Dans un budget automobile réaliste, il est utile de prévoir les deux catégories
+séparément.
+</p>
+
+<h3>📅 Pourquoi utiliser une moyenne annuelle?</h3>
+
+<p>
+Une automobile peut coûter relativement peu une année et beaucoup plus l'année
+suivante. Une moyenne annuelle permet de mieux répartir les dépenses importantes
+sur plusieurs années.
+</p>
+
+<p>
+Il est également prudent de conserver une réserve pour les réparations imprévues,
+surtout lorsque le véhicule vieillit ou accumule les kilomètres.
+</p>
+
+<h2>Combien coûtent les pneus d'une voiture sur une année?</h2>
+
+<p>
+Au Québec, les pneus représentent une dépense importante parce que plusieurs
+conducteurs utilisent des pneus différents selon la saison. Le coût réel
+dépend du prix des pneus, de leur durée de vie, du kilométrage et du type
+de véhicule.
+</p>
+
+<p>
+Pour obtenir une moyenne annuelle, on peut répartir le coût d'un ensemble
+de pneus sur le nombre d'années ou de kilomètres pendant lesquels il devrait
+être utilisé.
 </p>
 
 <div class="article-box">
-<strong>🧮 Dans notre calculateur :</strong><br><br>
-Vous pouvez inscrire votre coût annuel de pneus et prévoir séparément le montant du prochain remplacement.
+<strong>💡 Conseil :</strong><br><br>
+Si vous savez qu'un remplacement de pneus devra être effectué prochainement,
+prévoyez cette dépense à l'avance plutôt que d'attendre qu'elle devienne
+une surprise.
 </div>
-
 
 <h2>Comment calculer la dépréciation d'une voiture?</h2>
 
 <p>
-La dépréciation représente la perte de valeur d'un véhicule avec le temps. C'est l'un des coûts les plus importants à considérer lorsqu'on compare deux automobiles, même si cette dépense ne sort pas directement du compte bancaire chaque mois.
+La dépréciation représente la perte de valeur d'un véhicule avec le temps.
+Elle peut constituer une partie importante du coût réel d'une automobile,
+même si elle ne correspond pas à une facture mensuelle.
+</p>
+
+<p>
+Une méthode simple consiste à comparer le prix payé avec la valeur actuelle,
+puis à répartir la perte de valeur sur la période de possession.
 </p>
 
 <div class="article-box">
-<strong>📉 Exemple :</strong><br><br>
-Vous achetez une voiture 35 000 $ et sa valeur actuelle est de 25 000 $. La perte de valeur observée est de 10 000 $.
+<strong>Exemple :</strong><br><br>
+Un véhicule acheté 35 000 $ qui vaut maintenant 25 000 $ a perdu 10 000 $
+de valeur. Si cette perte s'est produite sur cinq ans, cela représente
+une dépréciation moyenne de 2 000 $ par année.
 </div>
 
-<h3>Pourquoi la dépréciation varie-t-elle?</h3>
-
 <p>
-La valeur d'un véhicule dépend notamment de son année, de son kilométrage, de son état, de sa réputation, de sa demande sur le marché et de son équipement. Les véhicules ne perdent donc pas tous leur valeur au même rythme.
+La dépréciation réelle peut toutefois être plus rapide au début et ralentir
+par la suite. Elle dépend notamment du modèle, de l'année, du kilométrage,
+de l'état et de la demande sur le marché.
 </p>
-
-<h3>Ne pas confondre dépréciation et paiement</h3>
-
-<p>
-Le paiement mensuel rembourse généralement une dette. La dépréciation mesure plutôt la perte de valeur de l'actif. Les deux peuvent être importants, mais ils ne représentent pas la même chose.
-</p>
-
-<h3>Pourquoi la valeur actuelle est utile</h3>
-
-<p>
-Pour obtenir une estimation plus réaliste, utilisez une valeur actuelle aussi proche que possible du marché. Une source spécialisée comme Canadian Black Book peut vous aider à obtenir une indication de valeur, que vous pouvez ensuite entrer dans notre calculateur.
-</p>
-
-<p>
-La dépréciation est particulièrement importante lorsque vous comparez une voiture neuve à une voiture usagée, car une différence importante de perte de valeur peut modifier le coût total de possession.
-</p>
-
 
 <h2>Combien coûte le financement d'une voiture?</h2>
 
 <p>
-Le financement permet d'étaler le paiement d'un véhicule, mais il ajoute généralement des intérêts au coût d'achat. Pour connaître le véritable coût d'un financement, il faut regarder le montant emprunté, le taux et la durée du prêt.
-</p>
-
-<h3>Pourquoi une longue durée réduit le paiement mais peut augmenter le coût</h3>
-
-<p>
-Un prêt plus long répartit la dette sur davantage de mois. Le paiement périodique peut donc être plus faible, mais les intérêts peuvent être payés pendant une période plus longue.
-</p>
-
-<div class="article-box">
-<strong>🏦 À comparer :</strong><br><br>
-Ne comparez pas seulement « combien par mois? ». Comparez aussi le montant financé, le taux d'intérêt, la durée et le total des intérêts.
-</div>
-
-<h3>Un exemple simple</h3>
-
-<p>
-Deux véhicules peuvent avoir des paiements mensuels semblables tout en ayant des coûts de financement très différents. Le taux et la durée peuvent faire une différence importante sur le montant total payé.
-</p>
-
-<h3>Le financement dans le coût réel</h3>
-
-<p>
-Dans notre calculateur, les intérêts du prêt sont considérés dans le coût économique annuel, tandis que le paiement mensuel est aussi présenté séparément afin de distinguer le coût économique de la sortie d'argent.
+Le financement ajoute des intérêts au coût du véhicule. Le montant financé,
+le taux d'intérêt et la durée du prêt déterminent le coût total du financement.
 </p>
 
 <p>
-Cette distinction est utile lorsque vous voulez savoir non seulement combien la voiture vous coûte, mais aussi combien d'argent quitte réellement votre compte chaque mois.
+Un financement plus long peut réduire le paiement périodique, mais augmente
+souvent le montant total des intérêts payés.
 </p>
 
+<h3>🏦 Trois chiffres à comparer</h3>
+
+<ul>
+<li><strong>Montant financé</strong></li>
+<li><strong>Taux d'intérêt</strong></li>
+<li><strong>Durée du financement</strong></li>
+</ul>
+
+<p>
+Regarder uniquement le paiement mensuel peut donc être trompeur. Deux prêts
+ayant des paiements semblables peuvent avoir des coûts totaux très différents.
+</p>
 
 <h2>Acheter une voiture : quels coûts faut-il prévoir au Québec?</h2>
 
 <p>
-Le prix affiché d'une voiture n'est qu'une partie du budget nécessaire pour la posséder. Au Québec, il faut prévoir plusieurs dépenses avant et après l'achat.
+Le prix affiché d'un véhicule n'est que le début. Lorsqu'on achète une
+automobile, il faut également prévoir les taxes et frais applicables,
+l'assurance, le carburant, l'entretien, les pneus, les réparations,
+l'immatriculation, le permis, le stationnement, le financement et la
+dépréciation.
 </p>
-
-<h3>Les coûts à considérer</h3>
-
-<ul>
-<li>Prix d'achat ou montant financé.</li>
-<li>Taxes et frais liés à la transaction.</li>
-<li>Assurance.</li>
-<li>Carburant ou recharge selon le véhicule.</li>
-<li>Immatriculation et permis.</li>
-<li>Entretien.</li>
-<li>Pneus.</li>
-<li>Réparations.</li>
-<li>Stationnement.</li>
-<li>Intérêts du financement.</li>
-<li>Dépréciation.</li>
-</ul>
-
-<h3>Le coût après l'achat</h3>
 
 <p>
-Une fois le véhicule acheté, les dépenses continuent. C'est pourquoi un véhicule abordable à l'achat peut devenir plus coûteux à utiliser, tandis qu'un véhicule plus cher peut parfois présenter certains avantages économiques selon son utilisation.
+Certains de ces coûts sont mensuels, tandis que d'autres surviennent seulement
+une ou quelques fois par année. Les inclure dans un budget annuel permet
+d'avoir une image beaucoup plus réaliste.
 </p>
-
-<h3>Ne pas oublier les dépenses irrégulières</h3>
-
-<p>
-Les pneus, certaines réparations et certains travaux d'entretien ne sont pas facturés chaque mois. Pour établir un budget, transformez ces dépenses en moyenne annuelle afin d'éviter de les oublier.
-</p>
-
-<div class="article-box">
-<strong>🚗 Avant d'acheter :</strong><br><br>
-Calculez le coût annuel estimé du véhicule avant de vous engager. Le paiement mensuel ne suffit pas pour déterminer si une voiture entre réellement dans votre budget.
-</div>
-
 
 <h2>Acheter ou louer une voiture : lequel coûte le moins cher?</h2>
 
 <p>
-Il n'existe pas de réponse universelle à la question « acheter ou louer? ». Le meilleur choix dépend de la durée pendant laquelle vous gardez le véhicule, du kilométrage prévu, du financement et de la valeur du véhicule à la fin de la période.
+Il n'existe pas une réponse universelle. L'achat et la location comportent
+des coûts différents et devraient être comparés sur une même période.
 </p>
-
-<h3>Acheter</h3>
 
 <p>
-Lorsque vous achetez, vous accumulez progressivement une valeur dans le véhicule. Une fois le financement terminé, vous pouvez continuer à l'utiliser sans paiement de prêt, tout en conservant les autres coûts de possession.
+Pour une comparaison sérieuse, il faut considérer les paiements, les intérêts,
+le carburant, l'assurance, l'entretien, les pneus, les réparations et la
+valeur du véhicule à la fin de la période.
 </p>
-
-<h3>Louer</h3>
 
 <p>
-Une location peut offrir un paiement différent et permet de changer de véhicule plus fréquemment. Elle comporte toutefois des conditions, notamment concernant le kilométrage et l'état du véhicule à la fin du contrat.
+Une location peut offrir des paiements périodiques intéressants, mais elle
+vient avec ses propres conditions et limites. L'achat permet généralement
+d'accumuler une valeur résiduelle dans le véhicule une fois le financement
+terminé.
 </p>
-
-<h3>La comparaison qui compte</h3>
-
-<p>
-Pour comparer correctement, regardez le coût total sur la même période. Incluez les paiements, les intérêts, le carburant, l'assurance, l'entretien, les pneus, les réparations et, selon la méthode utilisée, la perte de valeur.
-</p>
-
-<div class="article-box">
-<strong>⚖️ Conseil :</strong><br><br>
-Ne choisissez pas uniquement selon le paiement mensuel. Comparez le coût total prévu pendant toute la période où vous comptez utiliser le véhicule.
-</div>
-
-<p>
-Notre calculateur peut servir à analyser le coût d'un véhicule et à comparer deux scénarios afin de mieux comprendre les différences entre les options.
-</p>
-
 
 <h2>Comment calculer le vrai coût d'une voiture par kilomètre?</h2>
 
 <p>
-Le coût par kilomètre permet de ramener toutes les dépenses automobiles à une unité facile à comparer. C'est particulièrement pratique lorsqu'on compare deux véhicules ou qu'on veut mesurer le coût réel de ses déplacements.
+Le coût par kilomètre permet de comparer des véhicules ayant des coûts et
+des kilométrages différents.
+</p>
+
+<p>
+La formule est simple : coût automobile annuel ÷ kilomètres parcourus
+annuellement.
 </p>
 
 <div class="article-box">
-<strong>🛣️ Formule :</strong><br><br>
-coût automobile annuel ÷ kilomètres parcourus annuellement = coût par kilomètre.
+<strong>Exemple :</strong><br><br>
+Si votre automobile vous coûte 12 000 $ par année et que vous parcourez
+20 000 km, votre coût est de 0,60 $ par kilomètre.
 </div>
 
-<h3>Exemple</h3>
-
 <p>
-Si une voiture coûte 12 000 $ par année et parcourt 20 000 km, son coût moyen est de 0,60 $ par kilomètre.
+Ce calcul peut inclure le carburant, l'assurance, l'entretien, les pneus,
+les réparations, le stationnement, le financement et la dépréciation.
 </p>
-
-<h3>Pourquoi ce chiffre est utile</h3>
-
-<p>
-Le coût par kilomètre combine plusieurs catégories : carburant, assurance, entretien, pneus, réparations, stationnement, financement et dépréciation. Il donne donc une vision globale plutôt que de regarder une seule facture.
-</p>
-
-<h3>Attention à la différence entre coût économique et argent déboursé</h3>
-
-<p>
-Une voiture peut avoir une dépréciation importante sans que cette somme soit payée directement chaque mois. À l'inverse, un paiement de financement représente une sortie de trésorerie qui ne correspond pas exactement à la dépréciation.
-</p>
-
-<p>
-Notre calculateur présente ces éléments séparément pour vous permettre de comprendre à la fois le coût économique du véhicule et les sorties d'argent liées à son utilisation.
-</p>
-
-<div class="article-box">
-<strong>🧮 Faites votre calcul :</strong><br><br>
-Entrez votre kilométrage annuel et vos dépenses réelles dans le calculateur pour obtenir votre coût annuel, mensuel et par kilomètre.
-</div>
 
 </div>
-
 </section>
 
 
@@ -1759,71 +1715,110 @@ Entrez votre kilométrage annuel et vos dépenses réelles dans le calculateur p
 <h1>Comment ça marche?</h1>
 
 <p>
-Notre calculateur estime le coût réel de possession de votre automobile en regroupant les principales dépenses liées à son utilisation et à sa propriété.
+Notre calculateur estime le coût réel de possession de votre automobile
+en regroupant les principales dépenses liées à son utilisation et à sa propriété.
 </p>
 
 <h2>1. Votre véhicule</h2>
 
 <p>
-Entrez le prix d'achat, la valeur actuelle du véhicule, le nombre d'années de possession et son kilométrage actuel. Ces informations servent notamment à estimer la dépréciation.
+Entrez le prix d'achat, la valeur actuelle du véhicule, le nombre d'années
+de possession et son kilométrage actuel. Ces informations servent notamment
+à estimer la dépréciation.
 </p>
 
 <h2>2. Utilisation et financement</h2>
 
 <p>
-Indiquez votre kilométrage annuel, votre consommation de carburant et le prix de l'essence. Si votre véhicule est financé, ajoutez la mise de fonds, le taux d'intérêt et la durée du prêt.
+Indiquez votre kilométrage annuel, votre consommation de carburant et le prix
+de l'essence. Si votre véhicule est financé, ajoutez la mise de fonds,
+le taux d'intérêt et la durée du prêt.
 </p>
 
 <h2>3. Dépenses annuelles</h2>
 
 <p>
-Ajoutez vos coûts d'assurance, de permis, d'immatriculation, de transport ou TIV, d'entretien, de pneus, de réparations, de stationnement, de lavage et vos autres dépenses.
+Ajoutez vos coûts d'assurance, de permis, d'immatriculation, de transport
+ou TIV, d'entretien, de pneus, de réparations, de stationnement, de lavage
+et vos autres dépenses.
 </p>
 
 <h2>4. Vos résultats</h2>
 
 <p>
-Le calculateur affiche ensuite votre coût automobile économique annuel, mensuel et par kilomètre, ainsi que votre sortie d'argent mensuelle. Il présente aussi le montant financé, le paiement mensuel et les intérêts totaux du prêt.
+Le calculateur affiche ensuite votre coût automobile économique annuel,
+mensuel et par kilomètre, ainsi que votre sortie d'argent mensuelle.
+Il présente aussi le montant financé, le paiement mensuel et les intérêts
+totaux du prêt.
 </p>
 
 <div class="article-box">
 <strong>💡 À retenir :</strong>
-le coût économique tient notamment compte de la dépréciation et des intérêts du financement, tandis que la sortie d'argent mesure davantage les sommes qui quittent réellement votre compte.
+le coût économique tient notamment compte de la dépréciation et des intérêts
+du financement, tandis que la sortie d'argent mesure davantage les sommes
+qui quittent réellement votre compte.
 </div>
 
 </div>
-
-</section>
-
-
-<section id="apropos" class="page">
+</section><section id="apropos" class="page">
 
 <div class="card article">
 
 <h1>À propos de Calculateur Auto Québec</h1>
 
 <p>
-Calculateur Auto Québec a pour objectif de rendre le coût réel d'une automobile plus facile à comprendre.
+Calculateur Auto Québec est un outil québécois consacré à une question simple :
+combien coûte réellement une automobile lorsqu'on tient compte de l'ensemble
+de ses dépenses?
 </p>
 
 <p>
-L'idée est simple : plutôt que de regarder uniquement le prix d'achat ou le paiement mensuel, nous voulons permettre aux automobilistes de considérer l'ensemble des dépenses associées à leur véhicule.
+Le projet a été créé pour offrir aux automobilistes un calculateur simple,
+accessible et pratique. L'objectif est de regarder au-delà du seul paiement
+mensuel et de réunir les principaux coûts liés à l'utilisation et à la
+possession d'un véhicule.
 </p>
 
 <h2>Notre objectif</h2>
 
 <p>
-Fournir des outils simples, accessibles et faciles à utiliser afin d'aider les automobilistes à prendre de meilleures décisions financières concernant leur véhicule.
+Nous voulons aider les automobilistes à mieux comprendre leur budget automobile
+et à comparer plus facilement différents scénarios avant d'acheter, de conserver
+ou de remplacer un véhicule.
 </p>
 
-<h2>Important</h2>
+<h2>Comment les résultats sont calculés</h2>
 
 <p>
-Les résultats du calculateur sont des estimations basées sur les informations fournies par l'utilisateur. Ils ne constituent pas des conseils financiers, fiscaux, juridiques ou professionnels.
+Le calculateur utilise les informations saisies par l'utilisateur pour produire
+des estimations de coûts annuels, mensuels et par kilomètre. Les résultats
+peuvent notamment tenir compte du carburant, de l'assurance, de l'entretien,
+des pneus, des réparations, du stationnement, du financement et de la dépréciation.
+</p>
+
+<h2>Une estimation, pas une promesse</h2>
+
+<p>
+Les résultats dépendent des données fournies et des hypothèses utilisées.
+Les coûts réels peuvent varier selon le véhicule, le conducteur, l'utilisation,
+le marché et les dépenses réellement engagées. Les résultats ne constituent
+pas des conseils financiers, fiscaux, juridiques ou professionnels.
+</p>
+
+<h2>Sources et services externes</h2>
+
+<p>
+Lorsque le site renvoie vers un service externe, comme Canadian Black Book
+pour obtenir une valeur de véhicule, l'information fournie par ce service
+demeure sous la responsabilité de son fournisseur. Calculateur Auto Québec
+ne prétend pas remplacer les données ou services de ces fournisseurs.
+</p>
+
+<p class="small">
+Calculateur Auto Québec — Québec, Canada.
 </p>
 
 </div>
-
 </section>
 
 
@@ -1834,34 +1829,75 @@ Les résultats du calculateur sont des estimations basées sur les informations 
 <h1>Politique de confidentialité</h1>
 
 <p>
-Cette page présente les principes généraux de confidentialité applicables au site Calculateur Auto Québec.
+Cette politique explique de façon générale comment Calculateur Auto Québec
+traite les informations associées à l'utilisation du site.
 </p>
 
 <h2>Données saisies dans le calculateur</h2>
 
 <p>
-Les informations entrées dans le calculateur sont utilisées afin d'effectuer les calculs demandés par l'utilisateur.
+Dans la version actuelle du calculateur, les données que vous entrez servent
+à effectuer les calculs demandés. Les calculs sont effectués directement
+dans votre navigateur et les informations saisies ne sont pas transmises
+à un serveur de calcul du site.
 </p>
 
 <p>
-Dans cette version du calculateur, les calculs sont effectués directement dans le navigateur.
+Le site ne demande pas de créer un compte pour utiliser le calculateur et
+ne nécessite pas de fournir vos données personnelles pour effectuer un calcul.
 </p>
 
-<h2>Cookies et publicité</h2>
+<h2>Communications par courriel</h2>
 
 <p>
-Le site pourrait utiliser ultérieurement des services publicitaires, d'analyse ou d'affiliation. Ces services peuvent utiliser des cookies ou des technologies similaires conformément à leurs propres politiques.
+Si vous choisissez de nous contacter par courriel, les informations que vous
+fournissez dans votre message peuvent être utilisées afin de répondre à votre
+demande, de corriger un problème ou d'améliorer le site.
+</p>
+
+<h2>Cookies, publicité et analyse</h2>
+
+<p>
+Le site peut utiliser à l'avenir des services tiers de publicité, d'analyse
+ou d'affiliation. Ces services peuvent utiliser des cookies, des identifiants
+ou des technologies similaires pour mesurer l'audience, afficher de la publicité
+ou assurer le fonctionnement de leurs services, selon leurs propres politiques.
+</p>
+
+<p>
+Si des services publicitaires comme Google AdSense sont ajoutés au site,
+certaines informations techniques et liées à la navigation peuvent être
+traitées par ces fournisseurs conformément à leurs conditions et politiques
+applicables. Les mécanismes de consentement requis pourront également être
+utilisés lorsque la réglementation l'exige.
+</p>
+
+<h2>Liens vers des sites externes</h2>
+
+<p>
+Calculateur Auto Québec peut contenir des liens vers des sites externes.
+Lorsque vous quittez notre site pour utiliser un service tiers, sa propre
+politique de confidentialité et ses propres conditions s'appliquent.
+</p>
+
+<h2>Mise à jour de cette politique</h2>
+
+<p>
+Cette politique peut être mise à jour lorsque de nouvelles fonctionnalités,
+de nouveaux services ou de nouvelles exigences sont ajoutés au site.
+La version publiée sur cette page est la version en vigueur.
 </p>
 
 <h2>Contact</h2>
 
 <p>
-Pour toute question concernant la confidentialité, vous pouvez nous écrire à l'adresse
-<a href="mailto:evac-u8@live.ca">evac-u8@live.ca</a>.
+Pour toute question concernant la confidentialité, vous pouvez nous écrire
+à l'adresse <a href="mailto:evac-u8@live.ca">evac-u8@live.ca</a>.
 </p>
 
-</div>
+<p class="small">Dernière mise à jour : septembre 2026.</p>
 
+</div>
 </section>
 
 
@@ -1872,7 +1908,9 @@ Pour toute question concernant la confidentialité, vous pouvez nous écrire à 
 <h1>Contact</h1>
 
 <p>
-Vous avez une question, une suggestion, vous avez trouvé une erreur dans le calculateur ou vous souhaitez simplement nous faire part de vos commentaires? Vous pouvez nous écrire directement par courriel.
+Vous avez une question, une suggestion, vous avez trouvé une erreur dans
+le calculateur ou vous souhaitez simplement nous faire part de vos commentaires?
+Vous pouvez nous écrire directement par courriel.
 </p>
 
 <div class="contact-box">
@@ -1885,13 +1923,23 @@ Vous avez une question, une suggestion, vous avez trouvé une erreur dans le cal
 </p>
 
 <p>
-Pour faciliter le traitement de votre message, indiquez si possible le sujet de votre demande et, lorsqu'il s'agit du calculateur, les informations ou le résultat concernés.
+Pour faciliter le traitement de votre message, indiquez si possible le sujet
+de votre demande et, lorsqu'il s'agit du calculateur, les informations ou
+le résultat concernés.
 </p>
 
 </div>
 
-</div>
+<h2>Erreurs ou suggestions</h2>
 
+<p>
+Si vous remarquez une erreur dans un calcul, une information qui semble
+inexacte ou une fonction qui ne se comporte pas comme prévu, n'hésitez pas
+à nous le signaler. Les commentaires des utilisateurs peuvent nous aider
+à améliorer progressivement le calculateur et les guides.
+</p>
+
+</div>
 </section>
 
 
@@ -1902,27 +1950,68 @@ Pour faciliter le traitement de votre message, indiquez si possible le sujet de 
 <h1>Conditions d'utilisation</h1>
 
 <p>
-Les outils présents sur Calculateur Auto Québec sont fournis à titre informatif et permettent d'obtenir des estimations.
+En utilisant Calculateur Auto Québec, vous reconnaissez que les outils et
+les informations présentés sur le site sont fournis à titre informatif
+et général.
 </p>
 
-<h2>Exactitude</h2>
+<h2>Utilisation du calculateur</h2>
 
 <p>
-Les résultats dépendent des informations saisies par l'utilisateur. Les résultats peuvent donc différer des coûts réellement engagés.
+Le calculateur produit des estimations à partir des données saisies par
+l'utilisateur. Il appartient à l'utilisateur de vérifier ses propres chiffres
+et de juger de la pertinence des résultats selon sa situation.
 </p>
 
-<h2>Responsabilité</h2>
+<h2>Exactitude des informations</h2>
 
 <p>
-L'utilisateur demeure responsable de vérifier les informations utilisées avant de prendre une décision financière ou automobile.
+Nous cherchons à présenter des informations utiles et à maintenir le calculateur
+en bon état, mais aucune garantie n'est donnée quant à l'exactitude,
+l'exhaustivité ou l'actualité de chaque information. Les prix, frais, taux,
+valeurs de véhicules et autres données peuvent changer.
 </p>
+
+<h2>Limitation de responsabilité</h2>
+
+<p>
+Les résultats du calculateur ne constituent pas des conseils financiers,
+fiscaux, juridiques, mécaniques ou professionnels. Calculateur Auto Québec
+ne peut être tenu responsable d'une décision prise uniquement à partir
+d'une estimation ou d'une information présentée sur le site.
+</p>
+
+<h2>Services et liens externes</h2>
+
+<p>
+Le site peut proposer des liens vers des services externes. Ces services
+sont exploités par des tiers et peuvent avoir leurs propres conditions,
+tarifs, politiques et disponibilités. Leur présence sur le site ne signifie
+pas que Calculateur Auto Québec garantit leurs services.
+</p>
+
+<h2>Publicité et affiliation</h2>
+
+<p>
+Le site peut éventuellement afficher de la publicité ou contenir des liens
+d'affiliation. Lorsqu'un lien d'affiliation est utilisé, Calculateur Auto
+Québec pourrait recevoir une commission si une transaction admissible est
+effectuée, sans coût supplémentaire nécessairement imposé à l'utilisateur.
+</p>
+
+<h2>Modification du site</h2>
+
+<p>
+Calculateur Auto Québec peut modifier, améliorer, suspendre ou retirer
+certaines fonctionnalités et certains contenus du site à tout moment.
+</p>
+
+<p class="small">Dernière mise à jour : septembre 2026.</p>
 
 </div>
-
 </section>
 
 </main>
-
 
 <footer>
 
@@ -2031,7 +2120,9 @@ showError(
 return;
 }
 
-if(val("anneeVehicule")<1900 || val("anneeVehicule")>2100){
+var annee=val("anneeVehicule");
+
+if(annee<1900 || annee>2100){
 
 showError(
 "error1",
@@ -2097,29 +2188,42 @@ showError(
 return;
 }
 
+if(val("prixEssence")<0){
+
+showError(
+"error2",
+"Le prix de l'essence ne peut pas être négatif."
+);
+
+return;
 }
 
-document.querySelectorAll(".step").forEach(function(x){
-x.classList.remove("active");
+}
+
+if(step===4){
+
+hideError("error3");
+
+}
+
+document.querySelectorAll(".step").forEach(function(s){
+s.classList.remove("active");
 });
 
-document.getElementById("step"+step).classList.add("active");
+var target=document.getElementById("step"+step);
 
-for(var i=1;i<=4;i++){
-
-document
-.getElementById("indicator"+i)
-.classList.remove("active");
-
+if(target){
+target.classList.add("active");
 }
 
-for(var j=1;j<=step;j++){
+document.querySelectorAll(".progress-item").forEach(function(item,index){
 
-document
-.getElementById("indicator"+j)
-.classList.add("active");
+item.classList.toggle(
+"active",
+index<step
+);
 
-}
+});
 
 var progress=((step-1)/3)*100;
 
@@ -2138,17 +2242,16 @@ function calculer(){
 
 hideError("error3");
 
-
 var prixAchat=val("prixAchat");
 var valeurActuelle=val("valeurActuelle");
 var annees=val("anneesPossession");
+
 var anneeVehicule=val("anneeVehicule");
 var marqueVehicule=document.getElementById("marqueVehicule").value.trim();
 var modeleVehicule=document.getElementById("modeleVehicule").value.trim();
 var versionVehicule=document.getElementById("versionVehicule").value.trim();
 var etatVehicule=document.getElementById("etatVehicule").value;
 var kmActuel=val("kmActuel");
-
 
 var km=val("kmAnnuel");
 var consommation=val("consommation");
@@ -2159,7 +2262,6 @@ var litres=km*consommation/100;
 
 var carburant=
 (litres*prixEssence)+autreCarburant;
-
 
 var miseFonds=val("miseFonds");
 var taux=val("taux")/100;
@@ -2215,7 +2317,6 @@ interetsTotaux/duree;
 
 }
 
-
 var perte=
 Math.max(
 0,
@@ -2230,7 +2331,6 @@ depreciation=perte/annees;
 
 }
 
-
 var assurance=val("assurance");
 var permis=val("permis");
 var immatriculation=val("immatriculation");
@@ -2242,7 +2342,6 @@ var reparations=val("reparations");
 var stationnement=val("stationnement");
 var lavage=val("lavage");
 var autres=val("autres");
-
 
 var annuel=
 
@@ -2267,7 +2366,6 @@ km>0
 ?annuel/km
 :0;
 
-
 var cashAnnuel=
 
 carburant+
@@ -2285,34 +2383,41 @@ paiementAnnuel;
 
 var cashMensuel=cashAnnuel/12;
 
-
 var coutRecurrents=Math.max(0,annuel-depreciation);
-var projection3=coutRecurrents*3+Math.min(valeurActuelle,depreciation*3);
-var projection5=coutRecurrents*5+Math.min(valeurActuelle,depreciation*5);
-var valeur3=Math.max(0,valeurActuelle-depreciation*3);
-var valeur5=Math.max(0,valeurActuelle-depreciation*5);
 
+var projection3=
+coutRecurrents*3+
+Math.min(valeurActuelle,depreciation*3);
+
+var projection5=
+coutRecurrents*5+
+Math.min(valeurActuelle,depreciation*5);
+
+var valeur3=
+Math.max(0,valeurActuelle-depreciation*3);
+
+var valeur5=
+Math.max(0,valeurActuelle-depreciation*5);
 
 var postes=[
- {nom:"Carburant",valeur:carburant},
- {nom:"Assurance",valeur:assurance},
- {nom:"Immatriculation",valeur:immatriculation},
- {nom:"Permis",valeur:permis},
- {nom:"Transport / TIV",valeur:transport},
- {nom:"Entretien",valeur:entretien},
- {nom:"Pneus",valeur:pneus},
- {nom:"Réparations",valeur:reparations},
- {nom:"Stationnement",valeur:stationnement},
- {nom:"Lavage / esthétique",valeur:lavage},
- {nom:"Autres",valeur:autres},
- {nom:"Dépréciation",valeur:depreciation},
- {nom:"Intérêts",valeur:interetsAnnuels}
+{nom:"Carburant",valeur:carburant},
+{nom:"Assurance",valeur:assurance},
+{nom:"Immatriculation",valeur:immatriculation},
+{nom:"Permis",valeur:permis},
+{nom:"Transport / TIV",valeur:transport},
+{nom:"Entretien",valeur:entretien},
+{nom:"Pneus",valeur:pneus},
+{nom:"Réparations",valeur:reparations},
+{nom:"Stationnement",valeur:stationnement},
+{nom:"Lavage / esthétique",valeur:lavage},
+{nom:"Autres",valeur:autres},
+{nom:"Dépréciation",valeur:depreciation},
+{nom:"Intérêts",valeur:interetsAnnuels}
 ];
 
 postes.sort(function(a,b){
 return b.valeur-a.valeur;
 });
-
 
 document.getElementById("rCarburant").textContent=
 money(carburant);
@@ -2353,7 +2458,6 @@ money(depreciation);
 document.getElementById("rInterets").textContent=
 money(interetsAnnuels);
 
-
 document.getElementById("rFinance").textContent=
 money(finance);
 
@@ -2362,7 +2466,6 @@ money(paiementMensuel);
 
 document.getElementById("rInteretsTotaux").textContent=
 money(interetsTotaux);
-
 
 document.getElementById("rAnnuel").textContent=
 money(annuel);
@@ -2382,14 +2485,16 @@ money(coutKm)+" / km";
 document.getElementById("rCashMensuel").textContent=
 money(cashMensuel);
 
+var nomVehicule=
+(marqueVehicule+" "+modeleVehicule).trim();
 
-var nomVehicule=(marqueVehicule+" "+modeleVehicule).trim();
-
-if(versionVehicule)
+if(versionVehicule){
 nomVehicule+=" "+versionVehicule;
+}
 
-if(!nomVehicule)
+if(!nomVehicule){
 nomVehicule="Véhicule";
+}
 
 document.getElementById("rVehiculeNom").textContent=
 nomVehicule;
@@ -2403,7 +2508,6 @@ kmActuel.toLocaleString("fr-CA")+" km";
 document.getElementById("rVehiculeEtat").textContent=
 "État : "+etatVehicule;
 
-
 document.getElementById("rProjection3").textContent=
 money(projection3);
 
@@ -2416,19 +2520,19 @@ money(projection5);
 document.getElementById("rValeur5").textContent=
 money(valeur5);
 
-
 for(var t=1;t<=3;t++){
 
-var poste=postes[t-1]||{
-nom:"—",
-valeur:0
-};
+var poste=
+postes[t-1]||
+{nom:"—",valeur:0};
 
-document.getElementById("rTop"+t+"Nom").textContent=
-poste.nom;
+document.getElementById(
+"rTop"+t+"Nom"
+).textContent=poste.nom;
 
-document.getElementById("rTop"+t+"Valeur").textContent=
-money(poste.valeur);
+document.getElementById(
+"rTop"+t+"Valeur"
+).textContent=money(poste.valeur);
 
 }
 
@@ -2467,7 +2571,6 @@ money(prochainPneus)+
 document.getElementById("analyseDetail").textContent=
 analyse;
 
-
 var message="";
 
 if(mensuel<500){
@@ -2505,8 +2608,8 @@ goStep(4);
 function comparerVehicules(){
 
 var autreNom=
-document.getElementById("comparaisonNom").value.trim() ||
-"Autre véhicule";
+document.getElementById("comparaisonNom").value.trim()
+||"Autre véhicule";
 
 var autreCarburant=val("comparaisonCarburant");
 var autreAssurance=val("comparaisonAssurance");
@@ -2555,8 +2658,8 @@ var details=
 document.getElementById("comparisonDetails");
 
 var nomNotre=
-document.getElementById("rVehiculeNom").textContent ||
-"Votre véhicule";
+document.getElementById("rVehiculeNom").textContent
+||"Votre véhicule";
 
 result.style.display="block";
 
@@ -2583,15 +2686,16 @@ winner.textContent=
 "🏆 Le moins cher : "+moinsCher;
 
 details.textContent=
-nomNotre+" : "+
+nomNotre+
+" : "+
 money(notreAnnuel)+
 " / année ("+
 (notreParKm>0
 ?money(notreParKm)+" / km"
 :"coût/km non disponible")+
 "). "+
-
-autreNom+" : "+
+autreNom+
+" : "+
 money(autreTotal)+
 " / année ("+
 (autreParKm>0
@@ -2608,13 +2712,11 @@ function parseMoney(text){
 
 if(!text)return 0;
 
-var normalized=
-text
+var normalized=text
 .replace(/\s/g,"")
 .replace(/[^\d,.-]/g,"")
 .replace(/\./g,"")
-.replace(",", ".");
-
+.replace(",",".");
 var n=parseFloat(normalized);
 
 return isNaN(n)?0:n;
