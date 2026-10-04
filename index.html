@@ -241,6 +241,12 @@ footer button:hover{background:rgba(255,255,255,.2)}
 .energy-label{font-weight:800;color:#102b46}
 @media(max-width:800px){.cost-breakdown{grid-template-columns:1fr}.cost-donut{width:220px;height:220px}.cost-donut::after{inset:52px}.cost-donut-center{padding:48px}}
 
+
+/* V3 - valeur ajoutée et analyse personnalisée */
+.v3-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.v3-card{background:#fff;border:1px solid #d9e1e8;border-radius:12px;padding:18px;box-shadow:0 2px 8px rgba(16,43,70,.06)}
+.v3-card h3{margin:0 0 10px;color:#102b46}.v3-score{font-size:42px;font-weight:800;color:#1f6fd1;line-height:1}.v3-score-label{font-weight:700;margin-top:6px}.v3-meter{height:12px;background:#e7edf2;border-radius:99px;overflow:hidden;margin:12px 0}.v3-meter span{display:block;height:100%;width:0;border-radius:99px;background:#2bb673;transition:width .4s ease}.v3-analysis{line-height:1.65}.v3-analysis strong{color:#102b46}.v3-badge{display:inline-block;padding:5px 9px;border-radius:999px;background:#eef5ff;color:#1f6fd1;font-weight:700;font-size:.88rem}.v3-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.v3-compare-box{border:1px solid #d9e1e8;border-radius:10px;padding:14px}.v3-compare-box strong{font-size:1.25rem;color:#102b46}.v3-source-list{display:grid;gap:10px}.v3-source-list a{color:#1f6fd1;font-weight:700}.v3-updated{font-size:.88rem;color:#687785}@media(max-width:700px){.v3-grid,.v3-compare-grid{grid-template-columns:1fr}.v3-score{font-size:36px}}
+
 </style>
 </head>
 
@@ -250,20 +256,20 @@ footer button:hover{background:rgba(255,255,255,.2)}
 <div class="nav">
 <div class="logo"><img class="brand-logo" src="logo-calculateur-auto.png" alt="Calculateur Auto Québec — Le vrai coût de votre voiture"></div>
 <nav>
-<button onclick="showPage('accueil')">Accueil</button>
-<button onclick="showPage('calculateur')">Calculateur</button>
-<button onclick="showPage('express')">Express</button>
-<button onclick="showPage('guides')">Guides</button>
-<button onclick="showPage('budget')">Budget</button>
-<button onclick="showPage('scenarios')">Scénarios</button>
-<button onclick="showPage('faq')">FAQ</button>
-<button onclick="showPage('methodologie')">Méthodologie</button>
-<button onclick="showPage('glossaire')">Glossaire</button>
-<button onclick="showPage('checklist')">Checklist</button>
-<button onclick="showPage('sources')">Sources</button>
-<button onclick="showPage('comment-ca-marche')">Comment ça marche</button>
-<button onclick="showPage('apropos')">À propos</button>
-<button onclick="showPage('contact')">Contact</button>
+<button href="#accueil" onclick="showPage('accueil')">Accueil</button>
+<button href="#calculateur" onclick="showPage('calculateur')">Calculateur</button>
+<button href="#express" onclick="showPage('express')">Express</button>
+<button href="#guides" onclick="showPage('guides')">Guides</button>
+<button href="#budget" onclick="showPage('budget')">Budget</button>
+<button href="#scenarios" onclick="showPage('scenarios')">Scénarios</button>
+<button href="#faq" onclick="showPage('faq')">FAQ</button>
+<button href="#methodologie" onclick="showPage('methodologie')">Méthodologie</button>
+<button href="#glossaire" onclick="showPage('glossaire')">Glossaire</button>
+<button href="#checklist" onclick="showPage('checklist')">Checklist</button>
+<button href="#sources" onclick="showPage('sources')">Sources</button>
+<button href="#comment-ca-marche" onclick="showPage('comment-ca-marche')">Comment ça marche</button>
+<button href="#apropos" onclick="showPage('apropos')">À propos</button>
+<button href="#contact" onclick="showPage('contact')">Contact</button>
 </nav>
 </div>
 </header>
@@ -278,10 +284,10 @@ footer button:hover{background:rgba(255,255,255,.2)}
 Calculez votre coût automobile réel par mois, par année et par kilomètre.
 Carburant, assurance, entretien, dépréciation, financement et plus.
 </p>
-<button class="cta" onclick="showPage('calculateur')">
+<button class="cta" href="#calculateur" onclick="showPage('calculateur')">
 🧮 Calculer mon coût automobile
 </button>
-<button class="cta" style="margin-left:10px" onclick="showPage('express')">⚡ Calcul express</button>
+<button class="cta" style="margin-left:10px" href="#express" onclick="showPage('express')">⚡ Calcul express</button>
 </div>
 
 <div class="feature-grid">
@@ -330,7 +336,7 @@ Entrez vos données personnelles de véhicule et obtenez immédiatement
 une estimation de votre coût automobile annuel, mensuel et par kilomètre.
 </p>
 
-<button class="calculate" onclick="showPage('calculateur')">
+<button class="calculate" href="#calculateur" onclick="showPage('calculateur')">
 COMMENCER LE CALCUL
 </button>
 </div>
@@ -705,6 +711,11 @@ Sortie d'argent mensuelle
 <h3>💡 À retenir</h3>
 <p id="messageResultat"></p>
 </div>
+<div class="v3-grid">
+<div class="v3-card"><h3>🧠 Analyse personnalisée</h3><p id="v3PersonalAnalysis" class="v3-analysis">Votre analyse apparaîtra ici après le calcul.</p></div>
+<div class="v3-card"><h3>📊 Score du coût automobile</h3><div class="v3-score" id="v3Score">—/100</div><div class="v3-score-label" id="v3ScoreLabel">Calculez votre coût pour obtenir un score.</div><div class="v3-meter"><span id="v3ScoreBar"></span></div><p class="small">Ce score est un indicateur interne basé sur le coût mensuel, le coût par kilomètre et la répartition des dépenses. Il ne s'agit pas d'une norme financière officielle.</p></div>
+</div>
+<div class="v3-card" style="margin-top:16px"><h3>⚖️ Garder ou changer?</h3><p>Comparez le coût annuel actuel avec un véhicule envisagé. Le calculateur vous indique l'écart de coût, sans considérer qu'un véhicule plus cher est nécessairement un meilleur choix.</p><div class="v3-compare-grid"><div class="v3-compare-box"><span>Votre véhicule</span><br><strong id="v3CurrentAnnual">—</strong><br><span class="small">par année</span></div><div class="v3-compare-box"><span>Véhicule envisagé</span><br><strong id="v3AlternativeAnnual">—</strong><br><span class="small">À entrer dans le comparateur ci-dessous</span></div></div><p id="v3KeepChange" class="v3-analysis" style="margin-bottom:0"><span class="v3-badge">Conseil</span> Utilisez le comparateur pour obtenir une différence chiffrée.</p></div>
 
 <div class="tip">
 <strong>Pourquoi deux coûts?</strong><br><br>
@@ -1078,7 +1089,7 @@ et votre coût par kilomètre.
 <div class="info-card"><h3>3. Autres coûts</h3><p>Ajoutez assurance, entretien, pneus, réparations, immatriculation et stationnement.</p></div>
 </div>
 <div class="article-box"><strong>💡 Conseil :</strong> pour obtenir le résultat le plus précis, utilisez le calculateur complet. Il permet de tenir compte de la dépréciation et du financement.</div>
-<button class="calculate" onclick="showPage('calculateur')">Ouvrir le calculateur complet</button>
+<button class="calculate" href="#calculateur" onclick="showPage('calculateur')">Ouvrir le calculateur complet</button>
 
 </div>
 </section>
@@ -1179,21 +1190,7 @@ et votre coût par kilomètre.
 </div>
 </section>
 
-<section id="sources" class="page">
-<div class="card article">
-<h1>📚 Sources et références</h1>
-
-<p>Cette page présente les types de références utiles pour comprendre les coûts automobiles. Les montants et règles peuvent changer; vérifiez toujours les informations officielles avant de prendre une décision.</p>
-<div class="table-wrap"><table class="data-table"><thead><tr><th>Source</th><th>Utilité</th></tr></thead><tbody>
-<tr><td>SAAQ</td><td>Immatriculation, permis et informations liées aux véhicules au Québec.</td></tr>
-<tr><td>CAA</td><td>Informations et outils portant sur les coûts de possession et d'utilisation d'un véhicule.</td></tr>
-<tr><td>Statistique Canada</td><td>Données statistiques pouvant aider à contextualiser les déplacements et les coûts.</td></tr>
-<tr><td>Gouvernement du Québec</td><td>Informations réglementaires et administratives pertinentes.</td></tr>
-</tbody></table></div>
-<div class="article-box"><strong>Important :</strong> les valeurs saisies dans le calculateur peuvent être personnalisées avec vos propres factures, soumissions d'assurance et coûts réels.</div>
-
-</div>
-</section>
+<section id="sources" class="page"><h2>📚 Sources et références</h2><p>Nous distinguons les informations réglementaires des estimations produites par le calculateur. Les données saisies par l'utilisateur restent la base principale du résultat.</p><div class="v3-source-list"><div><a href="https://saaq.gouv.qc.ca/" target="_blank" rel="noopener noreferrer">SAAQ</a> — immatriculation, permis et informations québécoises liées aux véhicules.</div><div><a href="https://carcosts.caa.ca/?locale=fr" target="_blank" rel="noopener noreferrer">CAA — Calculateur des coûts automobiles</a> — référence utile pour comparer les catégories de coûts de possession.</div><div><a href="https://www.statcan.gc.ca/fr/enquete/menages/3508" target="_blank" rel="noopener noreferrer">Statistique Canada — Enquête sur les dépenses des ménages</a> — données sur les dépenses des ménages, dont le transport.</div><div><a href="https://www.revenuquebec.ca/fr/entreprises/retenues-a-la-source-et-cotisations-de-lemployeur/calcul-des-retenues-et-des-cotisations/particularites-calcul-des-retenues-et-des-cotisations/avantages-imposables/liste-des-avantages-imposables/vehicules-a-moteur/plafonds-et-taux-relatifs-a-lutilisation-dune-automobile/" target="_blank" rel="noopener noreferrer">Revenu Québec — automobile</a> — informations fiscales et taux applicables selon le contexte.</div></div><p class="small">Les sources servent à contextualiser le calcul. Calculateur Auto Québec ne reproduit pas leurs données ni leurs calculateurs; il applique sa propre méthode à partir des renseignements fournis par l'utilisateur.</p></section>
 
 <section id="comment-ca-marche" class="page">
 
@@ -1306,7 +1303,7 @@ Calculateur Auto Québec — Québec, Canada.
 </p>
 
 </div>
-</section>
+<p class="v3-updated"><strong>Dernière mise à jour :</strong> octobre 2026.</p><div class="v3-card"><h3>Pourquoi ce projet existe</h3><p>Le projet est né d'un besoin pratique : regarder au-delà du paiement mensuel et comprendre le coût complet d'une automobile. Le site privilégie un calcul transparent, des catégories détaillées et des explications en français adaptées au contexte québécois.</p><p>Les calculs sont conçus pour aider l'utilisateur à poser de meilleures questions et à comparer des scénarios. Ils ne remplacent ni une soumission d'assurance, ni une valeur de marché garantie, ni un avis financier.</p></div></section>
 
 
 <section id="confidentialite" class="page">
@@ -1510,14 +1507,14 @@ certaines fonctionnalités et certains contenus du site à tout moment.
 </div>
 
 <div>
-<button onclick="showPage('accueil')">Accueil</button>
-<button onclick="showPage('calculateur')">Calculateur</button>
-<button onclick="showPage('guides')">Guides</button>
-<button onclick="showPage('comment-ca-marche')">Comment ça marche</button>
-<button onclick="showPage('apropos')">À propos</button>
-<button onclick="showPage('contact')">Contact</button>
-<button onclick="showPage('confidentialite')">Confidentialité</button>
-<button onclick="showPage('conditions')">Conditions</button>
+<button href="#accueil" onclick="showPage('accueil')">Accueil</button>
+<button href="#calculateur" onclick="showPage('calculateur')">Calculateur</button>
+<button href="#guides" onclick="showPage('guides')">Guides</button>
+<button href="#comment-ca-marche" onclick="showPage('comment-ca-marche')">Comment ça marche</button>
+<button href="#apropos" onclick="showPage('apropos')">À propos</button>
+<button href="#contact" onclick="showPage('contact')">Contact</button>
+<button href="#confidentialite" onclick="showPage('confidentialite')">Confidentialité</button>
+<button href="#conditions" onclick="showPage('conditions')">Conditions</button>
 </div>
 
 </div>
@@ -2146,6 +2143,7 @@ document.getElementById("analyseDetail").textContent=
 analyse;
 
 drawCostBreakdown(postes,annuel);
+updateV3Analysis(annuel,mensuel,coutKm,postes,depreciation,energie);
 
 var message="";
 
@@ -2180,6 +2178,17 @@ goStep(4);
 
 }
 
+
+function updateV3Analysis(annuel,mensuel,coutKm,postes,depreciation,energie){
+ var analysis=document.getElementById("v3PersonalAnalysis"),scoreEl=document.getElementById("v3Score"),labelEl=document.getElementById("v3ScoreLabel"),bar=document.getElementById("v3ScoreBar"),current=document.getElementById("v3CurrentAnnual");
+ if(!analysis||!scoreEl)return; current.textContent=money(annuel);
+ var score=100; if(mensuel>500)score-=Math.min(15,(mensuel-500)/40); if(mensuel>900)score-=Math.min(20,(mensuel-900)/25); if(coutKm>0.50)score-=Math.min(15,(coutKm-0.50)*35); if(coutKm>0.75)score-=Math.min(15,(coutKm-0.75)*45);
+ var depPct=annuel>0?depreciation/annuel:0; if(depPct>0.25)score-=Math.min(10,(depPct-0.25)*40); var energyPct=annuel>0?energie/annuel:0; if(energyPct>0.20)score-=Math.min(8,(energyPct-0.20)*30);
+ score=Math.max(20,Math.min(100,Math.round(score))); var label=score>=85?"Coût très bien maîtrisé":score>=70?"Coût raisonnable":score>=55?"Coût à surveiller":"Coût élevé à examiner"; scoreEl.textContent=score+"/100"; labelEl.textContent=label; bar.style.width=score+"%";
+ var top=postes[0]||{nom:"vos dépenses",valeur:0},topPct=annuel>0?(top.valeur/annuel*100):0,daily=annuel/365;
+ analysis.innerHTML="Votre automobile représente environ <strong>"+money(mensuel)+" par mois</strong>, soit <strong>"+money(daily)+" par jour</strong> en coût économique. Votre coût est de <strong>"+money(coutKm)+" par kilomètre</strong>. La dépense dominante est <strong>"+top.nom+"</strong>, à "+money(top.valeur)+" par année ("+topPct.toFixed(1)+" % du total).";
+ if(depreciation>0)analysis.innerHTML+=" La dépréciation compte pour <strong>"+(depPct*100).toFixed(1)+" %</strong> du coût économique; c'est un coût souvent oublié lorsque l'on regarde seulement le paiement mensuel.";
+}
 
 function comparerVehicules(){
 
@@ -2260,6 +2269,10 @@ notreAnnuel<=autreTotal
 
 winner.textContent=
 "🏆 Le moins cher : "+moinsCher;
+
+document.getElementById("v3AlternativeAnnual").textContent=money(autreTotal);
+var v3kc=document.getElementById("v3KeepChange");
+if(v3kc){var deltaMensuel=difference/12;var direction=notreAnnuel<=autreTotal?"Le véhicule envisagé coûterait environ "+money(deltaMensuel)+" de plus par mois.":"Le véhicule envisagé serait environ "+money(deltaMensuel)+" moins cher par mois.";v3kc.innerHTML=`<span class="v3-badge">Comparaison</span> ${direction} Comparez aussi la fiabilité, l'espace, la sécurité, l'usage prévu et les besoins réels avant de décider.`;}
 
 details.textContent=
 nomNotre+
