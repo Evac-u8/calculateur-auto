@@ -1087,17 +1087,33 @@ et votre coût par kilomètre.
 
 <section id="express" class="page">
 <div class="card article">
-<h1>⚡ Calcul express : une estimation rapide</h1>
-
-<p>Vous voulez une estimation rapide sans remplir tous les champs du calculateur détaillé? Cette section vous donne une façon simple de réfléchir au coût d'une automobile.</p>
-<div class="info-grid">
-<div class="info-card"><h3>1. Paiement</h3><p>Regardez le paiement mensuel, mais ne vous arrêtez pas là. Un paiement bas peut cacher une longue durée de financement.</p></div>
-<div class="info-card"><h3>2. Carburant</h3><p>Votre kilométrage annuel et la consommation ont un impact direct sur votre budget.</p></div>
-<div class="info-card"><h3>3. Autres coûts</h3><p>Ajoutez assurance, entretien, pneus, réparations, immatriculation et stationnement.</p></div>
+<h1>⚡ Calcul express du coût automobile</h1>
+<p>Obtenez rapidement une estimation de vos dépenses automobiles mensuelles. Entrez vos chiffres annuels et votre paiement mensuel, puis lancez le calcul.</p>
+<div class="section-note"><strong>Ce calcul estime les sorties d'argent :</strong> carburant, paiement du véhicule, assurance, entretien, pneus, réparations, permis, immatriculation, stationnement et autres dépenses. Il n'inclut pas la dépréciation.</div>
+<div class="field-grid">
+<div><label for="expressKm">Kilométrage annuel (km)</label><input id="expressKm" type="number" min="1" step="1" value="20000"></div>
+<div><label for="expressConso">Consommation (L/100 km)</label><input id="expressConso" type="number" min="0" step="0.1" value="8.5"></div>
+<div><label for="expressPrixEssence">Prix de l'essence ($/L)</label><input id="expressPrixEssence" type="number" min="0" step="0.001" value="1.70"></div>
+<div><label for="expressPaiement">Paiement du véhicule ($/mois)</label><input id="expressPaiement" type="number" min="0" step="0.01" value="0"></div>
+<div><label for="expressAssurance">Assurance ($/année)</label><input id="expressAssurance" type="number" min="0" step="0.01" value="1200"></div>
+<div><label for="expressEntretien">Entretien et réparations ($/année)</label><input id="expressEntretien" type="number" min="0" step="0.01" value="1500"></div>
+<div><label for="expressPneus">Pneus ($/année)</label><input id="expressPneus" type="number" min="0" step="0.01" value="400"></div>
+<div><label for="expressRegistre">Permis et immatriculation ($/année)</label><input id="expressRegistre" type="number" min="0" step="0.01" value="300"></div>
+<div><label for="expressStationnement">Stationnement ($/année)</label><input id="expressStationnement" type="number" min="0" step="0.01" value="0"></div>
+<div><label for="expressAutres">Autres dépenses ($/année)</label><input id="expressAutres" type="number" min="0" step="0.01" value="0"></div>
 </div>
-<div class="article-box"><strong>💡 Conseil :</strong> pour obtenir le résultat le plus précis, utilisez le calculateur complet. Il permet de tenir compte de la dépréciation et du financement.</div>
-<button class="calculate" href="#calculateur" onclick="showPage('calculateur')">Ouvrir le calculateur complet</button>
-
+<div id="expressError" class="error" role="alert" aria-live="polite"></div>
+<button type="button" class="calculate" style="width:100%;margin-top:22px" onclick="calculerExpress()">⚡ CALCULER MON COÛT EXPRESS</button>
+<div id="expressResult" class="result-card" style="display:none" aria-live="polite">
+<h2>Votre estimation</h2>
+<div class="hero"><div class="hero-title">COÛT MENSUEL ESTIMÉ</div><div class="hero-value" id="expressMensuel">—</div></div>
+<div class="row"><span>Coût annuel estimé</span><strong id="expressAnnuel">—</strong></div>
+<div class="row"><span>Coût par kilomètre</span><strong id="expressParKm">—</strong></div>
+<div class="row"><span>Carburant par année</span><strong id="expressCarburant">—</strong></div>
+<p class="small">Le paiement mensuel est inclus tel quel; le calcul ne sépare pas le capital et les intérêts et n'est pas une estimation de dépréciation.</p>
+</div>
+<div class="article-box"><strong>Besoin d'une analyse plus complète?</strong> Le calculateur détaillé ajoute la dépréciation, le financement et les projections.</div>
+<button type="button" class="calculate" onclick="showPage('calculateur')">Ouvrir le calculateur complet</button>
 </div>
 </section>
 
@@ -1318,76 +1334,24 @@ Calculateur Auto Québec — Québec, Canada.
 <div class="card article">
 
 <h1>Politique de confidentialité</h1>
-
-<p>
-Cette politique explique de façon générale comment Calculateur Auto Québec
-traite les informations associées à l'utilisation du site.
-</p>
-
-<h2>Données saisies dans le calculateur</h2>
-
-<p>
-Dans la version actuelle du calculateur, les données que vous entrez servent
-à effectuer les calculs demandés. Les calculs sont effectués directement
-dans votre navigateur et les informations saisies ne sont pas transmises
-à un serveur de calcul du site.
-</p>
-
-<p>
-Le site ne demande pas de créer un compte pour utiliser le calculateur et
-ne nécessite pas de fournir vos données personnelles pour effectuer un calcul.
-</p>
-
-<h2>Communications par courriel</h2>
-
-<p>
-Si vous choisissez de nous contacter par courriel, les informations que vous
-fournissez dans votre message peuvent être utilisées afin de répondre à votre
-demande, de corriger un problème ou d'améliorer le site.
-</p>
-
-<h2>Cookies, publicité et analyse</h2>
-
-<p>
-Le site peut utiliser à l'avenir des services tiers de publicité, d'analyse
-ou d'affiliation. Ces services peuvent utiliser des cookies, des identifiants
-ou des technologies similaires pour mesurer l'audience, afficher de la publicité
-ou assurer le fonctionnement de leurs services, selon leurs propres politiques.
-</p>
-
-<p>
-Si des services publicitaires comme Google AdSense sont ajoutés au site,
-certaines informations techniques et liées à la navigation peuvent être
-traitées par ces fournisseurs conformément à leurs conditions et politiques
-applicables. Les mécanismes de consentement requis pourront également être
-utilisés lorsque la réglementation l'exige.
-</p>
-
+<p>Cette politique décrit les renseignements traités lorsque vous visitez Calculateur Auto Québec, utilisez ses outils ou communiquez avec nous. Elle s'applique au site calculateurauto.ca.</p>
+<h2>Renseignements saisis dans les calculateurs</h2>
+<p>Les calculs sont effectués directement dans votre navigateur. Les montants, le kilométrage et les renseignements sur le véhicule que vous saisissez ne sont pas envoyés à un serveur de calcul de Calculateur Auto Québec. Le site ne demande pas de compte et ces données ne sont pas utilisées par le site pour établir un profil personnel.</p>
+<h2>Renseignements techniques et journaux du serveur</h2>
+<p>Comme la plupart des sites Web, l'hébergement peut traiter certains renseignements techniques nécessaires à la livraison et à la sécurité du site, par exemple l'adresse IP, le type de navigateur, l'appareil, les pages demandées, la date et l'heure des requêtes. Ces renseignements peuvent apparaître dans les journaux techniques de l'hébergeur selon ses pratiques et ses durées de conservation.</p>
+<h2>Publicité Google AdSense et témoins (cookies)</h2>
+<p>Ce site utilise Google AdSense pour afficher des annonces. Google et ses partenaires peuvent utiliser des témoins (cookies), des adresses IP, des identifiants ou des technologies similaires afin de diffuser, mesurer et limiter la répétition des annonces, détecter la fraude et, lorsque les règles de consentement applicables le permettent, personnaliser la publicité selon les visites de l'utilisateur sur ce site ou sur d'autres sites.</p>
+<p>Des fournisseurs tiers, dont Google, peuvent placer et lire des témoins dans votre navigateur ou utiliser des balises Web et des adresses IP dans le cadre de la diffusion des annonces. Google explique ses pratiques dans sa <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">politique sur la publicité et les données</a>. Vous pouvez consulter ou modifier certains paramètres de personnalisation dans <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Mon centre d'annonces Google</a>.</p>
+<p>Les choix de consentement et les restrictions applicables sont présentés lorsque la loi ou les règles des plateformes l'exigent. Le refus de la publicité personnalisée n'empêche pas nécessairement l'affichage d'annonces non personnalisées.</p>
+<h2>Courriels et demandes de contact</h2>
+<p>Si vous nous écrivez, nous utilisons les renseignements inclus dans votre message pour vous répondre, examiner le problème signalé et améliorer le site. Évitez d'envoyer des renseignements sensibles qui ne sont pas nécessaires à votre demande.</p>
 <h2>Liens vers des sites externes</h2>
-
-<p>
-Calculateur Auto Québec peut contenir des liens vers des sites externes.
-Lorsque vous quittez notre site pour utiliser un service tiers, sa propre
-politique de confidentialité et ses propres conditions s'appliquent.
-</p>
-
-<h2>Mise à jour de cette politique</h2>
-
-<p>
-Cette politique peut être mise à jour lorsque de nouvelles fonctionnalités,
-de nouveaux services ou de nouvelles exigences sont ajoutés au site.
-La version publiée sur cette page est la version en vigueur.
-</p>
-
-<h2>Contact</h2>
-
-<p>
-Pour toute question concernant la confidentialité, vous pouvez nous écrire
-à l'adresse <a href="mailto:evac-u8@live.ca">evac-u8@live.ca</a>.
-</p>
-
-<p class="small">Dernière mise à jour : septembre 2026.</p>
-
+<p>Le site contient des liens vers des services externes. Lorsque vous les consultez, leurs propres politiques de confidentialité et conditions s'appliquent. Nous ne contrôlons pas leurs pratiques.</p>
+<h2>Vos choix et vos questions</h2>
+<p>Vous pouvez configurer votre navigateur pour bloquer ou supprimer les témoins. Certaines fonctions ou certains choix publicitaires peuvent alors être limités. Pour toute question concernant cette politique ou les renseignements communiqués par courriel, écrivez à <a href="mailto:evac-u8@live.ca">evac-u8@live.ca</a>.</p>
+<h2>Mise à jour</h2>
+<p>Cette politique peut être modifiée lorsque les outils, les fournisseurs ou les exigences applicables changent. La date ci-dessous indique sa dernière révision.</p>
+<p class="small">Dernière mise à jour : 1er novembre 2026.</p>
 </div>
 </section>
 
@@ -2215,6 +2179,32 @@ goStep(4);
 
 }
 
+
+
+function calculerExpress(){
+ var error=document.getElementById("expressError"),result=document.getElementById("expressResult");
+ error.style.display="none";
+ var fields=["expressKm","expressConso","expressPrixEssence","expressPaiement","expressAssurance","expressEntretien","expressPneus","expressRegistre","expressStationnement","expressAutres"],v={};
+ for(var i=0;i<fields.length;i++){
+  var el=document.getElementById(fields[i]),n=el?Number(el.value):NaN;
+  if(!Number.isFinite(n)||!el||el.value.trim()===""||n<0){
+   error.textContent="Vérifiez les champs : entrez des nombres égaux ou supérieurs à zéro.";
+   error.style.display="block";result.style.display="none";if(el)el.focus();return;
+  }
+  v[fields[i]]=n;
+ }
+ if(v.expressKm<=0){
+  error.textContent="Le kilométrage annuel doit être supérieur à zéro.";
+  error.style.display="block";result.style.display="none";document.getElementById("expressKm").focus();return;
+ }
+ var carburant=v.expressKm*v.expressConso/100*v.expressPrixEssence;
+ var annuel=carburant+v.expressAssurance+v.expressEntretien+v.expressPneus+v.expressRegistre+v.expressStationnement+v.expressAutres+v.expressPaiement*12;
+ document.getElementById("expressMensuel").textContent=money(annuel/12);
+ document.getElementById("expressAnnuel").textContent=money(annuel);
+ document.getElementById("expressParKm").textContent=money(annuel/v.expressKm)+" / km";
+ document.getElementById("expressCarburant").textContent=money(carburant);
+ result.style.display="block";result.scrollIntoView({behavior:"smooth",block:"start"});
+}
 
 function updateV3Analysis(annuel,mensuel,coutKm,postes,depreciation,energie){
  var analysis=document.getElementById("v3PersonalAnalysis"),scoreEl=document.getElementById("v3Score"),labelEl=document.getElementById("v3ScoreLabel"),bar=document.getElementById("v3ScoreBar"),current=document.getElementById("v3CurrentAnnual");
