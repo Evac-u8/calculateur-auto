@@ -2390,7 +2390,13 @@ input.value="";
 
 document.getElementById("transport").value="0";
 
+document.querySelectorAll("select").forEach(function(select){
+ select.selectedIndex=0;
+});
+
+document.getElementById("etatVehicule").selectedIndex=1;
 document.getElementById("permis").value="50.23";
+updateEnergyFields();
 
 goStep(1);
 
