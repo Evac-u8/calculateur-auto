@@ -2273,7 +2273,7 @@ winner.textContent=
 
 document.getElementById("v3AlternativeAnnual").textContent=money(autreTotal);
 var v3kc=document.getElementById("v3KeepChange");
-if(v3kc){var deltaMensuel=difference/12;var direction=notreAnnuel<=autreTotal?"Le véhicule envisagé coûterait environ "+money(deltaMensuel)+" de plus par mois.":"Le véhicule envisagé serait environ "+money(deltaMensuel)+" moins cher par mois.";v3kc.innerHTML=`<span class="v3-badge">Comparaison</span> ${direction} Comparez aussi la fiabilité, l'espace, la sécurité, l'usage prévu et les besoins réels avant de décider.`;}
+if(v3kc){v3kc.textContent=direction+" Comparez aussi la fiabilité, l’espace, la sécurité, l’usage prévu et les besoins réels avant de décider.";} Comparez aussi la fiabilité, l'espace, la sécurité, l'usage prévu et les besoins réels avant de décider.`;}
 
 details.textContent=
 nomNotre+
