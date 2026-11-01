@@ -1728,6 +1728,32 @@ if(step===3){
 
 hideError("error2");
 
+var champsNonNegatifs=[
+"prixAchat","valeurActuelle","anneesPossession","kmActuel","kmAnnuel",
+"consommation","prixEssence","consommationElectrique","prixElectricite",
+"autreElectricite","consommationHybrideElectrique","prixElectriciteHybride",
+"autreElectriciteHybride","autreCarburant","miseFonds","taux","duree",
+"assurance","permis","immatriculation","transport","entretien","pneus",
+"prochainPneus","reparations","stationnement","lavage","autres"
+];
+
+for(var i=0;i<champsNonNegatifs.length;i++){
+ if(val(champsNonNegatifs[i])<0){
+  showError("error2","Les montants, taux, durées et consommations ne peuvent pas être négatifs. Vérifiez vos valeurs.");
+  return;
+ }
+}
+
+if(val("miseFonds")>val("prixAchat")){
+ showError("error2","La mise de fonds ne peut pas dépasser le prix d'achat du véhicule.");
+ return;
+}
+
+if(val("prixAchat")>val("miseFonds") && val("duree")<=0){
+ showError("error2","Entrez une durée de financement supérieure à zéro, ou indiquez une mise de fonds égale au prix d'achat.");
+ return;
+}
+
 if(val("kmAnnuel")<=0){
 
 showError(
