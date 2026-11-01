@@ -202,6 +202,12 @@ nav button[onclick*="'contact'"]{--c:#26c4e6}nav button[onclick*="'contact'"]::b
 .card{box-shadow:0 2px 10px rgba(16,43,70,.1)}
 .feature{border-top:5px solid #1f6fd1;box-shadow:0 2px 10px rgba(16,43,70,.1)}
 .feature:nth-child(2){border-top-color:#2bb673}.feature:nth-child(3){border-top-color:#ffb347}
+.ev-highlight{border:2px solid #2bb673;background:linear-gradient(135deg,#f0fbf5,#fff);box-shadow:0 5px 18px rgba(43,182,115,.12)}
+.ev-highlight h2{border-color:#b9e5ca}
+.ev-kicker{display:inline-block;background:#dff5e8;color:#17683b;border-radius:999px;padding:6px 12px;font-weight:800;font-size:.88rem}
+.ev-highlight .calculate{display:inline-block;background:#218653;box-shadow:0 5px 0 #17683b;margin:8px 12px 8px 0}
+.ev-highlight .calculate:active{box-shadow:0 1px 0 #17683b}
+.ev-guide-link{font-weight:800;color:#17683b;display:inline-block;margin:10px 0}
 /* Boutons du calculateur */
 .next,.calculate{background:var(--bleu);color:#fff;min-height:48px;border-radius:14px;box-shadow:0 5px 0 #14509e;transition:transform .08s,box-shadow .08s;touch-action:manipulation}
 .next:active,.calculate:active{transform:translateY(4px);box-shadow:0 1px 0 #14509e}
@@ -307,6 +313,20 @@ Voyez l'impact de la perte de valeur de votre véhicule.
 Découvrez combien vous coûte chaque kilomètre parcouru.
 </div>
 
+</div>
+
+<div class="card ev-highlight">
+<div class="ev-kicker">⚡ Place à l'électrique</div>
+<h2>Une voiture électrique peut coûter moins cher à rouler — vérifiez avec vos chiffres.</h2>
+<p>Le coût de recharge à domicile peut être nettement inférieur au coût de l'essence par kilomètre. Les véhicules électriques ont aussi moins d'entretien moteur courant, mais le prix d'achat, l'assurance, les pneus, la recharge publique et la dépréciation doivent entrer dans la comparaison.</p>
+<ul>
+<li>Comparez le coût réel en kWh avec celui de l'essence en litres.</li>
+<li>Entrez votre tarif d'électricité et votre consommation réelle.</li>
+<li>Évaluez l'effet du kilométrage annuel, du financement et de la valeur de revente.</li>
+</ul>
+<button class="calculate" onclick="showPage('calculateur');document.getElementById('typeVehicule').value='Électrique';updateEnergyFields();">⚡ Calculer le coût de mon véhicule électrique</button>
+<a class="ev-guide-link" href="/cout-voiture-electrique-vs-essence/">Voir le guide : électrique ou essence</a>
+<p class="small">L'électrique n'est pas automatiquement moins chère à posséder : le résultat dépend du modèle, du prix d'achat, de la recharge et de votre utilisation.</p>
 </div>
 
 <div class="card">
@@ -713,7 +733,7 @@ Sortie d'argent mensuelle
 </div>
 <div class="v3-grid">
 <div class="v3-card"><h3>🧠 Analyse personnalisée</h3><p id="v3PersonalAnalysis" class="v3-analysis">Votre analyse apparaîtra ici après le calcul.</p></div>
-<div class="v3-card"><h3>📊 Score du coût automobile</h3><div class="v3-score" id="v3Score">—/100</div><div class="v3-score-label" id="v3ScoreLabel">Calculez votre coût pour obtenir un score.</div><div class="v3-meter"><span id="v3ScoreBar"></span></div><p class="small">Ce score est un indicateur interne basé sur le coût mensuel, le coût par kilomètre et la répartition des dépenses. Il ne s'agit pas d'une norme financière officielle.</p></div>
+<div class="v3-card"><h3>📊 Indice budgétaire estimatif</h3><div class="v3-score" id="v3Score">—/100</div><div class="v3-score-label" id="v3ScoreLabel">Calculez votre coût pour obtenir un score.</div><div class="v3-meter"><span id="v3ScoreBar"></span></div><p class="small">Indice interne indicatif : ne mesure ni la fiabilité ni la qualité du véhicule et ne constitue pas une norme officielle.</p></div>
 </div>
 <div class="v3-card" style="margin-top:16px"><h3>⚖️ Garder ou changer?</h3><p>Comparez le coût annuel actuel avec un véhicule envisagé. Le calculateur vous indique l'écart de coût, sans considérer qu'un véhicule plus cher est nécessairement un meilleur choix.</p><div class="v3-compare-grid"><div class="v3-compare-box"><span>Votre véhicule</span><br><strong id="v3CurrentAnnual">—</strong><br><span class="small">par année</span></div><div class="v3-compare-box"><span>Véhicule envisagé</span><br><strong id="v3AlternativeAnnual">—</strong><br><span class="small">À entrer dans le comparateur ci-dessous</span></div></div><p id="v3KeepChange" class="v3-analysis" style="margin-bottom:0"><span class="v3-badge">Conseil</span> Utilisez le comparateur pour obtenir une différence chiffrée.</p></div>
 
@@ -1075,6 +1095,7 @@ calculateur automobile de Calculateur Auto Québec et entrez vos chiffres
 réels. Vous pourrez voir immédiatement votre coût annuel, votre coût mensuel
 et votre coût par kilomètre.
 </p>
+<div class="article-box"><strong>Guides détaillés — Québec</strong><ul><li><a href="/cout-voiture-par-mois-quebec/">Coût mensuel d'une voiture</a></li><li><a href="/cout-par-kilometre/">Coût par kilomètre</a></li><li><a href="/cout-voiture-electrique-vs-essence/">Électrique ou essence</a></li><li><a href="/cout-entretien-voiture/">Entretien et réparations</a></li></ul></div>
 </div>
 </section>
 
@@ -1707,11 +1728,37 @@ if(step===3){
 
 hideError("error2");
 
-if(val("kmAnnuel")<0){
+var champsNonNegatifs=[
+"prixAchat","valeurActuelle","anneesPossession","kmActuel","kmAnnuel",
+"consommation","prixEssence","consommationElectrique","prixElectricite",
+"autreElectricite","consommationHybrideElectrique","prixElectriciteHybride",
+"autreElectriciteHybride","autreCarburant","miseFonds","taux","duree",
+"assurance","permis","immatriculation","transport","entretien","pneus",
+"prochainPneus","reparations","stationnement","lavage","autres"
+];
+
+for(var i=0;i<champsNonNegatifs.length;i++){
+ if(val(champsNonNegatifs[i])<0){
+  showError("error2","Les montants, taux, durées et consommations ne peuvent pas être négatifs. Vérifiez vos valeurs.");
+  return;
+ }
+}
+
+if(val("miseFonds")>val("prixAchat")){
+ showError("error2","La mise de fonds ne peut pas dépasser le prix d'achat du véhicule.");
+ return;
+}
+
+if(val("prixAchat")>val("miseFonds") && val("duree")<=0){
+ showError("error2","Entrez une durée de financement supérieure à zéro, ou indiquez une mise de fonds égale au prix d'achat.");
+ return;
+}
+
+if(val("kmAnnuel")<=0){
 
 showError(
 "error2",
-"Le kilométrage annuel ne peut pas être négatif."
+"Veuillez entrer un kilométrage annuel supérieur à zéro pour calculer le coût par kilomètre."
 );
 
 return;
@@ -1720,8 +1767,12 @@ return;
 var type= document.getElementById("typeVehicule").value;
 
 if(type==="Électrique") {
- if(val("consommationElectrique")<0 || val("prixElectricite")<0 || val("autreElectricite")<0){
-  showError("error2","Les valeurs d'énergie électrique ne peuvent pas être négatives.");
+ if(val("consommationElectrique")<=0){
+  showError("error2","Pour un véhicule électrique, entrez une consommation réelle supérieure à zéro en kWh/100 km.");
+  return;
+ }
+ if(val("prixElectricite")<0 || val("autreElectricite")<0){
+  showError("error2","Les coûts d'énergie électrique ne peuvent pas être négatifs.");
   return;
  }
 } else if(type==="Hybride") {
@@ -2186,7 +2237,7 @@ function updateV3Analysis(annuel,mensuel,coutKm,postes,depreciation,energie){
  var depPct=annuel>0?depreciation/annuel:0; if(depPct>0.25)score-=Math.min(10,(depPct-0.25)*40); var energyPct=annuel>0?energie/annuel:0; if(energyPct>0.20)score-=Math.min(8,(energyPct-0.20)*30);
  score=Math.max(20,Math.min(100,Math.round(score))); var label=score>=85?"Coût très bien maîtrisé":score>=70?"Coût raisonnable":score>=55?"Coût à surveiller":"Coût élevé à examiner"; scoreEl.textContent=score+"/100"; labelEl.textContent=label; bar.style.width=score+"%";
  var top=postes[0]||{nom:"vos dépenses",valeur:0},topPct=annuel>0?(top.valeur/annuel*100):0,daily=annuel/365;
- analysis.innerHTML="Votre automobile représente environ <strong>"+money(mensuel)+" par mois</strong>, soit <strong>"+money(daily)+" par jour</strong> en coût économique. Votre coût est de <strong>"+money(coutKm)+" par kilomètre</strong>. La dépense dominante est <strong>"+top.nom+"</strong>, à "+money(top.valeur)+" par année ("+topPct.toFixed(1)+" % du total).";
+ analysis.textContent="Votre automobile représente environ "+money(mensuel)+" par mois, soit "+money(daily)+" par jour en coût économique. Votre coût est de "+money(coutKm)+" par kilomètre. La dépense dominante est "+top.nom+", à "+money(top.valeur)+" par année ("+topPct.toFixed(1)+" % du total).";
  if(depreciation>0)analysis.innerHTML+=" La dépréciation compte pour <strong>"+(depPct*100).toFixed(1)+" %</strong> du coût économique; c'est un coût souvent oublié lorsque l'on regarde seulement le paiement mensuel.";
 }
 
@@ -2272,7 +2323,7 @@ winner.textContent=
 
 document.getElementById("v3AlternativeAnnual").textContent=money(autreTotal);
 var v3kc=document.getElementById("v3KeepChange");
-if(v3kc){var deltaMensuel=difference/12;var direction=notreAnnuel<=autreTotal?"Le véhicule envisagé coûterait environ "+money(deltaMensuel)+" de plus par mois.":"Le véhicule envisagé serait environ "+money(deltaMensuel)+" moins cher par mois.";v3kc.innerHTML=`<span class="v3-badge">Comparaison</span> ${direction} Comparez aussi la fiabilité, l'espace, la sécurité, l'usage prévu et les besoins réels avant de décider.`;}
+if(v3kc){v3kc.textContent=direction+" Comparez aussi la fiabilité, l’espace, la sécurité, l’usage prévu et les besoins réels avant de décider.";} Comparez aussi la fiabilité, l'espace, la sécurité, l'usage prévu et les besoins réels avant de décider.`;}
 
 details.textContent=
 nomNotre+
@@ -2339,7 +2390,13 @@ input.value="";
 
 document.getElementById("transport").value="0";
 
+document.querySelectorAll("select").forEach(function(select){
+ select.selectedIndex=0;
+});
+
+document.getElementById("etatVehicule").selectedIndex=1;
 document.getElementById("permis").value="50.23";
+updateEnergyFields();
 
 goStep(1);
 
