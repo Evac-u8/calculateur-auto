@@ -315,20 +315,6 @@ Découvrez combien vous coûte chaque kilomètre parcouru.
 
 </div>
 
-<div class="card ev-highlight">
-<div class="ev-kicker">⚡ Place à l'électrique</div>
-<h2>Une voiture électrique peut coûter moins cher à rouler — vérifiez avec vos chiffres.</h2>
-<p>Le coût de recharge à domicile peut être nettement inférieur au coût de l'essence par kilomètre. Les véhicules électriques ont aussi moins d'entretien moteur courant, mais le prix d'achat, l'assurance, les pneus, la recharge publique et la dépréciation doivent entrer dans la comparaison.</p>
-<ul>
-<li>Comparez le coût réel en kWh avec celui de l'essence en litres.</li>
-<li>Entrez votre tarif d'électricité et votre consommation réelle.</li>
-<li>Évaluez l'effet du kilométrage annuel, du financement et de la valeur de revente.</li>
-</ul>
-<button class="calculate" onclick="showPage('calculateur');document.getElementById('typeVehicule').value='Électrique';updateEnergyFields();">⚡ Calculer le coût de mon véhicule électrique</button>
-<a class="ev-guide-link" href="/cout-voiture-electrique-vs-essence/">Voir le guide : électrique ou essence</a>
-<p class="small">L'électrique n'est pas automatiquement moins chère à posséder : le résultat dépend du modèle, du prix d'achat, de la recharge et de votre utilisation.</p>
-</div>
-
 <div class="card">
 <h2>Pourquoi calculer le vrai coût d'une voiture?</h2>
 
@@ -2323,7 +2309,7 @@ winner.textContent=
 
 document.getElementById("v3AlternativeAnnual").textContent=money(autreTotal);
 var v3kc=document.getElementById("v3KeepChange");
-if(v3kc){v3kc.textContent=direction+" Comparez aussi la fiabilité, l’espace, la sécurité, l’usage prévu et les besoins réels avant de décider.";} Comparez aussi la fiabilité, l'espace, la sécurité, l'usage prévu et les besoins réels avant de décider.`;}
+if(v3kc){v3kc.textContent="Comparez aussi la fiabilité, l’espace, la sécurité, l’usage prévu et les besoins réels avant de décider.";}
 
 details.textContent=
 nomNotre+
