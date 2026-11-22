@@ -254,6 +254,19 @@ footer button:hover{background:rgba(255,255,255,.2)}
 .v3-card h3{margin:0 0 10px;color:#102b46}.v3-score{font-size:42px;font-weight:800;color:#1f6fd1;line-height:1}.v3-score-label{font-weight:700;margin-top:6px}.v3-meter{height:12px;background:#e7edf2;border-radius:99px;overflow:hidden;margin:12px 0}.v3-meter span{display:block;height:100%;width:0;border-radius:99px;background:#2bb673;transition:width .4s ease}.v3-analysis{line-height:1.65}.v3-analysis strong{color:#102b46}.v3-badge{display:inline-block;padding:5px 9px;border-radius:999px;background:#eef5ff;color:#1f6fd1;font-weight:700;font-size:.88rem}.v3-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.v3-compare-box{border:1px solid #d9e1e8;border-radius:10px;padding:14px}.v3-compare-box strong{font-size:1.25rem;color:#102b46}.v3-source-list{display:grid;gap:10px}.v3-source-list a{color:#1f6fd1;font-weight:700}.v3-updated{font-size:.88rem;color:#687785}@media(max-width:700px){.v3-grid,.v3-compare-grid{grid-template-columns:1fr}.v3-score{font-size:36px}}
 
 </style>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {"@type":"Question","name":"Le paiement mensuel est-il le coût réel de ma voiture?","acceptedAnswer":{"@type":"Answer","text":"Non. Il ne comprend pas nécessairement l'énergie, l'assurance, les pneus, l'entretien, les réparations, les frais réglementaires et la perte de valeur."}},
+  {"@type":"Question","name":"Pourquoi le calculateur affiche-t-il deux montants mensuels?","acceptedAnswer":{"@type":"Answer","text":"Le coût économique tient compte de la dépréciation et des intérêts. La sortie de trésorerie tient compte des paiements réellement effectués, dont le remboursement du capital."}},
+  {"@type":"Question","name":"Le résultat est-il une prévision exacte?","acceptedAnswer":{"@type":"Answer","text":"Non. C'est une estimation basée sur vos entrées. Les prix, réparations, primes, taux, kilométrage et valeurs de revente peuvent changer."}}
+ ]
+}
+</script>
+
 </head>
 
 <body>
@@ -345,6 +358,76 @@ une estimation de votre coût automobile annuel, mensuel et par kilomètre.
 <button class="calculate" href="#calculateur" onclick="showPage('calculateur')">
 COMMENCER LE CALCUL
 </button>
+</div>
+
+
+<div class="card article" id="guide-complet-cout-auto">
+  <p class="kicker">Guide pratique — Québec</p>
+  <h2>Le coût réel d'une voiture au Québec : le guide pour faire le bon calcul</h2>
+  <p>Le prix d'achat et le paiement mensuel ne montrent qu'une partie du coût d'une automobile. Pour savoir ce qu'un véhicule vous coûte réellement, il faut distinguer l'argent qui sort de votre compte, les intérêts du financement et la perte de valeur du véhicule. Cette page explique les postes à inclure, la méthode utilisée par notre calculateur et les limites à connaître avant de comparer deux véhicules.</p>
+
+  <h3>1. Les dépenses à inscrire dans votre budget</h3>
+  <div class="table-wrap"><table class="data-table">
+    <thead><tr><th>Poste</th><th>Comment l'estimer</th><th>À ne pas oublier</th></tr></thead>
+    <tbody>
+      <tr><td>Énergie</td><td>Distance annuelle × consommation ÷ 100 × prix par litre ou kWh.</td><td>Pour un véhicule électrique, utilisez votre coût moyen réel de recharge à domicile et à l'extérieur.</td></tr>
+      <tr><td>Assurance</td><td>Prime annuelle indiquée sur votre contrat ou votre soumission.</td><td>La prime dépend notamment du véhicule, du conducteur, du lieu et des protections choisies.</td></tr>
+      <tr><td>Immatriculation et permis</td><td>Montants réellement payés pour l'année concernée.</td><td>Les frais peuvent varier selon la catégorie du véhicule et les règles en vigueur.</td></tr>
+      <tr><td>Entretien</td><td>Factures annuelles ou moyenne des dernières années.</td><td>Incluez les vidanges, filtres, freins, fluides, alignement et entretien prévu par le fabricant.</td></tr>
+      <tr><td>Pneus</td><td>Prix du prochain ensemble ÷ durée d'utilisation estimée, plus montage et entreposage.</td><td>Au Québec, prévoyez les pneus d'hiver, les changements saisonniers et les réparations.</td></tr>
+      <tr><td>Réparations</td><td>Moyenne des factures passées ou réserve annuelle prudente.</td><td>Une année sans réparation ne signifie pas que le coût à long terme sera nul.</td></tr>
+      <tr><td>Stationnement et autres</td><td>Frais réellement payés sur 12 mois.</td><td>Ajoutez péages, lavage, accessoires et frais liés à votre usage.</td></tr>
+      <tr><td>Financement</td><td>Intérêts totaux du prêt répartis sur la période pertinente.</td><td>Le remboursement du capital est une sortie d'argent, mais pas une dépense économique comme les intérêts.</td></tr>
+      <tr><td>Dépréciation</td><td>Valeur perdue pendant la période étudiée.</td><td>La valeur de revente réelle peut différer fortement d'une estimation.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>2. La différence entre coût économique et argent déboursé</h3>
+  <p>Ces deux résultats répondent à deux questions différentes. Le <strong>coût économique</strong> additionne les dépenses d'utilisation, les intérêts et la dépréciation. Il sert à estimer ce que le véhicule vous coûte comme bien qui perd de la valeur. La <strong>sortie de trésorerie</strong> mesure plutôt les sommes payées pendant l'année, notamment les paiements de prêt. Le capital remboursé augmente votre équité dans le véhicule; il ne doit donc pas être additionné une deuxième fois à la dépréciation dans le coût économique.</p>
+  <div class="article-box"><strong>Exemple fictif, uniquement pour illustrer la méthode :</strong><br>Supposons 3 000 $ d'énergie, 1 500 $ d'assurance, 1 200 $ d'entretien et réparations, 900 $ de pneus et frais divers, 700 $ d'intérêts et 2 500 $ de dépréciation. Le coût économique annuel serait de 9 800 $, soit environ 817 $ par mois. Si le prêt entraîne en plus 4 800 $ de paiements de capital pendant l'année, ces paiements influencent la trésorerie, mais le capital n'est pas ajouté au 9 800 $.</div>
+
+  <h3>3. Les formules utilisées</h3>
+  <ul>
+    <li><strong>Énergie essence :</strong> kilomètres annuels × consommation (L/100 km) ÷ 100 × prix du litre.</li>
+    <li><strong>Électricité :</strong> kilomètres annuels × consommation (kWh/100 km) ÷ 100 × prix moyen du kWh, auquel on ajoute les autres frais de recharge saisis.</li>
+    <li><strong>Dépréciation annuelle moyenne :</strong> (prix d'achat − valeur actuelle) ÷ années de possession, si les deux valeurs et la période sont représentatives.</li>
+    <li><strong>Coût mensuel moyen :</strong> coût économique annuel ÷ 12.</li>
+    <li><strong>Coût par kilomètre :</strong> coût économique annuel ÷ kilomètres parcourus dans l'année.</li>
+    <li><strong>Paiement d'un prêt :</strong> calcul d'amortissement à partir du capital financé, du taux annuel et de la durée. Le résultat dépend des modalités réelles du prêteur.</li>
+  </ul>
+  <p>La dépréciation calculée à partir du prix d'achat et de la valeur actuelle est une moyenne depuis l'achat, pas une prévision garantie de la perte de valeur future. Pour une décision d'achat, comparez plusieurs valeurs de revente possibles et utilisez une période identique pour chaque scénario.</p>
+
+  <h3>4. Exemple : comparer deux véhicules correctement</h3>
+  <p>Un véhicule qui consomme moins n'est pas automatiquement le moins cher. Un prix d'achat supérieur, une assurance plus élevée, un financement plus coûteux ou une dépréciation plus importante peuvent annuler l'économie d'énergie. Pour comparer deux véhicules, utilisez le même kilométrage annuel, la même durée de possession et des hypothèses cohérentes pour l'assurance, l'entretien et la valeur de revente. Si une donnée est inconnue, indiquez une estimation prudente et identifiez-la comme telle plutôt que de la présenter comme un fait.</p>
+
+  <h3>5. Particularités à prévoir au Québec</h3>
+  <ul>
+    <li>Les pneus d'hiver représentent une dépense récurrente : achat, installation, équilibrage, entreposage et remplacement.</li>
+    <li>Le sel et l'humidité peuvent accélérer la corrosion. L'état du dessous de caisse, des conduites de frein et des éléments de suspension mérite une attention particulière sur un véhicule usagé.</li>
+    <li>Les frais d'immatriculation et de permis doivent être vérifiés auprès de la SAAQ pour l'année et la catégorie applicables.</li>
+    <li>Le coût d'assurance doit venir d'une soumission adaptée à votre profil et à votre adresse; une moyenne générale ne remplace pas une soumission.</li>
+    <li>Pour un véhicule électrique, distinguez la recharge à domicile, la recharge publique et les frais de réseau ou d'abonnement éventuels.</li>
+  </ul>
+
+  <h3>6. Comment obtenir une estimation plus fiable</h3>
+  <ol>
+    <li>Rassemblez vos factures d'assurance, d'entretien, de pneus et d'immatriculation.</li>
+    <li>Utilisez votre kilométrage réel des 12 derniers mois plutôt qu'une approximation optimiste.</li>
+    <li>Inscrivez la consommation observée sur plusieurs pleins ou saisons, si possible.</li>
+    <li>Séparez les réparations exceptionnelles des dépenses récurrentes, mais gardez une réserve pour les imprévus.</li>
+    <li>Vérifiez la valeur actuelle du véhicule à partir de plusieurs références et de son état réel.</li>
+    <li>Refaites le calcul avec les mêmes hypothèses lorsque vous comparez un autre véhicule.</li>
+  </ol>
+
+  <h3>Questions fréquentes</h3>
+  <div class="faq-item"><h3>Le paiement mensuel est-il le coût réel de ma voiture?</h3><p>Non. Il ne comprend pas nécessairement l'énergie, l'assurance, les pneus, l'entretien, les réparations, les frais réglementaires et la perte de valeur.</p></div>
+  <div class="faq-item"><h3>Pourquoi le calculateur affiche-t-il deux montants mensuels?</h3><p>Le coût économique tient compte de la dépréciation et des intérêts. La sortie de trésorerie tient compte des paiements réellement effectués, dont le remboursement du capital. Les deux montants répondent à des questions différentes.</p></div>
+  <div class="faq-item"><h3>Dois-je inscrire les pneus d'hiver séparément?</h3><p>Oui, si vous voulez un résultat détaillé. Vous pouvez annualiser le coût d'achat, de montage et d'entreposage pour éviter de concentrer toute la dépense dans une seule année.</p></div>
+  <div class="faq-item"><h3>Le résultat est-il une prévision exacte?</h3><p>Non. C'est une estimation basée sur vos entrées. Les prix, réparations, primes, taux, kilométrage et valeurs de revente peuvent changer.</p></div>
+  <div class="faq-item"><h3>Le calculateur enregistre-t-il les données de mon véhicule?</h3><p>Les calculs de cet outil sont effectués dans votre navigateur. Consultez la politique de confidentialité pour les renseignements techniques liés à la visite du site et aux services publicitaires.</p></div>
+
+  <div class="callout-blue"><strong>À vous de calculer :</strong> utilisez les chiffres de vos factures et de votre véhicule pour obtenir une estimation personnalisée. <button class="calculate" onclick="showPage('calculateur')">Ouvrir le calculateur complet</button></div>
+  <p class="small">Cette ressource est informative. Elle ne constitue ni une soumission d'assurance, ni une évaluation de véhicule, ni un conseil financier ou mécanique. Les montants de l'exemple sont fictifs et ne représentent pas des moyennes québécoises.</p>
 </div>
 
 </section>
